@@ -23,7 +23,7 @@ package ejerciciospseint;
         
 import java.io.*;
 
-public class login {
+public class Conversor_Profesor {
 
 	public static boolean checklogin(String function_user, String function_password) {
 		boolean islogincorrect;
