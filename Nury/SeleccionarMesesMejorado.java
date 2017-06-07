@@ -3,7 +3,7 @@ Es posible que el codigo generado no sea completamente correcto. Si encuentra
 errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 
 // En java, el nombre de un archivo fuente debe coincidir con el nombre de la clase que contiene,
-// por lo que este archivo deber�a llamarse "LOGIN.java."
+// por lo que este archivo deber�a llamarse "MESESDELA�O.java."
 
 // Hay dos errores que se pueden generar al exportar un algoritmo con subprocesos desde PSeint a Java:
 // 1) En java no se puede elegir entre pasaje por copia o por referencia. T�cnicamente solo existe el
@@ -18,47 +18,43 @@ errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 // directamente incluyen el c�digo que indica que pueden generar dicha excepci�n, pero las que
 // lo hacen indirectamente (invocando a otras que s� lo hacen), puede que no, y deber�n ser
 // corregidas manualmente.
-
 package ejerciciospseint;
-        
+
 import java.io.*;
 
-public class Conversor_Profesor {
+public class SeleccionarMesesMejorado {
 
-	public static boolean checklogin(String function_user, String function_password) {
-		boolean islogincorrect;
-		String password_defined;
-		String user_defined;
-		user_defined = "Alejandro";
-		password_defined = "CodoACodo";
-		islogincorrect = (function_user.equals(user_defined) && function_password.equals(password_defined));
-		return islogincorrect;
+	public static void pintarmenu() {
+		System.out.println("----------------------------------------------");
+		System.out.println("seleccione un numero del 1 a 12 o 0 para salir");
+		System.out.println("----------------------------------------------");
 	}
 
 	public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
-		double count;
-		boolean is_correct;
-		String password;
-		String user;
-		count = 0;
+		String listademeses[];
+		int mes_seleccionado;
+		listademeses = new String[13];
+		listademeses[0] = "Hasta Luego";
+		listademeses[1] = "Enero";
+		listademeses[2] = "Febrero";
+		listademeses[3] = "Marzo";
+		listademeses[4] = "Abril";
+		listademeses[5] = "Mayo";
+		listademeses[6] = "Junio";
+		listademeses[7] = "Julio";
+		listademeses[8] = "Agosto";
+		listademeses[9] = "Septiembre";
+		listademeses[10] = "Octubre";
+		listademeses[11] = "Noviembre";
+		listademeses[12] = "Diciembre";
 		do {
-			System.out.println("Ingrese usuario");
-			user = bufEntrada.readLine();
-			System.out.println("Ingrese contrase�a");
-			password = bufEntrada.readLine();
-			is_correct = checklogin(user,password);
-			count = count+1;
-			if (count>=3 && !is_correct) {
-				System.out.println("Usuario bloquead");
-			}
-			if (!is_correct) {
-				System.out.println("Usuario y/o contrase�a incorrectos, reintente");
-			}
-		} while (is_correct || count<3);
-		if (is_correct) {
-			System.out.println("Bienvenido "+user);
-		}
+			pintarmenu();
+			mes_seleccionado = Integer.parseInt (bufEntrada.readLine());
+			System.out.println(listademeses[mes_seleccionado]);
+			//System.in.read(); // a diferencia del pseudoc�digo, espera un Enter, no cualquier tecla
+			System.out.println(""); // no hay forma directa de borrar la consola en Java
+		} while ((mes_seleccionado)!=(0));
 	}
 
 

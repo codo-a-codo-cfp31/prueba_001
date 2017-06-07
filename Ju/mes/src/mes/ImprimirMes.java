@@ -1,9 +1,11 @@
-/* Este codigo ha sido generado por el modulo psexport 20160506-w32 de PSeInt.
+package mes;
+
+/* Este codigo ha sido generado por el modulo psexport 20150822-w32 de PSeInt.
 Es posible que el codigo generado no sea completamente correcto. Si encuentra
 errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 
 // En java, el nombre de un archivo fuente debe coincidir con el nombre de la clase que contiene,
-// por lo que este archivo deber�a llamarse "LOGIN.java."
+// por lo que este archivo deber�a llamarse "PROCESOSELECCIONADORDEMESES.java."
 
 // Hay dos errores que se pueden generar al exportar un algoritmo con subprocesos desde PSeint a Java:
 // 1) En java no se puede elegir entre pasaje por copia o por referencia. T�cnicamente solo existe el
@@ -19,46 +21,73 @@ errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 // lo hacen indirectamente (invocando a otras que s� lo hacen), puede que no, y deber�n ser
 // corregidas manualmente.
 
-package ejerciciospseint;
-        
 import java.io.*;
 
-public class Conversor_Profesor {
+public class ImprimirMes{
 
-	public static boolean checklogin(String function_user, String function_password) {
-		boolean islogincorrect;
-		String password_defined;
-		String user_defined;
-		user_defined = "Alejandro";
-		password_defined = "CodoACodo";
-		islogincorrect = (function_user.equals(user_defined) && function_password.equals(password_defined));
-		return islogincorrect;
+	public static void imprimirmes(SIN_TIPO numero_mes) {
+	}
+
+	public static void pintarmenu() {
+		System.out.println(".................");
+		System.out.println("Seleccione un numero del 1 al 12 o 0 para salir");
+		System.out.println(".................");
 	}
 
 	public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
-		double count;
-		boolean is_correct;
-		String password;
-		String user;
-		count = 0;
+		
+		int seleccionadordemeses;
+		pintarmenu();
+		seleccionadordemeses = Integer.parseInt(bufEntrada.readLine());
 		do {
-			System.out.println("Ingrese usuario");
-			user = bufEntrada.readLine();
-			System.out.println("Ingrese contrase�a");
-			password = bufEntrada.readLine();
-			is_correct = checklogin(user,password);
-			count = count+1;
-			if (count>=3 && !is_correct) {
-				System.out.println("Usuario bloquead");
+			// SEGUN
+			switch (seleccionadordemeses) {
+			case 0:
+				System.out.println("salir");
+				break;
+			case 1:
+				System.out.println("Enero");
+				break;
+			case 2:
+				System.out.println("Febrero");
+				break;
+			case 3:
+				System.out.println("Marzo");
+				break;
+			case 4:
+				System.out.println("Abril");
+				break;
+			case 5:
+				System.out.println("Mayo");
+				break;
+			case 6:
+				System.out.println("Junio");
+				break;
+			case 7:
+				System.out.println("Julio");
+				break;
+			case 8:
+				System.out.println("Agosto");
+				break;
+			case 9:
+				System.out.println("Septiembre");
+				break;
+			case 10:
+				System.out.println("Octubre");
+				break;
+			case 11:
+				System.out.println("Noviembre");
+				break;
+			case 12:
+				System.out.println("Diciembre");
+				break;
+			default:
+				System.out.println("Opcion Invalida");
 			}
-			if (!is_correct) {
-				System.out.println("Usuario y/o contrase�a incorrectos, reintente");
-			}
-		} while (is_correct || count<3);
-		if (is_correct) {
-			System.out.println("Bienvenido "+user);
-		}
+			System.out.println("Elegir tecla");
+			seleccionadordemeses = Integer.parseInt(bufEntrada.readLine());
+		} while ((seleccionadordemeses)!=(0));
 	}
 
 
