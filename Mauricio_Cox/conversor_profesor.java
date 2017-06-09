@@ -3,27 +3,25 @@ Es posible que el codigo generado no sea completamente correcto. Si encuentra
 errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 
 // En java, el nombre de un archivo fuente debe coincidir con el nombre de la clase que contiene,
-// por lo que este archivo deberï¿½a llamarse "LOGIN.java."
+// por lo que este archivo debería llamarse "LOGIN.java."
 
 // Hay dos errores que se pueden generar al exportar un algoritmo con subprocesos desde PSeint a Java:
-// 1) En java no se puede elegir entre pasaje por copia o por referencia. Tï¿½cnicamente solo existe el
+// 1) En java no se puede elegir entre pasaje por copia o por referencia. Técnicamente solo existe el
 // pasaje por copia, pero los identificadores de objetos representan en realidad referencias a los
-// objetos. Entonces, el pasaje para tipos nativos actï¿½a como si fuera por copia, mientras que el
-// pasaje para objetos (como por ejemplo String) actï¿½a como si fuera por referencia. Esto puede llevar
+// objetos. Entonces, el pasaje para tipos nativos actúa como si fuera por copia, mientras que el
+// pasaje para objetos (como por ejemplo String) actúa como si fuera por referencia. Esto puede llevar
 // a que el algoritmo exportado no se comporte de la misma forma que el algoritmo original, en cuyo
-// caso deberï¿½n modificarse algunos mï¿½todos (subprocesos exportados) para corregir el problema.
-// 2) Las funciones que hacen lectura por teclado deben lazar una excepciï¿½n. Si una funciï¿½n A es
-// invocada por otra B, B tambiï¿½n debe manejar (lanzar en este caso) las execpciones que lance A.
-// Esto no se cumple en el cï¿½digo generado automï¿½ticamante: las funciones que realizan lecturas
-// directamente incluyen el cï¿½digo que indica que pueden generar dicha excepciï¿½n, pero las que
-// lo hacen indirectamente (invocando a otras que sï¿½ lo hacen), puede que no, y deberï¿½n ser
+// caso deberán modificarse algunos métodos (subprocesos exportados) para corregir el problema.
+// 2) Las funciones que hacen lectura por teclado deben lazar una excepción. Si una función A es
+// invocada por otra B, B también debe manejar (lanzar en este caso) las execpciones que lance A.
+// Esto no se cumple en el código generado automáticamante: las funciones que realizan lecturas
+// directamente incluyen el código que indica que pueden generar dicha excepción, pero las que
+// lo hacen indirectamente (invocando a otras que sí lo hacen), puede que no, y deberán ser
 // corregidas manualmente.
 
-package ejerciciospseint;
-        
 import java.io.*;
 
-public class Conversor_Profesor {
+public class login {
 
 	public static boolean checklogin(String function_user, String function_password) {
 		boolean islogincorrect;
@@ -45,7 +43,7 @@ public class Conversor_Profesor {
 		do {
 			System.out.println("Ingrese usuario");
 			user = bufEntrada.readLine();
-			System.out.println("Ingrese contraseï¿½a");
+			System.out.println("Ingrese contraseña");
 			password = bufEntrada.readLine();
 			is_correct = checklogin(user,password);
 			count = count+1;
@@ -53,7 +51,7 @@ public class Conversor_Profesor {
 				System.out.println("Usuario bloquead");
 			}
 			if (!is_correct) {
-				System.out.println("Usuario y/o contraseï¿½a incorrectos, reintente");
+				System.out.println("Usuario y/o contraseña incorrectos, reintente");
 			}
 		} while (is_correct || count<3);
 		if (is_correct) {

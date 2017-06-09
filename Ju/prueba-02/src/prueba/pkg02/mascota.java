@@ -1,9 +1,11 @@
-/* Este codigo ha sido generado por el modulo psexport 20160506-w32 de PSeInt.
+package prueba.pkg02;
+
+/* Este codigo ha sido generado por el modulo psexport 20150822-w32 de PSeInt.
 Es posible que el codigo generado no sea completamente correcto. Si encuentra
 errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 
 // En java, el nombre de un archivo fuente debe coincidir con el nombre de la clase que contiene,
-// por lo que este archivo deber�a llamarse "LOGIN.java."
+// por lo que este archivo deber�a llamarse "SIN_TITULO.java."
 
 // Hay dos errores que se pueden generar al exportar un algoritmo con subprocesos desde PSeint a Java:
 // 1) En java no se puede elegir entre pasaje por copia o por referencia. T�cnicamente solo existe el
@@ -19,46 +21,52 @@ errores por favor reportelos en el foro (http://pseint.sourceforge.net). */
 // lo hacen indirectamente (invocando a otras que s� lo hacen), puede que no, y deber�n ser
 // corregidas manualmente.
 
-package ejerciciospseint;
-        
 import java.io.*;
 
-public class Conversor_Profesor {
+public class mascota {
 
-	public static boolean checklogin(String function_user, String function_password) {
-		boolean islogincorrect;
-		String password_defined;
-		String user_defined;
-		user_defined = "Alejandro";
-		password_defined = "CodoACodo";
-		islogincorrect = (function_user.equals(user_defined) && function_password.equals(password_defined));
-		return islogincorrect;
+	public static void imprimirmenu() {
+		System.out.println("*************************************");
+		System.out.println(" Seleccione una de las opciones de acuerdo a lo que m�s haga su mascota");
+		System.out.println("*************************************");
+		System.out.println(" 1- Ladrar");
+		System.out.println(" 2- Saltar");
+		System.out.println(" 3- Maullar");
+		System.out.println(" 4- Ayuda");
+		System.out.println(" 0- Salir del programa");
 	}
 
 	public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
-		double count;
-		boolean is_correct;
-		String password;
-		String user;
-		count = 0;
+		
+		String acciones[];
+		double opcion;
+		imprimirmenu();
+		acciones = new String[5];
+		acciones[1] = "Ladrar";
+		acciones[2] = "Saltar";
+		acciones[3] = "Maullar";
+		acciones[4] = "Ayuda";
+		acciones[0] = "Salir";
 		do {
-			System.out.println("Ingrese usuario");
-			user = bufEntrada.readLine();
-			System.out.println("Ingrese contrase�a");
-			password = bufEntrada.readLine();
-			is_correct = checklogin(user,password);
-			count = count+1;
-			if (count>=3 && !is_correct) {
-				System.out.println("Usuario bloquead");
+			opcion = 0;
+			opcion = Double.parseDouble(bufEntrada.readLine());
+			if ((opcion)==(1)) {
+				System.out.println("Perro");
 			}
-			if (!is_correct) {
-				System.out.println("Usuario y/o contrase�a incorrectos, reintente");
+			if ((opcion)==(2)) {
+				System.out.println("conejo");
 			}
-		} while (is_correct || count<3);
-		if (is_correct) {
-			System.out.println("Bienvenido "+user);
-		}
+			if ((opcion)==(3)) {
+				System.out.println("gato");
+			}
+			if ((opcion)==(4)) {
+				System.out.println("Debe seleccionar accion de su mascota");
+			}
+			if ((opcion)==(0)) {
+				System.out.println("A sido un gusto");
+			}
+		} while ((opcion)!=(0));
 	}
 
 
