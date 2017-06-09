@@ -18,13 +18,14 @@ public class Prueba2 {
     public static void main(String[] args) {
         // TODO code application logic here
         int contador = 0;
-        int numero_para_contar = 10;
+        int numero_para_contar ;
                 
                 Scanner un_scanner = new Scanner(System.in);
-                numero_para_contar = un_scanner.nextInt();
+                contador = un_scanner.nextInt();
                 
-        while (contador  < numero_para_contar){
-                contador = contador +1;
+        while (contador  >0){
+                contador = contador -1;
+                
                 System.out.println(contador);
                
                 
