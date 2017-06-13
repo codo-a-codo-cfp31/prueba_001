@@ -20,7 +20,7 @@ public class Proyectocontardescendente {
         System.out.println("Ingrese desde donde se mostraran los numeros");
         Scanner sca= new Scanner(System.in); //para leer datos enteros. sca es una variable de tipo Scanner
         // se requiere
-        num=sca.nextInt(); //para asignarle el valor a la variable
+        num=sca.nextInt(); //para asignarle el tipo de valor a la variable
         while (num>=0){ 
             if (num%5==0) {
             System.out.println("");    
@@ -28,6 +28,5 @@ public class Proyectocontardescendente {
             System.out.print(num+" ");
               num--;
     }
-    
 }
 }
