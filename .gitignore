@@ -1,2 +1,16 @@
+<<<<<<< HEAD
 /Pedro/monotributo/nbproject/private/
 /Pedro/monotributo/build/
+=======
+*.netbeans_automatic_build
+*.netbeans_update_resources
+*.class
+Ale/Prueba001/nbproject/private/private.properties
+Ale/Prueba001/nbproject/private/private.xml
+/Luis/Proyecto prueba/nbproject/private/
+/Luis/Proyecto prueba/build/
+/Luis/Prueba2/nbproject/private/
+/Luis/Prueba3/nbproject/private/
+/Luis/Prueba3/build/
+/Luis/Prueba2/build/
+>>>>>>> 9cc6bf93f57d984424b3e0b9810e70b842351c35
