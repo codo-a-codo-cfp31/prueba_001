@@ -18,13 +18,13 @@ public class Ejerciciomonotributo {
         // TODO code application logic here
     
     
-    int FacturacionAnual;
+    Double FacturacionAnual;
     
    System.out.println("Bienvenido, ingrese su facturacion anual");
     
    Scanner un_Scanner = new Scanner(System.in);
    
-   FacturacionAnual = un_Scanner.nextInt();
+   FacturacionAnual = un_Scanner.nextDouble();
    
    if ((FacturacionAnual >= 1) && (FacturacionAnual <= 84000)){
         System.out.println("Usted pertenece a la categoria A");
