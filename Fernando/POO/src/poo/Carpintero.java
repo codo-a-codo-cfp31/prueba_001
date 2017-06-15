@@ -7,11 +7,8 @@ package poo;
 
 /**
  *
- * @author CFP31-15
+ * @author CFP31-03
  */
-public class Ropa {
-    private String talle;
-    private String color;
-    private String tipo;
+public class Carpintero extends Persona {
     
 }
