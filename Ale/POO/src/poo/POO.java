@@ -22,6 +22,14 @@ public class POO {
         unaPersona.ahoraTeLlamas("Pirulo");
         
         System.out.println(unaPersona.comoTeLlamas());
+        
+        
+        Carpintero unCarpintero = new Carpintero();
+        
+        unCarpintero.ahoraTeLlamas("Ruidoso");
+        
+        System.out.println(unCarpintero.comoTeLlamas());
+        
     }
     
 }
