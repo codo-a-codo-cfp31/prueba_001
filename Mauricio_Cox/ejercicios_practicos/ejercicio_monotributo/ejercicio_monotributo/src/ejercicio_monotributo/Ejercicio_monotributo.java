@@ -9,7 +9,7 @@ public class Ejercicio_monotributo {
     
     public static void main(String[] args) {
         
-       //Facturaciones maximas de caa categoria
+       //Facturaciones maximas de cada categoria
        float categoria_A_max = 84000;
        float categoria_B_max = 126000;
        float categoria_C_max = 168000;
@@ -28,7 +28,7 @@ public class Ejercicio_monotributo {
        System.out.println("Ingrese se su facturacion anual");
        Scanner monto_ingresado = new Scanner(System.in);
        facturacion_anual = monto_ingresado.nextFloat();
-       System.out.println("El monto ngresado es: $ "+facturacion_anual);
+       System.out.println("El monto ingresado es: $ "+facturacion_anual);
        
        //Se evalua el monto ingresado para calcular la categoria que corresponde
        //Declaramos a variable categoria para poder ir asignandole los respecitvos valores
