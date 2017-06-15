@@ -32,7 +32,7 @@ public class Monotributo {
         }
         
         
-        
+        System.out.println("Tu categoria es: " + categoria);
                 
     }
     
