@@ -19,16 +19,32 @@ public class Persona {
      public String comoTeLlamas(){
          return nombre;
      }
-     
      public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
-     }
+     }    
+         
      
      public String cualEsTuApellido(){
          return apellido;
      }
-     
-     public void ahoraTuApellidoEs(String tuNuevoApellido){
+     public void ahoraTuApellidoEs (String tuNuevoApellido){
          apellido = tuNuevoApellido;
      }
+     
+     public int cualEsTuEdad(){
+         return edad;
+     }
+     public void ahoraTuEdadEs (int tuNuevaEdad){
+         edad = tuNuevaEdad;
+     }
+             
+         
+     public int cualEsTuDni(){
+         return dni;
+     }       
+     public void ahoraTuDniEs (int tuNuevoDni){
+         dni = tuNuevoDni;
+         
+     }
+
 }
