@@ -23,12 +23,4 @@ public class Persona {
      public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
      }
-     
-     public String cualEsTuApellido(){
-         return apellido;
-     }
-     
-     public void ahoraTuApellidoEs(String tuNuevoApellido){
-         apellido = tuNuevoApellido;
-     }
 }

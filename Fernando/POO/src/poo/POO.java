@@ -23,12 +23,12 @@ public class POO {
         
         System.out.println(unaPersona.comoTeLlamas());
         
-        
-        Carpintero unCarpintero = new Carpintero();
+        Persona unCarpintero = new Carpintero();
         
         unCarpintero.ahoraTeLlamas("Ruidoso");
-        
         System.out.println(unCarpintero.comoTeLlamas());
+        
+        
         
     }
     
