@@ -10,7 +10,6 @@ package poo;
  * @author CFP31-15
  */
 public class POO {
-
     /**
      * @param args the command line arguments
      */
@@ -18,18 +17,16 @@ public class POO {
         // TODO code application logic here
         
         Persona unaPersona = new Persona();
-        
         unaPersona.ahoraTeLlamas("Pirulo");
-        
         System.out.println(unaPersona.comoTeLlamas());
         
-        
         Carpintero unCarpintero = new Carpintero();
-        
         unCarpintero.ahoraTeLlamas("Ruidoso");
+        System.out.println("El carpintero es de Nombre: "+unCarpintero.comoTeLlamas());
         
-        System.out.println(unCarpintero.comoTeLlamas());
-        
+        Futbolista unFutbolista = new Futbolista();
+        unFutbolista.ahoraTuDniEs(22222222);
+        System.out.println("Dni del futbolistas es: "+unFutbolista.cualEsTuDni());   
+                
     }
-    
 }
