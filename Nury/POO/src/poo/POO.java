@@ -20,8 +20,45 @@ public class POO {
         Persona unaPersona = new Persona();
         
         unaPersona.ahoraTeLlamas("Pirulo");
+        unaPersona.ahoraTuApellido("Lopez");
+        unaPersona.ahoraTuEdadEs(27);
+        unaPersona.ahoraTuDNIEs(123456);
         
+        System.out.println("-----------------------");
         System.out.println(unaPersona.comoTeLlamas());
+        System.out.println(unaPersona.cualEsTuApellido());
+        System.out.println(unaPersona.cualEsTuEdad());
+        System.out.println(unaPersona.cualEsTuDNI());
+         System.out.println("-----------------------");
+        
+        Carpintero unCarpintero = new Carpintero();//primero va el class o molde que cree para carpintero,
+        //luego va el nombre de la variable y apartir de new carpintero cree el objeto.
+        
+        unCarpintero.ahoraTeLlamas("Ruidoso");
+        unCarpintero.ahoraTuApellido("Perez");
+        unCarpintero.ahoraTuEdadEs(13);
+        unCarpintero.ahoraTuDNIEs(222222);
+        
+         System.out.println("-----------------------");
+        System.out.println(unCarpintero.comoTeLlamas());
+        System.out.println(unCarpintero.cualEsTuApellido());
+        System.out.println(unCarpintero.cualEsTuEdad());
+        System.out.println(unCarpintero.cualEsTuDNI());
+         System.out.println("-----------------------");
+         
+        Futbolista unFutbolista = new Futbolista();
+             
+         unFutbolista.ahoraTeLlamas("Mauro");
+         unFutbolista.ahoraTuApellido("Icardi");
+         unFutbolista.ahoraTuEdadEs(24);
+         unFutbolista.ahoraTuDNIEs(999999);
+         
+        System.out.println("-----------------------"); 
+        System.out.println(unFutbolista.comoTeLlamas());
+        System.out.println(unFutbolista.cualEsTuApellido());
+        System.out.println(unFutbolista.cualEsTuEdad());
+        System.out.println(unFutbolista.cualEsTuDNI());
+         System.out.println("-----------------------");
     }
     
 }
