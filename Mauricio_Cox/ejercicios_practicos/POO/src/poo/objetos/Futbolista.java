@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo;
+package poo.objetos;
 
 /**
  *
- * @author CFP31-15
+ * @author CFP31-14
  */
-public class Ropa {
-    public String talle;
-    public String color;
-    public String tipo;
+public class Futbolista extends Persona {
     
 }
