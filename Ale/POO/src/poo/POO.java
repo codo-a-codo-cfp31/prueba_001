@@ -17,18 +17,18 @@ public class POO {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Persona unaPersona = new Persona();
+        Persona unaPersona = new Persona("Pirulo", "lala", 34);
         
-        unaPersona.ahoraTeLlamas("Pirulo");
+        //unaPersona.ahoraTeLlamas("Pirulo");
         
-        System.out.println(unaPersona.comoTeLlamas());
+        System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido());
         
         
-        Carpintero unCarpintero = new Carpintero();
+        Carpintero unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
         
-        unCarpintero.ahoraTeLlamas("Ruidoso");
+        //unCarpintero.ahoraTeLlamas("Ruidoso");
         
-        System.out.println(unCarpintero.comoTeLlamas());
+        System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido());
         
     }
     
