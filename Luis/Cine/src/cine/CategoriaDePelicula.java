@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo;
+package cine;
 
 /**
  *
- * @author CFP31-04
+ * @author Luis Vera
  */
-public class Futbolista extends Persona {
+public class CategoriaDePelicula {
     
 }
