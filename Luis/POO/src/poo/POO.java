@@ -79,7 +79,6 @@ public class POO {
         
         System.out.println(unFutbolista.cualEsTuDni());
         
-        
     }
     
 }

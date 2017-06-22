@@ -22,7 +22,8 @@ public class Persona {
      public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
      }    
-         
+     
+     
      
      public String cualEsTuApellido(){
          return apellido;
@@ -31,6 +32,8 @@ public class Persona {
          apellido = tuNuevoApellido;
      }
      
+     
+     
      public int cualEsTuEdad(){
          return edad;
      }
@@ -38,7 +41,8 @@ public class Persona {
          edad = tuNuevaEdad;
      }
              
-         
+ 
+     
      public int cualEsTuDni(){
          return dni;
      }       
