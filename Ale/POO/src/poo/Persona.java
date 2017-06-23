@@ -5,17 +5,33 @@
  */
 package poo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author CFP31-15
  */
 public class Persona {
-     private String nombre;
+     private String nombre = "luis";
      private String apellido;
      private int edad;
      private int dni;
      private Ropa suRopa;
     
+     
+     public Persona(){
+         //Esta NO ES la responsabiliadd de esta class
+         //Scanner unScanner = new Scanner(System.in);
+         //nombre = unScanner.next();
+     }
+     
+     public Persona(String unNombre, String unApellido){
+         nombre = unNombre;
+         apellido = unApellido;
+     }
+     
+     
+     
      public String comoTeLlamas(){
          return nombre;
      }

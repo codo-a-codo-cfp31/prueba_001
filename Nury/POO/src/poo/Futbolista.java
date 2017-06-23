@@ -7,7 +7,7 @@ package poo;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-08
  */
 public class Futbolista extends Persona {
     public Futbolista (String unNombre, String unApellido, int unEdad){
@@ -15,4 +15,7 @@ public class Futbolista extends Persona {
         suRopa = new Ropa("lalea", "tallelalala", "lala");
     }
     
+    public Futbolista(){
+         super("M", "Azul", "camiseta");
+     }
 }

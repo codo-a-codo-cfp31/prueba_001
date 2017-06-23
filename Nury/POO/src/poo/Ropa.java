@@ -14,4 +14,14 @@ public class Ropa {
     public String color;
     public String tipo;
     
+    public Ropa(String unTalle, String unColor, String unTipo){
+    talle= unTalle;
+     color=unColor;
+     tipo=unTipo;
+    }
+    public String cualEsTuRopa(){
+        return talle +" "+ color+" "+ tipo;
+    } 
+
 }
+

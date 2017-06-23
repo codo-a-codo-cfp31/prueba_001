@@ -5,33 +5,56 @@
  */
 package poo;
 
+import java.util.Scanner;
+
 /**
  *
  * @author CFP31-15
  */
 public class Persona {
+<<<<<<< HEAD
      private String nombre;
      private String apellido;
      private int edad;
      private int dni;
+=======
+     protected String nombre;
+     protected String apellido;
+     protected int edad;
+     protected int dni;
+>>>>>>> ebe6746fe1e00a4f11dce1835f5b364393d7180b
      protected Ropa suRopa;
     
+     
+     
+     
+     public Persona(String unNombre, String unApellido, int unEdad){
+         nombre = unNombre;
+         apellido = unApellido;
+         edad = unEdad;
+     }
+     
+     
+     
      public String comoTeLlamas(){
          return nombre;
      }
+     
      public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
+<<<<<<< HEAD
      }    
      
      
+=======
+     }
+>>>>>>> ebe6746fe1e00a4f11dce1835f5b364393d7180b
      
      public String cualEsTuApellido(){
          return apellido;
      }
-     public void ahoraTuApellidoEs (String tuNuevoApellido){
-         apellido = tuNuevoApellido;
-     }
      
+<<<<<<< HEAD
      
      
      public int cualEsTuEdad(){
@@ -61,4 +84,9 @@ public class Persona {
          suRopa = new Ropa(unTalle, unColor, unTipo);
      }
 
+=======
+     public void ahoraTuApellidoEs(String tuNuevoApellido){
+         apellido = tuNuevoApellido;
+     }
+>>>>>>> ebe6746fe1e00a4f11dce1835f5b364393d7180b
 }
