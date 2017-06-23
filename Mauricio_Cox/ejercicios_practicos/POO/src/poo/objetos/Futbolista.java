@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package poo.objetos;
 
-/**
- *
- * @author CFP31-14
- */
 public class Futbolista extends Persona {
     
+    public Futbolista (){
+        
+        super ("Talle: M ","Color: AZUL ","Tipo: DEPORTIVA ");
+        
+    }    
 }

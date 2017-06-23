@@ -1,4 +1,8 @@
 //Este sera nuestro archivo prinipal 
+
+//Manejo de datos java 
+//POO, Contructor, Super, new
+
 //Los demas seran objetos que creamos para darles los atos que necesitamos 
 package poo;
 
@@ -12,9 +16,15 @@ public class POO {
 
     public static void main(String[] args) {
         
-       
-        Persona unaPersona = new Persona();
         
+        
+        
+        //PERSONA//////////////
+        
+        //Ropa de persona
+        Persona unaPersona = new Persona("Talle: XL ","Color: ROJO ","Tipo: JEAN ");
+        
+        //------------------------------------------------
         unaPersona.ahoraTeLlamas("Pirulo");
         unaPersona.tuApellido("Galvan");
         unaPersona.tuEdad (29);
@@ -25,8 +35,15 @@ public class POO {
         System.out.println("Tu apellido es: " + unaPersona.cualEsTuApellido());
         System.out.println("Tu edad es: " + unaPersona.cualEsTuEdad());
         System.out.println("Tu DNI es: " + unaPersona.cualEsTuDni());
+        
         System.out.println("-------------------------------------------");
         
+        
+        //CARPINTERO//////////////
+        
+        
+        
+        //------------------------------------------------
         Carpintero unCarpintero = new Carpintero();
         
         unCarpintero.ahoraTeLlamas("Pedro el carpintero");
@@ -41,6 +58,12 @@ public class POO {
         System.out.println("Tu DNI es: " + unCarpintero.cualEsTuDni());
         System.out.println("-------------------------------------------");
         
+        
+        //FUTBOLISTA//////////////
+        
+        
+        
+        //------------------------------------------------
         Futbolista unFutbolista = new Futbolista();
         
         unFutbolista.ahoraTeLlamas("Juan el futbolista");
