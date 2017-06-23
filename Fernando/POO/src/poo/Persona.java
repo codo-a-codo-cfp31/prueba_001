@@ -1,21 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package poo;
 
-/**
- *
- * @author CFP31-15
- */
 public class Persona {
-     private String nombre;
-     private String apellido;
-     private int edad;
-     private int dni;
-     private Ropa suRopa;
-    
+     protected String nombre;
+     protected String apellido;
+     protected int edad;
+     protected int dni;
+     protected Ropa suRopa;
+      
+     public Persona(){
+     }
+
+     public Persona(String unNombre,String unApellido ){
+     nombre = unNombre;
+     apellido = unApellido;
+         }
+     
      public String comoTeLlamas(){
          return nombre;
      }
@@ -46,10 +46,6 @@ public class Persona {
      
      public void ahoraTuDniEs(int tuNuevoDni){
          dni = tuNuevoDni;
-     }
-
-
-
-
-
+     } 
+     
 }

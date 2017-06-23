@@ -16,6 +16,9 @@ public class POO {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        Persona otraPersona = new Persona();
+        System.out.println(otraPersona.comoTeLlamas() + "  " + otraPersona.comoTeApellidas()+ " " +otraPersona.cualEsTuEdad());
+        
         Persona unaPersona = new Persona();
         unaPersona.ahoraTeLlamas("Pirulo");
         System.out.println(unaPersona.comoTeLlamas());
