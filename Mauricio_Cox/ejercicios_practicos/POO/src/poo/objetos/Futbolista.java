@@ -3,9 +3,9 @@ package poo.objetos;
 
 public class Futbolista extends Persona {
     
-    public Futbolista (){
+    public Futbolista (String talleRopa, String colorRopa, String tipoRopa){
         
-        super ("Talle: M ","Color: AZUL ","Tipo: DEPORTIVA ");
+        super (talleRopa,colorRopa,tipoRopa);
         
     }    
 }

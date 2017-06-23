@@ -16,9 +16,6 @@ public class POO {
 
     public static void main(String[] args) {
         
-        
-        
-        
         //PERSONA//////////////
         
         //Ropa de persona
@@ -44,7 +41,7 @@ public class POO {
         
         
         //------------------------------------------------
-        Carpintero unCarpintero = new Carpintero();
+        Carpintero unCarpintero = new Carpintero("Talle: XXXL ","Color: VERDE ","Tipo: DE TRABAJO ");
         
         unCarpintero.ahoraTeLlamas("Pedro el carpintero");
         unCarpintero.tuApellido("Gonzalez");
@@ -64,7 +61,7 @@ public class POO {
         
         
         //------------------------------------------------
-        Futbolista unFutbolista = new Futbolista();
+        Futbolista unFutbolista = new Futbolista("Talle: S ","Color: AZUL ","Tipo: DEPORTIVA");
         
         unFutbolista.ahoraTeLlamas("Juan el futbolista");
         unCarpintero.tuApellido("Perez");
