@@ -1,4 +1,3 @@
-
 package poo;
 
 public class Futbolista extends Persona {
