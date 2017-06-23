@@ -3,18 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo;
+package cine;
 
 /**
  *
- * @author CFP31-03
+ * @author Luis Vera
  */
-public class Carpintero extends Persona {
-    
-    public Carpintero (){
-        
+public class Cine {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
-    
-    
     
 }
