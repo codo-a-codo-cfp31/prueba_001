@@ -13,8 +13,8 @@ public class Persona {
      private String nombre;
      private String apellido;
      private int edad;
-     private int dni;
-     private Ropa suRopa;
+     protected int dni;
+     protected Ropa suRopa;
     
      public String comoTeLlamas(){//le pregunto como se llama y me retorna su nombre esto es un metodo
          return nombre;
@@ -47,5 +47,13 @@ public class Persona {
      public void ahoraTuDNIEs(int tuNuevoDNI){
          dni = tuNuevoDNI;
      }
-}
      
+     public Persona(){
+      suRopa = new Ropa("Ninguno","Blanco","camisa");
+     }
+     
+     public Persona(String unTalle, String unColor, String unTipo){
+     suRopa = new Ropa(unTalle,unColor , unTipo);
+     }
+
+}     

@@ -29,7 +29,8 @@ public class POO {
         System.out.println(unaPersona.cualEsTuApellido());
         System.out.println(unaPersona.cualEsTuEdad());
         System.out.println(unaPersona.cualEsTuDNI());
-         System.out.println("-----------------------");
+        System.out.println(unaPersona.suRopa.cualEsTuRopa());
+        System.out.println("-----------------------");
         
         Carpintero unCarpintero = new Carpintero();//primero va el class o molde que cree para carpintero,
         //luego va el nombre de la variable y apartir de new carpintero cree el objeto.
@@ -44,7 +45,8 @@ public class POO {
         System.out.println(unCarpintero.cualEsTuApellido()); 
         System.out.println(unCarpintero.cualEsTuEdad());
         System.out.println(unCarpintero.cualEsTuDNI());
-         System.out.println("-----------------------");
+        System.out.println(unCarpintero.suRopa.cualEsTuRopa());
+        System.out.println("-----------------------");
          
         Futbolista unFutbolista = new Futbolista();
              
@@ -58,7 +60,10 @@ public class POO {
         System.out.println(unFutbolista.cualEsTuApellido());
         System.out.println(unFutbolista.cualEsTuEdad());
         System.out.println(unFutbolista.cualEsTuDNI());
-         System.out.println("-----------------------");
+        System.out.println(unFutbolista.suRopa.cualEsTuRopa());
+        System.out.println("-----------------------");
+       
+        //System.out.println("Su ropa es: "+unFutbolista.suRopa.talle+" "+ unFutbolista.suRopa.color+" "+ unFutbolista.suRopa.tipo);   }
     }
-    
-}
+
+}    

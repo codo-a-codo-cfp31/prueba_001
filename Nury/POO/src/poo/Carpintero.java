@@ -11,5 +11,7 @@ package poo;
  */
 public class Carpintero extends Persona {
 //extends es la forma de definir que Carpintero tambien es una persona.
-             
+     public Carpintero(){
+         super("L", "Rojo", "franela");
+     }
 }

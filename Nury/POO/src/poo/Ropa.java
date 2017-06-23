@@ -10,8 +10,18 @@ package poo;
  * @author CFP31-15
  */
 public class Ropa {
-    private String talle;
-    private String color;
-    private String tipo;
+    public String talle;
+    public String color;
+    public String tipo;
     
+    public Ropa(String unTalle, String unColor, String unTipo){
+    talle= unTalle;
+     color=unColor;
+     tipo=unTipo;
+    }
+    public String cualEsTuRopa(){
+        return talle +" "+ color+" "+ tipo;
+    } 
+
 }
+

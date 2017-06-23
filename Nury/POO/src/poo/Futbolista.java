@@ -11,4 +11,7 @@ package poo;
  */
 public class Futbolista extends Persona {
     
+    public Futbolista(){
+         super("M", "Azul", "camiseta");
+     }
 }
