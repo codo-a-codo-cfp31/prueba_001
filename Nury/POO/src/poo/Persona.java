@@ -47,13 +47,15 @@ public class Persona {
      public void ahoraTuDNIEs(int tuNuevoDNI){
          dni = tuNuevoDNI;
      }
-     
+     // un contructor que no tiene parametros o argumentos
      public Persona(){
       suRopa = new Ropa("Ninguno","Blanco","camisa");
+      //inicializo ropa por defecto en una persona
      }
      
      public Persona(String unTalle, String unColor, String unTipo){
      suRopa = new Ropa(unTalle,unColor , unTipo);
+     // creo un constructor para ropa que contiene la persona.
      }
 
 }     
