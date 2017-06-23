@@ -14,7 +14,7 @@ public class Persona {
      private String apellido;
      private int edad;
      private int dni;
-     private Ropa suRopa;
+     protected Ropa suRopa;
     
      public String comoTeLlamas(){
          return nombre;
@@ -40,15 +40,25 @@ public class Persona {
      public void ahoraTuEdadEs (int tuNuevaEdad){
          edad = tuNuevaEdad;
      }
-             
+     
  
      
      public int cualEsTuDni(){
          return dni;
      }       
      public void ahoraTuDniEs (int tuNuevoDni){
-         dni = tuNuevoDni;
+         dni = tuNuevoDni;    
+     }
+     
+     public Persona(){
          
+     }
+     public Persona(String nombre, String apellido, int edad){
+         suRopa = new Ropa("lala","lala","lala");
+     }
+     
+     public Persona(String unTalle, String unColor, String unTipo){
+         suRopa = new Ropa(unTalle, unColor, unTipo);
      }
 
 }

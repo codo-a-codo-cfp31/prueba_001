@@ -10,5 +10,9 @@ package poo;
  * @author CFP31-04
  */
 public class Futbolista extends Persona {
+    public Futbolista (String unNombre, String unApellido, int unEdad){
+        super (unNombre, unApellido, unEdad);
+        suRopa = new Ropa("lalea", "tallelalala", "lala");
+    }
     
 }

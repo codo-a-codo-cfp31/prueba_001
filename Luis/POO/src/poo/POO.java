@@ -60,24 +60,10 @@ public class POO {
         System.out.println("");
 
         
+        Persona unaPersonaConRopa = new Persona("talle", "cololala", "tipolalala");
         
-        Futbolista unFutbolista = new Futbolista();
+        Futbolista unFutbolista = new Futbolista("luis", "vera", 28);
         
-        unFutbolista.ahoraTeLlamas("Ronaldo");
-        
-        System.out.println(unFutbolista.comoTeLlamas());
-        
-        unFutbolista.ahoraTuApellidoEs("Nazario");
-        
-        System.out.println(unFutbolista.cualEsTuApellido());
-        
-        unFutbolista.ahoraTuEdadEs(38);
-        
-        System.out.println(unFutbolista.cualEsTuEdad());
-        
-        unFutbolista.ahoraTuDniEs(94890876);
-        
-        System.out.println(unFutbolista.cualEsTuDni());
         
     }
     
