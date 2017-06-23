@@ -62,7 +62,7 @@ public class POO {
         System.out.println(unFutbolista.cualEsTuDNI());
         System.out.println(unFutbolista.suRopa.cualEsTuRopa());
         System.out.println("-----------------------");
-       
+       // asi podria imprmir los valores de esas variables pero era mejor imprimirlos desde el metodo que cree en ropa.
         //System.out.println("Su ropa es: "+unFutbolista.suRopa.talle+" "+ unFutbolista.suRopa.color+" "+ unFutbolista.suRopa.tipo);   }
     }
 
