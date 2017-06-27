@@ -1,4 +1,8 @@
 //Este sera nuestro archivo prinipal 
+
+//Manejo de datos java 
+//POO, Contructor, Super, new
+
 //Los demas seran objetos que creamos para darles los atos que necesitamos 
 package poo;
 
@@ -12,9 +16,12 @@ public class POO {
 
     public static void main(String[] args) {
         
-       
-        Persona unaPersona = new Persona();
+        //PERSONA//////////////
         
+        //Ropa de persona
+        Persona unaPersona = new Persona("Talle: XL ","Color: ROJO ","Tipo: JEAN ");
+        
+        //------------------------------------------------
         unaPersona.ahoraTeLlamas("Pirulo");
         unaPersona.tuApellido("Galvan");
         unaPersona.tuEdad (29);
@@ -25,9 +32,16 @@ public class POO {
         System.out.println("Tu apellido es: " + unaPersona.cualEsTuApellido());
         System.out.println("Tu edad es: " + unaPersona.cualEsTuEdad());
         System.out.println("Tu DNI es: " + unaPersona.cualEsTuDni());
+        
         System.out.println("-------------------------------------------");
         
-        Carpintero unCarpintero = new Carpintero();
+        
+        //CARPINTERO//////////////
+        
+        
+        
+        //------------------------------------------------
+        Carpintero unCarpintero = new Carpintero("Talle: XXXL ","Color: VERDE ","Tipo: DE TRABAJO ");
         
         unCarpintero.ahoraTeLlamas("Pedro el carpintero");
         unCarpintero.tuApellido("Gonzalez");
@@ -41,7 +55,13 @@ public class POO {
         System.out.println("Tu DNI es: " + unCarpintero.cualEsTuDni());
         System.out.println("-------------------------------------------");
         
-        Futbolista unFutbolista = new Futbolista();
+        
+        //FUTBOLISTA//////////////
+        
+        
+        
+        //------------------------------------------------
+        Futbolista unFutbolista = new Futbolista("Talle: S ","Color: AZUL ","Tipo: DEPORTIVA");
         
         unFutbolista.ahoraTeLlamas("Juan el futbolista");
         unCarpintero.tuApellido("Perez");

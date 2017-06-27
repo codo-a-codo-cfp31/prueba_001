@@ -7,8 +7,11 @@ package poo;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
  */
-public class Futbolista extends Persona {
+public class Ropa {
+    public String talle;
+    public String color;
+    public String tipo;
     
 }

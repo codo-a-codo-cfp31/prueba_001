@@ -9,6 +9,10 @@ package poo;
  *
  * @author CFP31-08
  */
-public class Futbolista extends Persona {
+public class Futbolista extends Persona{
     
+public Futbolista(){
+         super("M", "Azul", "camiseta");
+     //    
+     }
 }

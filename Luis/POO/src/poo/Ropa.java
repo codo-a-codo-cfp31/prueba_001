@@ -13,5 +13,11 @@ public class Ropa {
     public String talle;
     public String color;
     public String tipo;
+
+public Ropa(String unTalle, String unColor, String unTipo) {
+    talle = unTalle;
+    color = unColor;
+    tipo = unTipo;
     
+}
 }

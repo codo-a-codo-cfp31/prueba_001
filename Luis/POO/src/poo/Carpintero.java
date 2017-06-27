@@ -7,8 +7,17 @@ package poo;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
+ *
  */
-public class Carpintero extends Persona {
+public class Carpintero extends Persona{
     
-}
+    public Carpintero(String unNombre, String unApellido, int unEdad){
+        super(unNombre, unApellido, unEdad);
+        edad = unEdad;
+    }
+    
+    
+        
+    }
+

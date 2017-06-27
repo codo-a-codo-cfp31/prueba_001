@@ -17,16 +17,16 @@ public class POO {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Persona unaPersona = new Persona();
+        Persona unaPersona = new Persona("Pirulo", "lala", 34);
         
-        unaPersona.ahoraTeLlamas("Pirulo");
+        //unaPersona.ahoraTeLlamas("Pirulo");
         
-        System.out.println(unaPersona.comoTeLlamas());
+        System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido());
         
-        unaPersona.ahoraTuApellidoEs("Perez");
         
-        System.out.println(unaPersona.cualEsTuApellido());
+        Carpintero unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
         
+<<<<<<< HEAD
         unaPersona.ahoraTuEdadEs(25);
         
         System.out.println(unaPersona.cualEsTuEdad());
@@ -60,25 +60,14 @@ public class POO {
         System.out.println("");
 
         
+        Persona unaPersonaConRopa = new Persona("talle", "cololala", "tipolalala");
         
-        Futbolista unFutbolista = new Futbolista();
+        Futbolista unFutbolista = new Futbolista("luis", "vera", 28);
+=======
+        //unCarpintero.ahoraTeLlamas("Ruidoso");
+>>>>>>> ebe6746fe1e00a4f11dce1835f5b364393d7180b
         
-        unFutbolista.ahoraTeLlamas("Ronaldo");
-        
-        System.out.println(unFutbolista.comoTeLlamas());
-        
-        unFutbolista.ahoraTuApellidoEs("Nazario");
-        
-        System.out.println(unFutbolista.cualEsTuApellido());
-        
-        unFutbolista.ahoraTuEdadEs(38);
-        
-        System.out.println(unFutbolista.cualEsTuEdad());
-        
-        unFutbolista.ahoraTuDniEs(94890876);
-        
-        System.out.println(unFutbolista.cualEsTuDni());
-        
+        System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido());
         
     }
     
