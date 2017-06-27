@@ -2,9 +2,16 @@
 package poo.objetos;
 
 public class Ropa {
-    private String talle;
-    private String color;
-    private String tipo;
+    protected String talle;
+    protected String color;
+    protected String tipo;
+    
+    public Ropa () {
+     
+        talle = "XL";
+        color = "AZUL";
+        tipo = "deortiva";
+}
     
     //Constructor - constructor
     public Ropa (String talleRopa, String colorRopa, String tipoRopa){
