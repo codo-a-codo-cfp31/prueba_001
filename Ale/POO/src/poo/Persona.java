@@ -12,11 +12,11 @@ import java.util.Scanner;
  * @author CFP31-15
  */
 public class Persona {
-     private String nombre = "luis";
-     private String apellido;
-     private int edad;
-     private int dni;
-     private Ropa suRopa;
+     protected String nombre = "luis";
+     protected String apellido;
+     protected int edad;
+     protected int dni;
+     protected Ropa suRopa;
     
      
      public Persona(){
@@ -30,7 +30,16 @@ public class Persona {
          apellido = unApellido;
      }
      
+     public Persona(int nuevaEdad){
+         edad = nuevaEdad;
+         suRopa = new Ropa();
+         
+     }
      
+     public Persona(int nuevaEdad, int nuevoDNI){
+         edad = nuevaEdad;
+         dni = nuevoDNI;
+     }
      
      public String comoTeLlamas(){
          return nombre;
@@ -46,5 +55,9 @@ public class Persona {
      
      public void ahoraTuApellidoEs(String tuNuevoApellido){
          apellido = tuNuevoApellido;
+     }
+     
+     public int cualEsTuEdad(){
+         return edad;
      }
 }

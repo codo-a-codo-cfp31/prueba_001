@@ -15,20 +15,20 @@ public class POO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ////////////////////////////////////////////////////////////////
+        // Otra persona
+        Persona otraPErsona = new Persona();
+        System.out.println(otraPErsona.comoTeLlamas() + " "+ otraPErsona.cualEsTuApellido()+ "  "+ otraPErsona.cualEsTuEdad());
         
-        Persona unaPersona = new Persona("Pirulo", "lala", 34);
-        
-        //unaPersona.ahoraTeLlamas("Pirulo");
-        
-        System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido());
-        
-        
+        ////////////////////////////////////////////////////////////////
+        // Una persona
+        Persona unaPersona = new Persona("Pirulo", "lala");        
+        System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido()+ "  "+ unaPersona.cualEsTuEdad());
+       
+        /////////////////////////////////////////////////////////////////
+        /// El carpintero
         Carpintero unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
-        
-        //unCarpintero.ahoraTeLlamas("Ruidoso");
-        
-        System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido());
+        System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido() + " " + unCarpintero.cualEsTuEdad());
         
     }
     
