@@ -1,0 +1,11 @@
+diff a/.gitignore b/.gitignore	(rejected hunks)
+@@ -8,4 +8,6 @@
+ /Luis/Prueba2/nbproject/private/
+ /Luis/Prueba3/nbproject/private/
+ /Luis/Prueba3/build/
+-/Luis/Prueba2/build/
+\ No newline at end of file
++/Luis/Prueba2/build/
++/Luis/Categorias_Monotributo/nbproject/private/
++/Luis/Categorias_Monotributo/build/
+\ No newline at end of file
