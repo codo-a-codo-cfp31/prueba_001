@@ -11,6 +11,15 @@ package poo;
  */
 public class Carpintero extends Persona{
     
+    
+    public Carpintero(String unTalle){
+        super(unTalle, "Mismo", "MismotipodeRopa");
+    }
+    
+    public Carpintero(){
+        //super("talle", "color", "lalao"); 
+    }
+    
     public Carpintero(String unNombre, String unApellido, int unEdad){
         super(unNombre, unApellido);
         edad = unEdad;

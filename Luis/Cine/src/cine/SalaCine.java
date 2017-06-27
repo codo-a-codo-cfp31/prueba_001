@@ -11,11 +11,14 @@ package cine;
  */
 public class SalaCine extends Centro_Comercial{
     protected int nrodesalas;
+    protected Butacas susButacas;
+    protected CategoriaDePelicula suCategoriaDePelicula; 
     
-    public SalaCine (String unNombre, String unaDireccion, String unHorario){
+    public SalaCine (String unNombre, String unaDireccion, String unHorario, int SalasDeCine){
         super(unNombre, unaDireccion, unHorario);
-        nrodesalas = unaSalaDeCine;
-        
+        nrodesalas = SalasDeCine;       
 }
-
+    public int numeroDeSalas(){
+        return nrodesalas;
+}  
 }

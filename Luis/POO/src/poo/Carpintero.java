@@ -17,7 +17,7 @@ public class Carpintero extends Persona{
         edad = unEdad;
     }
     
-    public Carpintero(){
+    
         
     }
-}
+

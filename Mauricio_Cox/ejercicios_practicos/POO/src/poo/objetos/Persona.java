@@ -9,16 +9,13 @@ public class Persona {
      private Ropa suRopa;
     
      
-     //Creamos el constructor en persoa para la ropa
+     //Creamos el constructor en persona para la ropa
      public Persona (String talleRopa, String colorRopa, String tipoRopa){
          
         suRopa = new Ropa (talleRopa, colorRopa, tipoRopa);
                    
      }
                       
-             
-     
-     
      
      //Metodos: por cada uno de los datos que vamos a solicitar debemos crear un nuevo metodo para aa uno
     
