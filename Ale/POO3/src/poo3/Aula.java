@@ -5,18 +5,20 @@
  */
 package poo3;
 
+import java.util.*;
+
 /**
  *
  * @author CFP31-15
  */
-public class POO3 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Aula unAula = new Aula();
-    }
+public class Aula {
     
+    protected List<IPersona> lista_de_personas;
+    protected List<Mueble> lista_de_muebles;
+    
+    
+    public Aula(){
+      
+        
+    }
 }
