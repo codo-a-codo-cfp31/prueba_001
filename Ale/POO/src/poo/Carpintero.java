@@ -13,7 +13,7 @@ public class Carpintero extends Persona{
     
     
     public Carpintero(String unTalle){
-        super(unTalle, "Mismo", "MismotipodeRopa");
+        super( "Mismo", "MismotipodeRopa");
     }
     
     public Carpintero(){

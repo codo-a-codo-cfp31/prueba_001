@@ -7,9 +7,9 @@ package poo3;
 
 /**
  *
- * @author CFP31-14
+ * @author CFP31-15
  */
-public class Poo3 {
+public class POO3 {
 
     /**
      * @param args the command line arguments
