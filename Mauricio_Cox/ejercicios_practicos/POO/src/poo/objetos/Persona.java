@@ -1,4 +1,3 @@
-
 package poo.objetos;
 
 public class Persona {
@@ -8,7 +7,7 @@ public class Persona {
      private int dni;
      private Ropa suRopa;
     
-     
+      
      //Creamos el constructor en persona para la ropa
      public Persona (String talleRopa, String colorRopa, String tipoRopa){
          

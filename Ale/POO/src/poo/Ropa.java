@@ -10,8 +10,28 @@ package poo;
  * @author CFP31-15
  */
 public class Ropa {
-    public String talle;
-    public String color;
-    public String tipo;
+    protected String talle;
+    protected String color;
+    protected String tipo;
+    
+    
+    public Ropa(){
+        talle = "untalle";
+        color = "rojo";
+        tipo = "lala";
+    }
+    
+    public Ropa(String nuevotalle, String nuevocolor, String nuevotipo){
+        talle = nuevotalle;
+        color = nuevocolor;
+        tipo = nuevotipo;
+    }
+    
+    
+    public String descripcionRopa() {
+        
+        return "La ropa es talle: " +  talle + " Color : " +  color;
+        
+    }
     
 }

@@ -1,3 +1,4 @@
+//////////////////////////CLASE PRINCIPAL////////////////////////// 
 //Este sera nuestro archivo prinipal 
 
 //Manejo de datos java 
@@ -38,8 +39,6 @@ public class POO {
         
         //CARPINTERO//////////////
         
-        
-        
         //------------------------------------------------
         Carpintero unCarpintero = new Carpintero("Talle: XXXL ","Color: VERDE ","Tipo: DE TRABAJO ");
         
@@ -57,8 +56,6 @@ public class POO {
         
         
         //FUTBOLISTA//////////////
-        
-        
         
         //------------------------------------------------
         Futbolista unFutbolista = new Futbolista("Talle: S ","Color: AZUL ","Tipo: DEPORTIVA");
