@@ -15,21 +15,29 @@ public class POO {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        ////////////////////////////////////////////////////////////////
+        // Un extraterrestre
+        IPersona et = new Extraterreste();
+        System.out.println(et.comoTeLlamas() + " "+ et.cualEsTuApellido()+ "  "+ et.cualEsTuEdad());
+      
+        
         ////////////////////////////////////////////////////////////////
         // Otra persona
-        Persona otraPErsona = new Persona();
+        IPersona otraPErsona = new Persona();
         System.out.println(otraPErsona.comoTeLlamas() + " "+ otraPErsona.cualEsTuApellido()+ "  "+ otraPErsona.cualEsTuEdad());
         
         ////////////////////////////////////////////////////////////////
         // Una persona
-        Persona unaPersona = new Persona("Pirulo", "lala");        
+        IPersona unaPersona = new Persona("Pirulo", "lala");        
         System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido()+ "  "+ unaPersona.cualEsTuEdad());
        
         /////////////////////////////////////////////////////////////////
         /// El carpintero
-        Carpintero unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
+        IPersona unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
         System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido() + " " + unCarpintero.cualEsTuEdad());
         
     }
     
 }
+

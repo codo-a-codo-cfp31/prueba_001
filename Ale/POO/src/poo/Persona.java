@@ -5,35 +5,38 @@
  */
 package poo;
 
-import java.util.Scanner;
 
 /**
  *
  * @author CFP31-15
  */
-public class Persona {
+public class Persona implements IPersona {
      protected String nombre = "luis";
      protected String apellido;
      protected int edad;
      protected int dni;
      protected Ropa suRopa;
-    
      
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
          //Scanner unScanner = new Scanner(System.in);
          //nombre = unScanner.next();
+         suRopa = new Ropa();
      }
      
      public Persona(String unNombre, String unApellido){
          nombre = unNombre;
          apellido = unApellido;
+          suRopa = new Ropa();
+         
+         System.out.println(suRopa.descripcionRopa());
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
          suRopa = new Ropa();
          
+         System.out.println(suRopa.descripcionRopa());
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){
