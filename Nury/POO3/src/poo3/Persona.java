@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo;
+package poo3;
 
 /**
  *
  * @author CFP31-15
  */
-public class Persona {
+public class Persona implements IPersona {
      private String nombre;
      private String apellido;
      private int edad;
      protected int dni;
-     protected Ropa suRopa;
     
      public String comoTeLlamas(){//le pregunto como se llama y me retorna su nombre esto es un metodo
          return nombre;
@@ -49,13 +48,6 @@ public class Persona {
      }
      // un contructor que no tiene parametros o argumentos
     public Persona(){
-    suRopa = new Ropa("Ninguno","Blanco","camisa");
-     //inicializo ropa por defecto en una persona
-     }
-     
-     public Persona(String unTalle, String unColor, String unTipo){
-     suRopa = new Ropa(unTalle,unColor , unTipo);
-     // creo un constructor para ropa que contiene la persona.
      }
 
 }     
