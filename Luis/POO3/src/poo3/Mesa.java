@@ -9,6 +9,6 @@ package poo3;
  *
  * @author cfp31-06
  */
-public class Mesa {
+public class Mesa extends Mueble{
     
 }

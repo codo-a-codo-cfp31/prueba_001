@@ -5,10 +5,23 @@
  */
 package poo3;
 
+import java.util.*;
+
 /**
  *
  * @author cfp31-06
  */
 public class Aula {
     
+    protected List<Persona> lista_de_personas;
+    protected List<Mueble> lista_de_muebles;
+    
+    public Aula(){
+        unaPersona = new Persona();
+        unMueble = new Mueble();
+        
+    }
+            
+            
+            
 }

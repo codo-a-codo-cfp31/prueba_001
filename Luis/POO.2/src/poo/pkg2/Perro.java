@@ -19,7 +19,7 @@ public class Perro extends Mamiferos implements Cuadrupedos{
         
     }
     
-    public void COrrer(){
+    public void Correr(){
         
     }
     

@@ -9,6 +9,6 @@ package poo3;
  *
  * @author cfp31-06
  */
-public class Alumno {
+public class Alumno extends Persona {
     
 }

@@ -11,4 +11,13 @@ package poo3;
  */
 public interface IPersona {
     
+    public String comoTeLlamas();
+    
+    public void ahoraTeLlamas(String tuNuevoNombre);
+    
+    public String cualEsTuApellido();
+    
+    public void ahoraTuApellidoEs(String tuNuevoApellido);
+    
+    public int cualEsTuEdad();
 }
