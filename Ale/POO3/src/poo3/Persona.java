@@ -11,7 +11,7 @@ package poo3;
  * @author CFP31-15
  */
 public class Persona implements IPersona {
-     protected String nombre = "luis";
+     protected String nombre;
      protected String apellido;
      protected int edad;
      protected int dni;

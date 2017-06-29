@@ -12,23 +12,32 @@ import java.util.*;
  * @author CFP31-15
  */
 public class Aula {
-    
+
     protected List<IPersona> lista_de_personas;
     protected List<Mueble> lista_de_muebles;
-    
-    
-    public Aula(){
-        
+
+    public Aula() {
+
         lista_de_personas = new ArrayList();
         lista_de_muebles = new ArrayList();
-        
+
         lista_de_personas.add(new Profesor());
-        
-        lista_de_personas.add(new Alumno());
-        lista_de_personas.add(new Alumno());
-        lista_de_personas.add(new Alumno());
-        lista_de_personas.add(new Alumno());
-        lista_de_personas.add(new Alumno());
-        lista_de_personas.add(new Alumno());
+        for (int i = 0; i < 6; i++) {
+            lista_de_muebles.add(new Silla());
+        }
+
+        for (int i = 0; i < 3; i++) {
+            lista_de_muebles.add(new Mesa());
+        }
+
     }
+
+    public void addAlumno(Alumno unAlumno) {
+        lista_de_personas.add(unAlumno);
+    }
+
+    public List<IPersona> dameLaListaDePersonas() {
+        return lista_de_personas;
+    }
+
 }
