@@ -12,9 +12,9 @@ package poo;
 // una clase es un molde para poder crear un objeto 
 //en este caso este es el molde del objeto ropa y definimos sus caracteristicas o propiedades, y comportamientos.
 public class Ropa {
-    public String talle;
-    public String color;
-    public String tipo;
+    protected String talle;
+    protected String color;
+    protected String tipo;
     
     public Ropa(String unTalle, String unColor, String unTipo){
     talle= unTalle;
