@@ -18,7 +18,17 @@ public class Aula {
     
     
     public Aula(){
-      
         
+        lista_de_personas = new ArrayList();
+        lista_de_muebles = new ArrayList();
+        
+        lista_de_personas.add(new Profesor());
+        
+        lista_de_personas.add(new Alumno());
+        lista_de_personas.add(new Alumno());
+        lista_de_personas.add(new Alumno());
+        lista_de_personas.add(new Alumno());
+        lista_de_personas.add(new Alumno());
+        lista_de_personas.add(new Alumno());
     }
 }
