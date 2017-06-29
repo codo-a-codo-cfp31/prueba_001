@@ -19,9 +19,9 @@ public class POO {
         
         Persona unaPersona = new Persona();
         
-        unaPersona.ahoraTeLlamas("Pirulo");
-        unaPersona.ahoraTuApellido("Lopez");
-        unaPersona.ahoraTuEdadEs(27);
+        unaPersona.ahoraTeLlamas("UnNombre");
+        unaPersona.ahoraTuApellido("UnApellido");
+        unaPersona.ahoraTuEdadEs(1);
         unaPersona.ahoraTuDNIEs(123456);
         
         System.out.println("-----------------------");

@@ -7,7 +7,7 @@ package poo3;
 
 /**
  *
- * @author CFP31-15
+ * @author CFP31-08
  */
 public class POO3 {
 

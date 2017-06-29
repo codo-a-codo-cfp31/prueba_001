@@ -3,20 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo3;
+package poo2;
 
 /**
  *
- * @author CFP31-15
+ * @author ELSA.BENAviD00953
  */
-public class POO3 {
-
-    /**
+public class POO2 {
+   /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Aula unAula = new Aula();
-    }
-    
+        Cuadrupedo unPerro = new Perro();
+        
+        unPerro.Trotar();
+        //unPerro.Ladrar();
+        
+        String unTexto = "lalalal";
+    }  
 }

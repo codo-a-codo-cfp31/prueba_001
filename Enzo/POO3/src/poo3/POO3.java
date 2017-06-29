@@ -7,16 +7,14 @@ package poo3;
 
 /**
  *
- * @author CFP31-15
+ * @author ELSA.BENAviD00953
  */
 public class POO3 {
-
-    /**
+     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         Aula unAula = new Aula();
     }
-    
 }
