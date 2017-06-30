@@ -13,15 +13,31 @@ import java.util.*;
  */
 public class Aula {
     
-    protected List<Persona> lista_de_personas;
+    protected List<IPersona> lista_de_personas;
     protected List<Mueble> lista_de_muebles;
     
     public Aula(){
-        unaPersona = new Persona();
-        unMueble = new Mueble();
+        //La lista se comporta como una interface
+        lista_de_muebles = new ArrayList();
+        lista_de_personas = new ArrayList();
+        
+        lista_de_personas.add(new Profesor());
+        
+        for (int i = 0; i < 6; i++) {
+            lista_de_personas.add(new Alumno());
+        }
+        
+        for (int i = 0; i < 7; i++) {
+            lista_de_muebles.add(new Silla());
         
     }
+        for (int i = 0; i < 4; i++) {
+            lista_de_muebles.add(new Mesa());
             
-            
-            
+    }        
+    }
+        public List<IPersona> dameLaListaDePersonas(){
+            return lista_de_personas;
+    }
+    
 }
