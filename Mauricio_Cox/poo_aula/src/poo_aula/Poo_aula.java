@@ -1,21 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Crear 
 package poo_aula;
 
-/**
- *
- * @author CFP31-14
- */
 public class Poo_aula {
-
-    /**
-     * @param args the command line arguments
-     */
+ 
     public static void main(String[] args) {
-        // TODO code application logic here
+        Aula unAula=new Aula();
+        
+        Alumno unAlumno=new Alumno();
+        unAula.addAlumno(unAlumno);
+        
+        List<Ipersona> lista=unAula.dameLaListaDePersonas();
+        
+        for(int i=0; i<lista.size(); i++){
+            IPersona unaPersona=lista.get(i);
+            
+            System.out.println();
+        }
+        
     }
     
 }
