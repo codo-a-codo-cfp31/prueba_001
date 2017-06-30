@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo_aula;
+package poo3;
 
 /**
  *
- * @author CFP31-14
+ * @author CFP31-15
  */
-public class Alumno extends Persona {
+public class Mueble {
     
 }

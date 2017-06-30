@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 package poo_aula;
-
+import java.util.*;
 public class Aula {
-    protected List<Ipersona> lista_de_personas;
+    protected List<IPersona> lista_de_personas;
     protected List<Mueble> lista_de_muebles;
     
     public Aula(){
@@ -16,8 +16,18 @@ public class Aula {
         lista_de_personas.add(new Profesor());
         
         for(int i=0;i<6;i++){
-            lista_de_personas.add(new Alumno());
+            lista_de_muebles.add(new Sillas());
         }
-    }
+        
+        for(int i=0;i<3;i++){
+            lista_de_muebles.add(new Mesas());
+        }
+     }
 
+    public void addAlumno(Alumno unAlumno){
+            lista_de_personas.add(unAlumno);
+        }
+    public List<IPersona> dameLaListaDePersonas(){
+        retun lista_de_personas;
+    }
 }
