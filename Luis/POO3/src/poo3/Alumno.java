@@ -5,10 +5,11 @@
  */
 package poo3;
 
+import java.util.*;
 /**
  *
  * @author cfp31-06
  */
-public class Alumno extends Persona {
+public class Alumno extends Persona implements IPersona{
     
 }
