@@ -21,9 +21,7 @@ public class PersonaNuevo {
         
         Futbolista unFutbolista = new Futbolista ("Pedro", "Hernandez", 26);
         System.out.println(unFutbolista.comoTeLlamas()+" "+unFutbolista.cualEsTuApellido()+" "+unFutbolista.cualEsTuEdad());
-        
-        Futbolista ropaFutbolista = new Futbolista ("M", "Verde", "Camiseta");
-        System.out.println(ropaFutbolista.cualEsTuRopa());
+        System.out.println(unFutbolista.cualEsTuRopa());
         
        //Ropa ropaFutbolista = new Ropa ("M", "Verde", "Camiseta");
        //System.out.println(ropaFutbolista.cualEsTuRopa());
