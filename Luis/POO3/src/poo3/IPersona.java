@@ -5,7 +5,8 @@
  */
 package poo3;
 
-import java.util.*;//Cuando se crea una interface con sus metodos, todos estos metodos deben cumplirse en la clase q se le aplica la interface (cuando se le pone implements)
+
+//Cuando se crea una interface con sus metodos, todos estos metodos deben cumplirse en la clase q se le aplica la interface (cuando se le pone implements)
 /**
  *
  * @author cfp31-06
@@ -13,14 +14,13 @@ import java.util.*;//Cuando se crea una interface con sus metodos, todos estos m
 public interface IPersona  {
     
     public String comoTeLlamas();
-    
     public void ahoraTeLlamas(String tuNuevoNombre);
     
-    public String cualEsTuApellido();
     
+    public String cualEsTuApellido();
     public void ahoraTuApellidoEs(String tuNuevoApellido);
     
     public int cualEsTuEdad();
-    
     public void ahoraTuEdadEs(int unaEdad);
+
 }
