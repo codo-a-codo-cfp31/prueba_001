@@ -17,6 +17,8 @@ public class Persona implements IPersona {
      protected int dni;
      protected Ropa suRopa;
      
+     final static boolean print_ropa_description = false;
+     
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
          //Scanner unScanner = new Scanner(System.in);
@@ -29,14 +31,20 @@ public class Persona implements IPersona {
          apellido = unApellido;
           suRopa = new Ropa();
          
-         System.out.println(suRopa.descripcionRopa());
+          if (print_ropa_description) {
+              System.out.println(suRopa.descripcionRopa());
+         }
+        
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
          suRopa = new Ropa();
          
-         System.out.println(suRopa.descripcionRopa());
+         if (print_ropa_description) {
+              System.out.println(suRopa.descripcionRopa());
+         }
+        
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){

@@ -5,6 +5,8 @@
  */
 package poo4;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -22,8 +24,31 @@ public class POO4 {
         
         // 1- Pedir un numero => la cantidad en una lista
         // 2- Ingresar Nombre y Apellido de cada persona de esa lista
-        // 3- Mostrarlo por pantall
+        // 3- Mostrarlo por pantalla
         // Hay que usar List<IPersona> unaLista = new ArrayList();
+        // unaLista.add(persona);
+        List<IPersona> lista_de_personas = new ArrayList();
+        
+        System.out.println("Ingrese la cantidad de persona en la lista: ");
+        int cantidad_de_personas = scanner.nextInt();
+        
+        for (int i = 0; i < cantidad_de_personas; i++) {
+           
+            System.out.println("Ingrese el nombre de la persona " + i + " : ");
+            String nombre_persona = scanner.next();
+            System.out.println("Ingrese el apellido de la persona " + i + " : ");
+            String appelido_persona = scanner.next();
+            
+            IPersona unaPersona = new Persona(nombre_persona, appelido_persona);
+            
+            lista_de_personas.add(unaPersona);
+            
+        }
+        
+        System.out.println("La lista de personas es: " +  lista_de_personas);
+        
+        
+        
         
     }
     
