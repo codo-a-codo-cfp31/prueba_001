@@ -5,10 +5,13 @@
  */
 package poo3;
 
+
 /**
  *
  * @author cfp31-06
  */
-public class Alumno extends Persona {
+public class Alumno extends Persona implements IPersona{
+    
+      
     
 }

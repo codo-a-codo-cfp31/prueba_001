@@ -3,14 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo3;
+package poo_aula;
 
-import java.util.*;
 /**
  *
- * @author cfp31-06
+ * @author CFP31-14
  */
-public class Profesor extends Persona implements IPersona{
-    
+public class Mueble {
     
 }

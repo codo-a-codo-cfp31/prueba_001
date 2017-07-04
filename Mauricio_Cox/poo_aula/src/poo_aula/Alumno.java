@@ -9,6 +9,6 @@ package poo_aula;
  *
  * @author CFP31-14
  */
-public class Alumno {
+public class Alumno extends Persona {
     
 }

@@ -3,14 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo_aula;
+package poo3;
 
 /**
  *
- * @author CFP31-14
+ * @author CFP31-15
  */
 public interface IPersona {
-    public String comoTeLlamas();
+     public String comoTeLlamas();
      
      public void ahoraTeLlamas(String tuNuevoNombre);
      
@@ -19,4 +19,5 @@ public interface IPersona {
      public void ahoraTuApellidoEs(String tuNuevoApellido);
      
      public int cualEsTuEdad();
+
 }

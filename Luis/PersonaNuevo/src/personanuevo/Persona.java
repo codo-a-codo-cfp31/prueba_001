@@ -39,8 +39,5 @@ public class Persona {
         
     }
     
-    public Persona (String unTalle, String unColor, String unTipo){
-        suRopa = new Ropa("M", "Blanca", "Franela");
-        
-    }
+    
 }

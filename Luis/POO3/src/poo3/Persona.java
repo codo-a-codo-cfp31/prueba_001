@@ -5,10 +5,41 @@
  */
 package poo3;
 
+
 /**
  *
  * @author cfp31-06
  */
-public class Persona {
+public class Persona implements IPersona {
     
+    protected String nombre;
+    protected String apellido;
+    protected int edad;              
+    
+    
+   
+    public String comoTeLlamas(){
+        return nombre;
+    }
+    
+    public void ahoraTeLlamas(String tuNuevoNombre){
+        nombre = tuNuevoNombre;
+    }
+        
+    public String cualEsTuApellido (){
+        return apellido;
+    }    
+    
+    public void ahoraTuApellidoEs(String tuNuevoApellido){
+        apellido = tuNuevoApellido;
+    }
+    
+    public int cualEsTuEdad(){
+        return edad;
+    }   
+    
+    public void ahoraTuEdadEs(int unaEdad){
+        edad = unaEdad;
+    }
+
 }
