@@ -71,4 +71,8 @@ public class Persona implements IPersona {
      public int cualEsTuEdad(){
          return edad;
      }
+     
+     public String toString(){
+         return "Nombre: " + nombre + " y Apellido:  " + apellido;
+     }
 }

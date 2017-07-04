@@ -21,7 +21,7 @@ public class POO4 {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner scanner = new Scanner(System.in);
-        
+
         // 1- Pedir un numero => la cantidad en una lista
         // 2- Ingresar Nombre y Apellido de cada persona de esa lista
         // 3- Mostrarlo por pantalla
@@ -33,9 +33,10 @@ public class POO4 {
         int cantidad_de_personas = scanner.nextInt();
         
         for (int i = 0; i < cantidad_de_personas; i++) {
-           
+            
             System.out.println("Ingrese el nombre de la persona " + i + " : ");
             String nombre_persona = scanner.next();
+            
             System.out.println("Ingrese el apellido de la persona " + i + " : ");
             String appelido_persona = scanner.next();
             
@@ -45,10 +46,19 @@ public class POO4 {
             
         }
         
-        System.out.println("La lista de personas es: " +  lista_de_personas);
+        System.out.println("La lista de personas es: " + lista_de_personas);
         
+        System.out.println("***********************************************");
+        System.out.println("Buscar en la lista a la siguiente persona(nombre): ");
+        String buscarPersonaPorNombre = scanner.next();
         
-        
+        for (int i = 0; i < cantidad_de_personas; i++) {
+            IPersona unaPersona = lista_de_personas.get(i);
+            
+            if (/* Aca escribir condicion */) {
+                System.out.println("Encontre a la persona con ese nombre");
+            }
+        }
         
     }
     
