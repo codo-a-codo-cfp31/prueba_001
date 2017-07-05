@@ -12,6 +12,7 @@ import java.util.*;
  * @author cfp31-06
  */
 public class Aula {
+    //Para definir que el aula "tiene" alumnos y profesor simplemente se agregan como atributos a la class aula
     
     protected List<IPersona> lista_de_personas;
     protected List<Mueble> lista_de_muebles;
