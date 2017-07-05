@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo3;
+package poo4;
 
 
 //Cuando se crea una interface con sus metodos, todos estos metodos deben cumplirse en la clase q se le aplica la interface (cuando se le pone implements)
@@ -20,8 +20,5 @@ public interface IPersona  {
     
     public String cualEsTuApellido();
     public void ahoraTuApellidoEs(String tuNuevoApellido);
-    
-    public int cualEsTuEdad();
-    public void ahoraTuEdadEs(int unaEdad);
 
 }
