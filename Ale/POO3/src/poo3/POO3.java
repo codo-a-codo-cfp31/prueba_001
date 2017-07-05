@@ -22,6 +22,7 @@ public class POO3 {
         Aula unAula = new Aula();
         
         Alumno unAlumno = new Alumno();
+        unAlumno.ahoraTeLlamas("Lalal");
         unAula.addAlumno(unAlumno);
         
         
