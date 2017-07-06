@@ -19,8 +19,32 @@ public class POO3 {
         // TODO code application logic here
         Aula unAula = new Aula();
         
-        Alumno unAlumno = new Alumno ();
-        unAula.addAlumno(unAlumno);
+        //Estoy agregando un alumno al aula
+        Alumno Alumno1 = new Alumno ();
+        unAula.addAlumno(Alumno1);
+        Alumno1.ahoraTeLlamas("Luis");
+        
+        Alumno Alumno2 = new Alumno ();
+        unAula.addAlumno(Alumno2);
+        Alumno2.ahoraTeLlamas("Airam");
+        
+        Alumno Alumno3 = new Alumno ();
+        unAula.addAlumno(Alumno3);
+        Alumno3.ahoraTeLlamas("Nury");
+        
+        Alumno Alumno4 = new Alumno ();
+        unAula.addAlumno(Alumno4);
+        Alumno4.ahoraTeLlamas("Mauricio");
+        
+        Alumno Alumno5 = new Alumno ();
+        unAula.addAlumno(Alumno5);
+        Alumno5.ahoraTeLlamas("Pedro");
+        
+        Profesor elProfesor = new Profesor();
+        unAula.addProfesor(elProfesor);
+        elProfesor.ahoraTeLlamas("Alejandro");
+        
+        
         
         List<IPersona> lista = unAula.dameLaListaDePersonas();
         

@@ -12,6 +12,7 @@ import java.util.*;
  * @author cfp31-06
  */
 public class Aula {
+    //Para definir que el aula "tiene" alumnos y profesor simplemente se agregan como atributos a la class aula
     
     protected List<IPersona> lista_de_personas;
     protected List<Mueble> lista_de_muebles;
@@ -19,8 +20,8 @@ public class Aula {
     public Aula(){
         //La lista se comporta como una interface
         lista_de_muebles = new ArrayList();
-        lista_de_personas = new ArrayList();
         
+        lista_de_personas = new ArrayList();
         lista_de_personas.add(new Profesor());
         
         for (int i = 0; i < 6; i++) {
@@ -36,7 +37,18 @@ public class Aula {
             
     }        
     }
-        public List<IPersona> dameLaListaDePersonas(){
+    
+    //metodo para agregar a la lista de personas
+    public void addAlumno(Alumno AgregarAlumno){
+        lista_de_personas.add(AgregarAlumno);
+    } 
+    
+    public void addProfesor (Profesor AgregarProfesor ){
+        lista_de_personas.add(AgregarProfesor);
+    }
+          
+   
+    public List<IPersona> dameLaListaDePersonas(){
             return lista_de_personas;
     }
     

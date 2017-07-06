@@ -5,7 +5,7 @@
  */
 package poo3;
 
-import java.util.*;
+
 /**
  *
  * @author cfp31-06
@@ -14,21 +14,15 @@ public class Persona implements IPersona {
     
     protected String nombre;
     protected String apellido;
-    protected int edad;
-    
-    public Persona (String unNombre, String unApellido, int unEdad){
-        nombre = unNombre;
-        apellido = unApellido;
-        edad = unEdad;               
-    }
+    protected int edad;              
     
     
-    
+   
     public String comoTeLlamas(){
         return nombre;
     }
     
-    public void ahoraTeLLamas(String tuNuevoNombre){
+    public void ahoraTeLlamas(String tuNuevoNombre){
         nombre = tuNuevoNombre;
     }
         
@@ -47,16 +41,5 @@ public class Persona implements IPersona {
     public void ahoraTuEdadEs(int unaEdad){
         edad = unaEdad;
     }
+
 }
-
-
-    
-    
-    
-
-    
-    
-    
-   
-    
-    
