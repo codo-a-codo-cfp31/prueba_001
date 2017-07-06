@@ -10,25 +10,28 @@ package poo3;
  * @author ELSA.BENAviD00953
  */
 public class Persona implements IPersona {
-     protected String nombre = "luis";
-     protected String apellido;
-     protected int edad;
+     protected String nombre="Philip";
+     protected String apellido="Fry";
+     protected int edad=25;
      protected int dni;
- 
+     protected Ropa suRopa;
      
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
          //Scanner unScanner = new Scanner(System.in);
          //nombre = unScanner.next();
+          suRopa = new Ropa();
      }
      
      public Persona(String unNombre, String unApellido){
          nombre = unNombre;
          apellido = unApellido;
+         suRopa = new Ropa();
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
+         suRopa = new Ropa();
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){
@@ -55,4 +58,18 @@ public class Persona implements IPersona {
      public int cualEsTuEdad(){
          return edad;
      }
+      public void ahoraTuEdadEs(int tuNuevaEdad){
+         edad = tuNuevaEdad;
+     }
+     
+     public int cualEsTuDNI(){
+         return dni;
+     }
+     
+     public void ahoraTuDNIEs(int tuNuevoDNI){
+         dni = tuNuevoDNI;
+     }
+       public String toString(){
+        return "Nombre: " + nombre + " Apellido: " + apellido;
+    }
 }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.objetos;
+package poo3;
 /**
  *
  * @author CFP31-15

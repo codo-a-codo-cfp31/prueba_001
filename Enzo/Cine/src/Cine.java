@@ -3,15 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo3;
 
 /**
  *
  * @author ELSA.BENAviD00953
  */
-public class Alumno extends Persona{
-public Alumno(){}
-    
-public Alumno(String unNombre,String unApellido){
-super(unNombre,unApellido);}
+public class Cine {
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        
+    }
 }

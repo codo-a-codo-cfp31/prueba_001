@@ -21,8 +21,7 @@ public class Mascota {
 		
 		String acciones[];
 		int opcion;
-		imprimirmenu();
-              
+	
 		acciones = new String[5];
 		acciones[1] = "Ladrar";
 		acciones[2] = "Saltar";
@@ -30,6 +29,7 @@ public class Mascota {
 		acciones[4] = "Ayuda";
 		acciones[0] = "Salir";
 		do {
+                    imprimirmenu();
 			opcion = 0;
 			opcion = Integer.parseInt(bufEntrada.readLine());
                 System.out.println("***********************************************************************");

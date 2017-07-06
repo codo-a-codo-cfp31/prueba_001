@@ -3,41 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo.objetos;
+package poo4;
 /**
  *
- * @author CFP31-15
+ * @author ELSA.BENAviD00953
  */
-public class Persona implements IPersona{
-     protected String nombre="Bart";
-     protected String apellido="Simspon";
-     protected int edad=40;
+public class Persona implements IPersona {
+     protected String nombre="Philip";
+     protected String apellido="Fry";
+     protected int edad=25;
      protected int dni;
      protected Ropa suRopa;
-      
+     
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
          //Scanner unScanner = new Scanner(System.in);
          //nombre = unScanner.next();
-         suRopa = new Ropa();
+          suRopa = new Ropa();
      }
      
      public Persona(String unNombre, String unApellido){
          nombre = unNombre;
          apellido = unApellido;
-          suRopa = new Ropa();
-     }
-     
-      public Persona(String unNombre, String unApellido,int unaEdad){
-         nombre = unNombre;
-         apellido = unApellido;
-         edad=unaEdad;
-          suRopa = new Ropa();
-     }
-      
-     //Creamos el constructor en persona para la ropa
-     public Persona (String talleRopa, String colorRopa, String tipoRopa){
-        suRopa = new Ropa (talleRopa, colorRopa, tipoRopa);            
+         suRopa = new Ropa();
      }
      
      public Persona(int nuevaEdad){
@@ -49,9 +37,7 @@ public class Persona implements IPersona{
          edad = nuevaEdad;
          dni = nuevoDNI;
      }
-    
-     //Metodos: por cada uno de los datos que vamos a solicitar debemos crear un nuevo metodo para aa uno
-     //NOMBRE
+     
      public String comoTeLlamas(){
          return nombre;
      }
@@ -60,29 +46,31 @@ public class Persona implements IPersona{
          nombre = tuNuevoNombre;
      }
      
-     //APELLIDO
      public String cualEsTuApellido(){
          return apellido;
      }
      
-     public void ahoraTuApellidoEs(String nuevoApellido ){
-         apellido = nuevoApellido;
+     public void ahoraTuApellidoEs(String tuNuevoApellido){
+         apellido = tuNuevoApellido;
      }
      
-     //EDAD
      public int cualEsTuEdad(){
          return edad;
      }
-     public void tuEdad(int nuevaEdad ){
-         edad = nuevaEdad;
+     
+      public void ahoraTuEdadEs(int tuNuevaEdad){
+         edad = tuNuevaEdad;
      }
      
-     //DNI
-     public int cualEsTuDni(){
+     public int cualEsTuDNI(){
          return dni;
      }
      
-     public void tuDni(int nuevoDni ){
-         dni = nuevoDni;
+     public void ahoraTuDNIEs(int tuNuevoDNI){
+         dni = tuNuevoDNI;
      }
+     
+      public String toString(){
+        return "Nombre: " + nombre + " Apellido: " + apellido;
+    }
 }

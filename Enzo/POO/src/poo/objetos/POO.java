@@ -25,9 +25,10 @@ public class POO {
          System.out.println("-Persona");
         ////////////////////////////////////////////////////////////////
         // Una persona
-        IPersona unaPersona = new Persona("Pirulo", "lala");        
+        IPersona unaPersona = new Persona("Pirulo", "Lala",20);        
         System.out.println(unaPersona.comoTeLlamas() + " "+ unaPersona.cualEsTuApellido()+ "  "+ unaPersona.cualEsTuEdad());
-       
+        Ropa ropaPersona=new Ropa("M","Azul","Camisa");
+        System.out.println(ropaPersona.cualEsTuRopa());
         System.out.println("*************************************************************");
          System.out.println("-Otra Persona");
         ////////////////////////////////////////////////////////////////
@@ -41,6 +42,18 @@ public class POO {
         /// El carpintero
         IPersona unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
         System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido() + " " + unCarpintero.cualEsTuEdad());
+        Ropa ropaCarpintero=new Ropa("M","Azul","Camisa");
+        System.out.println(ropaCarpintero.cualEsTuRopa());
+        System.out.println("*************************************************************");
+        
+         System.out.println("*************************************************************");
+         System.out.println("-Futbolista");
+         /////////////////////////////////////////////////////////////////
+        /// El futbolista
+        IPersona unFutbolista=new Futbolista("Rodrigo","Mora",20);
+        System.out.println(unFutbolista.comoTeLlamas()+ " "+ unFutbolista.cualEsTuApellido() + " " + unCarpintero.cualEsTuEdad());
+        Ropa ropaFutbolista=new Ropa("M","Banda Roja","Camiseta");
+        System.out.println(ropaFutbolista.cualEsTuRopa());
         System.out.println("*************************************************************");
     }
 }
