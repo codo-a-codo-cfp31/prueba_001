@@ -52,10 +52,12 @@ public class POO4 {
         System.out.println("Buscar en la lista a la siguiente persona(nombre): ");
         String buscarPersonaPorNombre = scanner.next();
         
+        
         for (int i = 0; i < cantidad_de_personas; i++) {
             IPersona unaPersona = lista_de_personas.get(i);
+            String nombre_de_la_persona = unaPersona.comoTeLlamas();
             
-            if (/* Aca escribir condicion */) {
+            if ( nombre_de_la_persona.equalsIgnoreCase(buscarPersonaPorNombre)  ) {
                 System.out.println("Encontre a la persona con ese nombre");
             }
         }
