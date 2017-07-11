@@ -12,6 +12,7 @@ package poo3;
  * @author cfp31-06
  */
 public interface IPersona  {
+
     
     public String comoTeLlamas();
     public void ahoraTeLlamas(String tuNuevoNombre);

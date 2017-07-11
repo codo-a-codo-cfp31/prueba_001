@@ -10,5 +10,8 @@ package poo3;
  * @author ELSA.BENAviD00953
  */
 public class Profesor extends Persona{
+    public Profesor(){}
     
+    public Profesor(String unNombre,String unApellido){
+    super(unNombre,unApellido);}
 }

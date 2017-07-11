@@ -23,9 +23,10 @@ public class Carpintero extends Persona {
     super(unTalle,"Mismo","MismotipodeRopa");
     }
     
-    public Carpintero(String unNombre, String unApellido, int unEdad){
-       super(unNombre, unApellido);
-       int edad = unEdad;
+    public Carpintero(String unNombre, String unApellido, int unaEdad){
+       super(unNombre, unApellido,unaEdad);
+       edad=unaEdad;
+      
     }
     
     public Carpintero(String talleRopa, String colorRopa, String tipoRopa ){

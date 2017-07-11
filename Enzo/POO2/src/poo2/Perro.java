@@ -10,7 +10,7 @@ package poo2;
  * @author ELSA.BENAviD00953
  */
 public class Perro extends Mamifero implements Cuadrupedo{
-      public void Trotar(){   
+    public void Trotar(){   
       }
     
     public void Moverse(){  

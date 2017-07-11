@@ -23,9 +23,9 @@ public class Credenciales {
     if (user1.equals(user2) && pass1==pass2) {
            System.out.println("CREDENCIAL CORRECTA. BIENVENIDO");
     }else{
-           System.out.println("TIENE "+(n-1)+" INTENTOS");
-           n=n-1;
-           System.out.println("ERROR DE CREDENCIAL. FALLA INGRESO DE USUARIO Y/O CONTRASEÑA");
+   System.out.println("TIENE "+(n-1)+" INTENTOS");
+   n=n-1;
+   System.out.println("ERROR DE CREDENCIAL. FALLA INGRESO DE USUARIO Y/O CONTRASEÑA");
                             }
                         }
                     }
