@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo4;
+package poo5;
 
 
 import java.util.*;/**
@@ -18,6 +18,10 @@ public class Persona implements IPersona {
     public Persona (String unNombre, String unApellido){
         nombre = unNombre;
         apellido = unApellido;
+        
+    }
+    
+    public Persona (){
         
     }
     

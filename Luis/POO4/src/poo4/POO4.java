@@ -52,10 +52,7 @@ public class POO4 {
                 System.out.println("Encontre a la persona con ese nombre");
             }
         }
-        
-        
-        
-        
+
         // TODO code application logic here
         
         //1-Pedir un numero -> la cantidad en una lista
