@@ -17,7 +17,7 @@ public class Persona implements IPersona {
      protected int dni;
      protected Ropa suRopa;
      
-     final static boolean print_ropa_description = false;
+     final static boolean PRINT_ROPA_DESCRIPTION = false;
      
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
@@ -31,7 +31,7 @@ public class Persona implements IPersona {
          apellido = unApellido;
           suRopa = new Ropa();
          
-          if (print_ropa_description) {
+          if (PRINT_ROPA_DESCRIPTION) {
               System.out.println(suRopa.descripcionRopa());
          }
         
@@ -41,7 +41,7 @@ public class Persona implements IPersona {
          edad = nuevaEdad;
          suRopa = new Ropa();
          
-         if (print_ropa_description) {
+         if (PRINT_ROPA_DESCRIPTION) {
               System.out.println(suRopa.descripcionRopa());
          }
         
@@ -52,29 +52,53 @@ public class Persona implements IPersona {
          dni = nuevoDNI;
      }
      
-     public String comoTeLlamas(){
+    /**
+     *
+     * @return
+     */
+     @Override
+     final public String comoTeLlamas(){
          return nombre;
      }
      
-     public void ahoraTeLlamas(String tuNuevoNombre){
+    /**
+     *
+     * @param tuNuevoNombre
+     */
+     @Override
+    public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
      }
      
-     public String cualEsTuApellido(){
+    /**
+     *
+     * @return
+     */
+     @Override
+    public String cualEsTuApellido(){
          return apellido;
      }
      
-     public void ahoraTuApellidoEs(String tuNuevoApellido){
+    /**
+     *
+     * @param tuNuevoApellido
+     */
+     @Override
+    public void ahoraTuApellidoEs(String tuNuevoApellido){
          apellido = tuNuevoApellido;
      }
      
-     public int cualEsTuEdad(){
+    /**
+     *
+     * @return
+     */
+     @Override
+    public int cualEsTuEdad(){
          return edad;
      }
      
+     @Override
      public String toString(){
-         String numero = new String("asdad");
-         String otro = "";
          return "Nombre: " + nombre + " y Apellido:  " + apellido + "edad " + edad;
      }
 }

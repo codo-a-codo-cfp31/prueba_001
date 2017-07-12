@@ -15,13 +15,11 @@ public class POO5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+
         // TODO code application logic here
-        
-        UserProfile perfil = new UserProfile();
-        
-        
-        System.out.println("Perfil de usuario" + perfil.comoTeLlamas());
-        
+        Controlador unControlador = new Controlador();
+                
+        unControlador.Run();
     }
-    
+
 }
