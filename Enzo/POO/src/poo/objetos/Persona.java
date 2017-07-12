@@ -9,9 +9,9 @@ package poo.objetos;
  * @author CFP31-15
  */
 public class Persona implements IPersona{
-     protected String nombre="luis";
-     protected String apellido;
-     protected int edad;
+     protected String nombre="Bart";
+     protected String apellido="Simspon";
+     protected int edad=40;
      protected int dni;
      protected Ropa suRopa;
       
@@ -26,13 +26,23 @@ public class Persona implements IPersona{
          nombre = unNombre;
          apellido = unApellido;
           suRopa = new Ropa();
-         System.out.println(suRopa.descripcionRopa());
+     }
+     
+      public Persona(String unNombre, String unApellido,int unaEdad){
+         nombre = unNombre;
+         apellido = unApellido;
+         edad=unaEdad;
+          suRopa = new Ropa();
+     }
+      
+     //Creamos el constructor en persona para la ropa
+     public Persona (String talleRopa, String colorRopa, String tipoRopa){
+        suRopa = new Ropa (talleRopa, colorRopa, tipoRopa);            
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
          suRopa = new Ropa();
-         System.out.println(suRopa.descripcionRopa());
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){
@@ -74,10 +84,5 @@ public class Persona implements IPersona{
      
      public void tuDni(int nuevoDni ){
          dni = nuevoDni;
-     }
-
-    //Creamos el constructor en persona para la ropa
-     public Persona (String talleRopa, String colorRopa, String tipoRopa){
-        suRopa = new Ropa (talleRopa, colorRopa, tipoRopa);            
      }
 }

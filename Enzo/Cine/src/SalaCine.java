@@ -16,6 +16,7 @@
         super(unNombre, unaDireccion, unHorario);
         nrodesalas = SalasDeCine;       
         }
+    
     public int numeroDeSalas(){
         return nrodesalas;
         }  

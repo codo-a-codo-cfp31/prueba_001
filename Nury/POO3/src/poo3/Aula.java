@@ -42,7 +42,7 @@ public class Aula {
     } 
     
     public List<IPersona> dameLaListaDePersonas(){
-        return lista_de_personas;
+        return lista_de_personas; 
     }
     
     

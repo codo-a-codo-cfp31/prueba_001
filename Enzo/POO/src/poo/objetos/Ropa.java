@@ -16,7 +16,7 @@ public class Ropa {
      
      public Ropa(){
     talle = "untalle";
-    color = "rojo";
+    color = "uncolor";
     tipo = "lala";
     }
      
@@ -27,6 +27,6 @@ public class Ropa {
         tipo = tipoRopa;
     }
     
-     public String descripcionRopa() {
+     public String cualEsTuRopa() {
     return "La ropa es talle: " +  talle + " Color : " +  color;}
 }

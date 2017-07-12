@@ -13,7 +13,7 @@ package poo4;
 public class Persona implements IPersona {
      protected String nombre;
      protected String apellido;
-     protected int edad;
+     protected Integer edad;
      protected int dni;
      protected Ropa suRopa;
      
@@ -73,6 +73,8 @@ public class Persona implements IPersona {
      }
      
      public String toString(){
-         return "Nombre: " + nombre + " y Apellido:  " + apellido;
+         String numero = new String("asdad");
+         String otro = "";
+         return "Nombre: " + nombre + " y Apellido:  " + apellido + "edad " + edad;
      }
 }
