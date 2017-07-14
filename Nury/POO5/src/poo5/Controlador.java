@@ -12,36 +12,48 @@ import java.util.*;
  * @author CFP31-21
  */
 public class Controlador {
+    
+    protected UserProfile perfil;
+
+    public UserProfile getPerfil() {
+        return perfil;
+    }
+    
+    protected IView view;
+
+    public Controlador(IView view) {
+        this.view = view;
+    }
+    
+   
+    
     public void Run(){
-      IPersona Persona = new Persona();
+      IPersona UserProfile  = new Persona();
         
-        System.out.println("Bienvenido, ingrese un usuario");
+        view.Draw("Bienvenido, ingrese un usuario");
         
         Scanner unScanner = new Scanner(System.in);
         
         String username = unScanner.next();
         
-        System.out.println("ingrese una password de 8 caracteres");
+        view.Draw("ingrese una password de 8 caracteres");
         
         String password = unScanner.next();
         
-        System.out.println("ingrese su contraseña nuevamente");
+        view.Draw("ingrese su contraseña nuevamente");
         
         String password2 = unScanner.next();
         
         if (password.equalsIgnoreCase(password2) && (password.length()==8) ){
-        System.out.println("contraseña guardada con exito");
-        }
-        else{
-        System.out.println(); 
+        view.Draw("contraseña guardada con exito");
         }
         
-        System.out.println("ingrese un email");
+        view.Draw("ingrese un email");
         
         String email = unScanner.next();
         
         if (email.contains("@")){
-            System.out.println("email guardado con exito");
+           view.Draw("email guardado con exito");
         }
     }
         
