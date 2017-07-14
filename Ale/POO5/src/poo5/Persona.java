@@ -62,7 +62,7 @@ public class Persona implements IPersona {
      }
      
     /**
-     *
+     *asdakdadad
      * @param tuNuevoNombre
      */
      @Override
