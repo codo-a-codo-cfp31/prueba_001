@@ -7,18 +7,12 @@ package poo5;
 
 /**
  *
- * @author CFP31-21
+ * @author CFP31-04
  */
-public class ViewConsole implements IView{
+public interface IView {
+    
+     public void Draw(String text);
 
-    @Override
-    public void Draw(String texto) {
-        System.out.println(texto);
-    }
-
-    @Override
-    public void Clear() {
-        
-    }
+     public void Clear();
     
 }
