@@ -17,9 +17,19 @@ public class POO5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    Controlador unControlador = new Controlador();
+        
+        IView unaVista =new ViewJPanel();
+    Controlador unControlador = new Controlador(unaVista);
     
     unControlador.Run();
+    
+    //aca termino
+    
+    UserProfile perfildelusuario = unControlador.getPerfil();
+    
+    ControladorLogin otroControlador = new ControladorLogin (unaVista, perfildelusuario);
+    //necesita los dos parametros para poder crear el objeto ya que el contructor de constructorLogin los requiere.
+    otroControlador.Run();
     }
     
 }

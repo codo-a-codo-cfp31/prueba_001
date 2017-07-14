@@ -5,20 +5,25 @@
  */
 package poo5;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /**
  *
- * @author CFP31-21
+ * @author CFP31-04
  */
-public class ViewConsole implements IView{
+public class ViewJPanel implements IView {
 
     @Override
-    public void Draw(String texto) {
-        System.out.println(texto);
+    public void Draw(String text) {
+        JOptionPane.showMessageDialog(null, text);
     }
 
     @Override
     public void Clear() {
-        
+
     }
+    
+    
     
 }
