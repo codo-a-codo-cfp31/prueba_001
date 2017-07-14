@@ -17,9 +17,17 @@ public class POO5 {
     public static void main(String[] args) {
 
         // TODO code application logic here
-        Controlador unControlador = new Controlador();
+        IView unaVista = new ViewJPanel();
+        Controlador unControlador = new Controlador(unaVista);
                 
         unControlador.Run();
+        
+        /// Aca termino
+        UserProfile userProfile = unControlador.getPerfil();
+        
+        ControladorLogin otroControlador = new ControladorLogin(unaVista, userProfile);
+        
+        otroControlador.Run();
     }
 
 }
