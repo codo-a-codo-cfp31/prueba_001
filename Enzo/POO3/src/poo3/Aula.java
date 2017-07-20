@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo3;
-
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 import java.util.*;
 import java.io.*;

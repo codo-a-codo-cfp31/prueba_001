@@ -6,7 +6,7 @@
 package poo.objetos;
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 
 public class Carpintero extends Persona {

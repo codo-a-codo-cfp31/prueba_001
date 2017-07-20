@@ -1,9 +1,10 @@
 package mascota;
 import java.io.*;
-
+/**
+ * @AnalistaSistok args the command line arguments
+ */
 public class Mascota {
-
-	public static void imprimirmenu() {
+public static void imprimirmenu() {
 		System.out.println("***********************************************************************");
 		System.out.println(" Seleccione una de las opciones de acuerdo a lo que más haga su mascota");
 		System.out.println("***********************************************************************");

@@ -5,7 +5,7 @@
  */
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 public class CentroComercial {
     protected String nombre;

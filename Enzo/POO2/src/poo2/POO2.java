@@ -4,14 +4,9 @@
  * and open the template in the editor.
  */
 package poo2;
-
-/**
- *
- * @author ELSA.BENAviD00953
- */
 public class POO2 {
    /**
-     * @param args the command line arguments
+     * @AnalistaSistok args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here

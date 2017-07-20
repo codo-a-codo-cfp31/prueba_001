@@ -1,4 +1,7 @@
 import java.io.*;
+/**
+ * @AnalistaSistok args the command line arguments
+ */
 public class Credenciales {
 	public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));

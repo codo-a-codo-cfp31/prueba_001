@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo3;
-
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 public class Mesa extends Mueble{
     

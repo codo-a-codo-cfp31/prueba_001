@@ -5,19 +5,13 @@
  */
 package poo4;
 import java.util.*;
-/**
- *
- * @author ELSA.BENAviD00953
- */
 public class POO4 {
-    
     /**
-     * @param args the command line arguments
+     * @AnalistaSistok args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner scanner = new Scanner(System.in);
-
         // 1- Pedir un numero => la cantidad en una lista
         // 2- Ingresar Nombre y Apellido de cada persona de esa lista
         // 3- Mostrarlo por pantalla
@@ -39,7 +33,6 @@ public class POO4 {
             IPersona unaPersona = new Persona(nombre_persona, appelido_persona);
             
             lista_de_personas.add(unaPersona);
-            
         }
         
         System.out.println("La lista de personas es: " + lista_de_personas);
@@ -55,6 +48,5 @@ public class POO4 {
                 System.out.println("Encontre a la persona con ese nombre");
             }
         }
-        
     }
 }

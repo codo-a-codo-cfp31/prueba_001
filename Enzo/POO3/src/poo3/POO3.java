@@ -6,14 +6,11 @@
 package poo3;
 import java.util.*;
 import java.io.*;
-/**
- *
- * @author ELSA.BENAviD00953
- */
+
 public class POO3 {
-     /**
-     * @param args the command line arguments
-     */
+/**
+ * @AnalistaSistok  args the command line arguments
+ */
     public static void main(String[] args)throws IOException {
         // TODO code application logic here
 //        Alumno unAlumno = new Alumno();
