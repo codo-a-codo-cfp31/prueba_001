@@ -17,7 +17,7 @@ public class POO5 {
     public static void main(String[] args) {
 
         // TODO code application logic here
-        IView unaVista = new ViewJPanel();
+        IView unaVista = new ViewConsole();//new ViewJPanel();
         Controlador unControlador = new Controlador(unaVista);
                 
         unControlador.Run();
