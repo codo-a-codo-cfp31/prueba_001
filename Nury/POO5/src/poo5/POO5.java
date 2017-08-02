@@ -18,10 +18,20 @@ public class POO5 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        IView unaVista =new ViewJPanel();
-    Controlador unControlador = new Controlador(unaVista);
+        //llamo al objeto instancia y lo imprimo 
+        Singleton UnaInstancia = Singleton.GetSingleton();
+                       
+        System.out.println(UnaInstancia);
+        
+        // aunque creo otra variable instancia siempre sera el mismo objeto.
+        Singleton otraInstancia = Singleton.GetSingleton();
+                       
+        System.out.println(otraInstancia);
+        
+    IView unaVista =new ViewJPanel();
+   Controlador unControlador = new Controlador(unaVista);
     
-    unControlador.Run();
+   unControlador.Run();
     
     //aca termino
     
