@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo5;
+package poo6;
 
-import poo5.IPersona;
+//import poo5.IPersona;
 
 /**
  *
@@ -54,9 +54,9 @@ public class Persona implements IPersona {
         apellido = SuApellido;
      }
     
-    public String toString(){
-        return "Nombre: " + nombre + " Apellido: " + apellido;
-    }
+   public String toString(){
+     return "Nombre: " + nombre + " Apellido: " + apellido;
+   }
 
     public Persona(){
     }
