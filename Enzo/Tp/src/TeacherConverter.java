@@ -1,5 +1,7 @@
 import java.io.*;
-
+/**
+ * @AnalistaSistok args the command line arguments
+ */
 public class TeacherConverter {
 public static void imprimirmenu() {
 System.out.println("*************************************");

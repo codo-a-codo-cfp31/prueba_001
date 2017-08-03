@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo2;
-
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 public class Perro extends Mamifero implements Cuadrupedo{
     public void Trotar(){   

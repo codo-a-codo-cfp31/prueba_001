@@ -6,7 +6,7 @@
 package poo4;
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 public class Persona implements IPersona {
      protected String nombre="Philip";
@@ -14,6 +14,7 @@ public class Persona implements IPersona {
      protected int edad=25;
      protected int dni;
      protected Ropa suRopa;
+     final static boolean print_ropa= false;
      
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
@@ -26,11 +27,17 @@ public class Persona implements IPersona {
          nombre = unNombre;
          apellido = unApellido;
          suRopa = new Ropa();
+         if (print_ropa) {
+              System.out.println(suRopa.cualEsTuRopa());
+         }
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
          suRopa = new Ropa();
+         if (print_ropa) {
+              System.out.println(suRopa.cualEsTuRopa());
+         }
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){
