@@ -1,5 +1,8 @@
 import java.io.*;
 import java.util.*;
+/**
+ * @AnalistaSistok args the command line arguments
+ */
 public class ImprimirMes {
 
 	public static String mestexto(int numerodelmes) {

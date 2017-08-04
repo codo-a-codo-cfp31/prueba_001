@@ -6,7 +6,7 @@
 package poo.objetos;
 /**
  *
- * @author CFP31-15
+ * @AnalistaSistok
  */
 public class Persona implements IPersona{
      protected String nombre="Bart";

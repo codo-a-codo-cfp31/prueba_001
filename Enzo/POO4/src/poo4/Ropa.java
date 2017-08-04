@@ -6,7 +6,7 @@
 package poo4;
 /**
  *
- * @author CFP31-15
+ * @AnalistaSistok
  */
 
 public class Ropa {

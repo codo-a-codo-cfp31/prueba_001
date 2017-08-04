@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo4;
-
 /**
  *
- * @author ELSA.BENAviD00953
+ * @AnalistaSistok
  */
 public interface IPersona {
      public String comoTeLlamas();

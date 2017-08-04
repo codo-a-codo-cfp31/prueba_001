@@ -5,7 +5,6 @@
  */
 package poo5;
 
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**

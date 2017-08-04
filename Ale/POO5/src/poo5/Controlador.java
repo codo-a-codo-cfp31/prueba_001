@@ -15,6 +15,10 @@ public class Controlador {
 
     protected UserProfile perfil;
 
+    public UserProfile getPerfil() {
+        return perfil;
+    }
+
     protected IView view;
 
     public Controlador(IView view) {

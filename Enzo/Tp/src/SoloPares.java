@@ -1,5 +1,7 @@
 import java.io.*;
-
+/**
+ * @AnalistaSistok args the command line arguments
+ */
 public class SoloPares {
 
 	public static void main(String args[]) {
