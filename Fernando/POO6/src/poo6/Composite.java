@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo5;
-
-import javax.swing.JOptionPane;
+package poo6;
 
 /**
  *
  * @author CFP31-15
  */
-public class ViewJPanel implements IView {
-
-    @Override
-    public void Draw(String text) {
-        JOptionPane.showMessageDialog(null, text);
-    }
-
-    @Override
-    public void Clear() {
+public class Composite {
+    public void Add(Composite objectoParaAgregar){
+        
     }
     
+    public void Remove(Composite objectoParaEliminar) {
+        
+    }
+    
+    public Object getObjectList(){
+        return null;
+    }
 }
