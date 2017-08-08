@@ -12,7 +12,7 @@ import java.util.*;
  * @author CFP31-21
  */
 public class Empleado extends Persona implements IComposite {
-
+//el Icoposite es el tipo de dato o mejor dicho el objeto que puede ser el Empleado.
     protected List<IComposite> ListaDeEmpleados;
     protected Integer salario;
     protected Integer ID;
