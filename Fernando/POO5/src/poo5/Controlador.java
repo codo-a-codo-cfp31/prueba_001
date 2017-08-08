@@ -12,14 +12,15 @@ import java.util.Scanner;
  * @author CFP31-15
  */
 public class Controlador {
-    
+
     protected UserProfile perfil;
+
     protected IView view;
 
     public Controlador(IView view) {
         this.view = view;
     }
-        
+
     public void Run() {
         Scanner unScanner = new Scanner(System.in);
         String username = "";

@@ -7,9 +7,9 @@ package poo5;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
  */
-public class ViewConsola implements IView{
+public class ViewConsole implements IView{
 
     @Override
     public void Draw(String text) {
@@ -18,8 +18,9 @@ public class ViewConsola implements IView{
 
     @Override
     public void Clear() {
+  
     }
-    
 
+    
     
 }

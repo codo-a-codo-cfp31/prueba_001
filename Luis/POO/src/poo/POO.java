@@ -26,7 +26,6 @@ public class POO {
         
         Carpintero unCarpintero = new Carpintero("Ruidoso", "Sarza", 34);
         
-<<<<<<< HEAD
         unaPersona.ahoraTuEdadEs(25);
         
         System.out.println(unaPersona.cualEsTuEdad());
@@ -37,37 +36,12 @@ public class POO {
         
         
         System.out.println("");
-        
-        
-        Carpintero unCarpintero = new Carpintero();
-        
-        unCarpintero.ahoraTeLlamas("Ruidoso");
-        
-        System.out.println(unCarpintero.comoTeLlamas());
-        
-        unCarpintero.ahoraTuApellidoEs("Romero");
-        
-        System.out.println(unCarpintero.cualEsTuApellido());
-        
-        unCarpintero.ahoraTuEdadEs(28);
-        
-        System.out.println(unCarpintero.cualEsTuEdad());
-        
-        unCarpintero.ahoraTuDniEs(23567489);
-        
-        System.out.println(unCarpintero.cualEsTuDni());
-        
-        System.out.println("");
 
         
         Persona unaPersonaConRopa = new Persona("talle", "cololala", "tipolalala");
         
         Futbolista unFutbolista = new Futbolista("luis", "vera", 28);
-=======
-        //unCarpintero.ahoraTeLlamas("Ruidoso");
->>>>>>> ebe6746fe1e00a4f11dce1835f5b364393d7180b
-        
-        System.out.println(unCarpintero.comoTeLlamas()+ " "+ unCarpintero.cualEsTuApellido());
+
         
     }
     

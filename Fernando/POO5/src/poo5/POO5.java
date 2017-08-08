@@ -21,6 +21,13 @@ public class POO5 {
         Controlador unControlador = new Controlador(unaVista);
                 
         unControlador.Run();
+        
+        /// Aca termino
+        UserProfile userProfile = unControlador.getPerfil();
+        
+        ControladorLogin otroControlador = new ControladorLogin(unaVista, userProfile);
+        
+        otroControlador.Run();
     }
 
 }
