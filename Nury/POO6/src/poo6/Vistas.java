@@ -13,6 +13,14 @@ import java.util.List;
  */
 public class Vistas implements IComposite<Vistas>{
     protected List<Vistas> Lista;
+    
+    public Vistas(){ 
+        vistaSwing = new VistaPrincipal();
+        vistaSwing.getjTextField1().setText("Hola");
+        vistaSwing.setVisible(true);
+    }
+    
+    protected VistaPrincipal vistaSwing;
 
     @Override
     public void Add(Vistas objetoParaAgregar) {
