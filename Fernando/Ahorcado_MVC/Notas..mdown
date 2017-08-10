@@ -1,0 +1,436 @@
+// Ahorcado en Java 
+
+// 1) 
+// Clase principal main
+
+package ahorcado;
+
+public class Ahorcado {
+
+    public static void main(String[] args) {
+        Tablero tablero = new Tablero();
+        tablero.imprimir();
+        Jugador jugador = new Jugador();
+        boolean ganador = false;
+
+        for (int i = 1; i <= tablero.getCantidadElementos() * 2; i++) {
+            String letra = jugador.pedirLetra();
+            tablero.verificar(letra);
+            tablero.imprimir();
+            if (tablero.verificarGanador()) {
+                ganador = true;
+                break;
+            }
+        }
+        if (ganador) {
+            System.out.println("HAZ GANADO!!!");
+            
+        }else{
+            System.out.println("VUELVE A INTENTARLO!!!");
+        }
+    }
+
+}
+
+// Clase jugador
+
+package ahorcado;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
+public class Jugador {
+
+        
+    public String pedirLetra(){
+        String valor = " ";
+        try {
+            InputStreamReader isr = new InputStreamReader(System.in);
+            BufferedReader br = new BufferedReader (isr);
+            System.out.print("Ingrese letra   : ");
+            valor = br.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(Jugador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return valor;
+    }
+}
+// Clase tablero
+
+package ahorcado;
+
+public class Tablero {
+
+    private String[] palabraAAdivinar = {"J", "A", "V", "A"};
+    private String[] palabraAdivinada;
+
+    public Tablero() {
+        palabraAdivinada = new String[palabraAAdivinar.length];
+        limpiar();
+    }
+
+    public void limpiar() {
+        for (int i = 0; i < palabraAdivinada.length; i++) {
+            palabraAdivinada[i] = "";
+        }
+    }
+
+    public void imprimir() {
+        for (int i = 0; i < palabraAdivinada.length; i++) {
+            if (palabraAdivinada[i].equals("")) {
+                System.out.print("_");
+            } else {
+                System.out.print(palabraAdivinada[i]);
+            }
+
+        }
+        System.out.println("");
+    }
+
+    public void verificar(String letra) {
+        for (int i = 0; i < palabraAAdivinar.length; i++) {
+            if (palabraAAdivinar[i].equalsIgnoreCase(letra)) {
+                palabraAdivinada[i] = letra;
+            }
+        }
+    }
+
+    public int getCantidadElementos() {
+        return palabraAAdivinar.length;
+    }
+
+    public boolean verificarGanador() {
+        boolean valor = true;
+        for (int i = 0; i < palabraAdivinada.length; i++) {
+            if (palabraAdivinada[i].equals("")) {
+                valor = false;
+
+            }
+
+        }
+        return valor;
+
+    }
+
+}
+
+// 2) 
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Ahorcado {
+
+    public Ahorcado() {
+        Scanner scanner = new Scanner(System.in);
+        String [] listaPalabras = {"avion","barco","computadora","dinosaurio","elefante","foca","gato","hielo","iguana","jabon"};
+        
+        //Elegimos un numero random, que sera el numero de palabra que legiremos de la lista de palabras
+        int numeroRandom = 1 + new Random().nextInt(listaPalabras.length);
+        
+        String palabraEscogida = listaPalabras[numeroRandom];//Guardamos la palabra escogida por la pc en una variable
+        System.out.println("Esta palabra tiene "+palabraEscogida.length()+" letras");
+        String[] palabra = new String[palabraEscogida.length()];//si se llena todos los espacios de este array es que ha ganado el juego
+        imprimirPalabra(palabra);//Mostramos las rayitas
+        int vidas = 15;//Contador de vidas
+        
+        while(true) {
+            System.out.println("*************************************************");
+            System.out.println("Escoge una letra");
+            String letraElegidaPorUsuario = scanner.nextLine();
+            String[] letras = palabraEscogida.split("");
+            int contador = 0;
+            
+            boolean acertoAlguna = false;
+            //Recorremos cada letra de la palabra para comprobar si hay una igualdad
+            for (String letra : letras) {
+                if(letraElegidaPorUsuario.equals(letra)) {
+                    palabra[contador] = letraElegidaPorUsuario;
+                    acertoAlguna = true;
+                }
+                contador++;
+            }
+            if(acertoAlguna) {
+                System.out.println("Has acertado una palabra");
+                System.out.println("Te quedan "+vidas+" vidas");
+            }
+            else{
+                vidas --;
+                System.out.println("No has acertado ninguna palabra");
+                if(vidas == 0) {
+                    System.out.println("Se te acabaron las vidas, quedas ahorcado x(");
+                    break;
+                }
+                else{
+                    System.out.println("Te quedan "+vidas+" vidas");
+                }
+            }
+            System.out.println("Hasta el momento vas: ");
+            imprimirPalabra(palabra);
+            contador = 0;
+            acertoAlguna = false;
+            if (gano(palabra)){
+                System.out.println("Has completado la palabra");
+                break;
+            }
+        }
+    }
+    
+    public void imprimirPalabra(String[] palabra) {
+        //Este metodo imprime las letras que ha acertado el usuario hasta el momento.
+        for (String letra : palabra) {
+            if(letra != null) {
+                System.out.print(letra);
+            }
+            else{
+                System.out.print("-");
+            }
+        }
+        System.out.println("");
+    }
+    
+    public boolean gano(String[] palabra) {
+        boolean gano = true;
+        
+        for (String letra : palabra) {
+            if(letra == null) {
+                gano = false;
+                break;
+            }
+        }
+        
+        return gano;
+    }
+    
+    public static void main(String[] args) {
+        //String[] asd = new String[10];
+        new Ahorcado();
+    }
+}
+
+// 3) 
+
+package SistemaEscolar;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+/**
+ * @web <a href="http://www.facebook.com/oskr2013
+" title="http://www.facebook.com/oskr2013
+">http://www.facebook.com/oskr2013
+</a> * @author Oskr
+ */
+public class Ahorcado {
+    JTextField jt;
+    JLabel lb;
+    JLabel lb2;
+    private boolean play =false;
+    private String[] diccionario = {"CANTAR","BAILAR","REIR","APLAUDIR","APRENDER","GANAR","ESCRIBIR","APUNTAR","ACEPTAR","ACTUAR","PERMITIR","PREGUNTAR","EVITAR","CAMBIAR","LIMPIAR","RECOLECTAR","VENIR","COMPRAR","COMER","RECLAMAR","CERRAR","MONTAR","TREPAR","ELEGIR","PODER","LLAMAR","CONSTRUIR"};
+    private char[] palabra_secreta;
+    private char[] palabra;
+    int intentos = 0;
+    boolean cambios=false;
+    public ahorcado(){}
+    public ahorcado(JTextField texto, JLabel emo, JLabel emo2){
+        System.out.println("Juego del ahorcado por Oskr");
+        this.palabra_secreta = Random().toCharArray();
+        String s="";
+        //llena un string con "_"
+        for(int i=0;i<=this.palabra_secreta.length-1;i++){
+          s = s + "_";
+          System.out.print(this.palabra_secreta[i]); 
+        }
+       
+        this.palabra = s.toCharArray();
+        this.jt=texto;
+        this.lb= emo;
+        this.lb2= emo2;
+        jt.setText(s);
+        lb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/emo0.jpg")));
+        lb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ahorcado_0.jpg")));
+        this.play=true;
+    }
+    //evalua el juego de acuerdo a los caracteres que se le pase
+    public void evaluar(char word){
+        if(play){
+        String p="";
+        //controla que aun se pueda jugar
+        if(this.intentos==6){
+           JOptionPane.showMessageDialog(null,"GAME OVER, MENSO!!!---JUEGO TERMINADO, MENSO!!!");
+        }
+        else{
+           //evalua caracter por caracter
+           for(int j=0;j<=this.palabra_secreta.length-1;j++){
+             //si el caracter se encuentra en la palabra secreta
+             if(this.palabra_secreta[j]==word){
+                this.palabra[j]= word;//se asigna para que se pueda ver en pantalla
+                this.cambios=true;
+             }
+             p = p + this.palabra[j];
+           }//fin for
+           //si no se produjo ningun cambio, quiere decir que el jugador se equivoco
+           if(this.cambios==false){
+             this.intentos+=1; //se incrementa
+             lb.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/emo"+this.intentos+".jpg")));
+             lb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ahorcado_"+this.intentos+".jpg")));
+             if(this.intentos<6){
+                JOptionPane.showMessageDialog(null,"MENSO!, te quedan " + (6-this.intentos) + " intentos más");
+             }
+           }else{
+               this.cambios=false;
+           }
+           this.jt.setText(p);
+           //comprobamos el estado del juego
+           gano();
+         }
+       }
+    }
+    private void gano(){
+        boolean win=false;
+        for(int i=0;i<=this.palabra_secreta.length-1;i++){
+            if(this.palabra[i]==this.palabra_secreta[i]){
+                win=true;
+            }else{
+                win=false;
+                break;
+            }
+        }
+        if(win){
+             JOptionPane.showMessageDialog(null,"Ganaste, Felicidades!!! \n espera tu premio");
+             lb2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/win.jpg")));
+        }
+    }
+    private String Random(){
+    int num = (int)(Math.random()*(diccionario.length));
+    return diccionario[num];
+    }
+}
+
+// 4) 
+
+package Ahorcado;
+ 
+import static java.lang.System.*;
+import java.io.IOException;
+import java.util.*;
+ 
+public class Practica {
+static int coinciden = 0;
+String [] Palabras = {"Java", "PHP"};
+static int numeroPalabra = (int) Math.round(Math.random());
+static char [] LetrasAdivinadas;
+static String charIntroducido = "";
+static int intentos;
+static String palabraActual;
+static int posicionAcierto;
+static char [] Letras;
+static int terminar;
+ 
+//Metodo para pedir letra
+public char introducirLetra(){
+Scanner entrada = new Scanner(in);
+out.print("Introduzca la letra: ");
+String cadena = entrada.next();
+//char [] charIntr = cadena.toCharArray();
+charIntroducido = charIntroducido + cadena.charAt(0) + " - ";
+ 
+return cadena.charAt(0);
+}
+ 
+//Metodo para comparar letra introducida con una palabra del array de palabras
+public char coincide(char charIntroducido) throws IOException{
+palabraActual = Palabras[numeroPalabra];
+Letras = palabraActual.toCharArray();
+for (int i = 0; i < Letras.length; i++){
+if (charIntroducido == Letras[i]){
+posicionAcierto = i;
+coinciden = 1;
+//Letras[i] = charIntroducido;
+}
+ 
+}
+if (coinciden != 1){
+intentos++;
+out.println("No coincide. \nNumero de Intentos: " + intentos );
+}
+return charIntroducido;
+}
+ 
+//Metodo para mostrar las rayas segun el tamaño de la palabra del array
+public void inicializarPalabra() {
+int indiceArray = Palabras[numeroPalabra].length();
+LetrasAdivinadas = new char[indiceArray];
+for (int i = 0; i < LetrasAdivinadas.length; i++){
+LetrasAdivinadas[i] = '_';
+out.print(LetrasAdivinadas[i] + " ");
+} out.println("\n ");
+}
+ 
+//Metodo para cambiar la raya por la letra correspondiente
+public void intercambiarLetra(char charIntroducido) {
+int pos = 0;
+do {
+pos = palabraActual.indexOf(charIntroducido, pos);
+if (pos != -1) {
+LetrasAdivinadas[pos] = charIntroducido;
+pos++;
+}
+}
+while (pos != -1);
+}
+ 
+public void mostrarJuego() {
+for (int i = 0; i < Letras.length; i++) {
+System.out.print(LetrasAdivinadas[i] + " ");
+}
+System.out.println();
+System.out.println("Letras que ya introduciste: " + charIntroducido);
+}
+ 
+public int fin() {
+int res = 0;
+for ( int i = 0; i < Letras.length; i++) {
+if (LetrasAdivinadas[i] == '_') {
+res = 1;
+break;
+}
+else {
+res = 0;
+}
+}
+System.out.println();
+//System.out.println(res);
+return res;
+}
+ 
+public static void main(String[]args) throws IOException {
+ 
+while( intentos < 5) {
+ 
+char c;
+Practica practica = new Practica();
+practica.inicializarPalabra();
+/*
+practica.coincide(charIntroducido);
+practica.intercambiarLetra(charIntroducido);
+practica.mostrarJuego();
+practica.fin();
+*/
+do {
+c = practica.introducirLetra();
+practica.coincide(c);
+practica.intercambiarLetra(c);
+practica.mostrarJuego();
+}
+while (practica.fin() == 1);
+out.println("Felicidades");
+numeroPalabra = (int) Math.round(Math.random());
+ 
+}
+}
+}
