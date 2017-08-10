@@ -22,27 +22,9 @@ public class POO6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        Empleado Gerente = new Empleado(50000,1,6);
-        Empleado SubGerente = new Empleado(25000,2,8);
-        Empleado Esclavo = new Empleado(10000,3,12);
-        Empleado elDelivery = new Empleado (7000,4,10);
-        Empleado elQueLimpia = new Empleado (6000,5,12);
-        
-        System.out.println(Gerente);
-        
-        Gerente.Add(SubGerente);
-                 
-        SubGerente.Add(Esclavo);
-        
-        Esclavo.Add(elDelivery);
-        
-        elDelivery.Add(elQueLimpia);
-        
-        System.out.println(Gerente);
-                
-        
-        
+       Controlador unControlador = new Controlador(new Vistas());
+       
+       unControlador.Run();
     }
     
 }

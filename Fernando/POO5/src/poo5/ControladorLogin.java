@@ -5,10 +5,43 @@
  */
 package poo5;
 
+import java.util.Scanner;
+
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
  */
 public class ControladorLogin {
-    
+
+    protected IView view;
+    protected UserProfile profile;
+
+    public ControladorLogin(IView view, UserProfile profile) {
+        this.view = view;
+        this.profile = profile;
+    }
+
+    public void Run() {
+        Scanner unScanner = new Scanner(System.in);
+        String username = "";
+        String password = "";
+
+        Boolean registrationCompleted = Boolean.FALSE;
+
+        do {
+            view.Draw("Ingrese nombre de usuario");
+            username = unScanner.next();
+
+            view.Draw("Ingrese contraseña");
+            password = unScanner.next();
+            
+            if ( (username.compareTo(profile.getUsername()) == 0 ) && (password.compareTo(profile.getPassword())==0)) {
+                view.Draw("Ingreso correcto");
+                registrationCompleted = Boolean.TRUE;
+            } else {
+                view.Draw("Datos ingresados erroneos");
+            }
+            
+        } while (registrationCompleted);
+    }
 }
