@@ -15,12 +15,27 @@ public class POO5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
+        
+        Singleton unaInstancia  = Singleton.getInstance();
+        
+        System.out.println(unaInstancia);
+        
+        Singleton otraInstancia  = Singleton.getInstance();
+        
+        System.out.println(otraInstancia);
+        
         // TODO code application logic here
-        IView unaVista = new ViewJPanel();
+        IView unaVista = new ViewConsole();//new ViewJPanel();
         Controlador unControlador = new Controlador(unaVista);
                 
         unControlador.Run();
+        
+        /// Aca termino
+        UserProfile userProfile = unControlador.getPerfil();
+        
+        ControladorLogin otroControlador = new ControladorLogin(unaVista, userProfile);
+        
+        otroControlador.Run();
     }
 
 }
