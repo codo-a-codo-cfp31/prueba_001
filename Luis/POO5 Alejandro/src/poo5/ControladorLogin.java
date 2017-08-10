@@ -19,6 +19,8 @@ public class ControladorLogin {
     public ControladorLogin(IView view, UserProfile perfil) {
         this.view = view;
         this.perfil = perfil;
+        
+        
     }
     
     public void Run(){
