@@ -219,12 +219,7 @@ package SistemaEscolar;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-/**
- * @web <a href="http://www.facebook.com/oskr2013
-" title="http://www.facebook.com/oskr2013
-">http://www.facebook.com/oskr2013
-</a> * @author Oskr
- */
+
 public class Ahorcado {
     JTextField jt;
     JLabel lb;
