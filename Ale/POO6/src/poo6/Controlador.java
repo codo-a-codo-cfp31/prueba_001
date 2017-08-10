@@ -24,6 +24,5 @@ public class Controlador {
         gerente.Add(subgerente);
 
         System.out.println(gerente);
-        Math.random()
     }
 }
