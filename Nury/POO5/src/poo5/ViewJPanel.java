@@ -4,8 +4,8 @@
  * and open the template in the editor.
  */
 package poo5;
-import javax.swing.JDialog;
-import javax.swing.JDesktopPane;
+//import javax.swing.JDialog;
+//import javax.swing.JDesktopPane;
 import javax.swing.JOptionPane;
 /**
  *

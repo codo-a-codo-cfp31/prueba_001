@@ -5,12 +5,11 @@
  */
 package poo5;
 
-import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
  */
 public class ViewJPanel implements IView {
 
@@ -21,9 +20,6 @@ public class ViewJPanel implements IView {
 
     @Override
     public void Clear() {
-
     }
-    
-    
     
 }
