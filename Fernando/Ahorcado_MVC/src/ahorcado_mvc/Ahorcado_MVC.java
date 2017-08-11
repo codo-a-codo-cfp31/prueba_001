@@ -10,10 +10,7 @@ package ahorcado_mvc;
  * @author ffhernan
  */
 public class Ahorcado_MVC {
-
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         // TODO code application logic here
     }
