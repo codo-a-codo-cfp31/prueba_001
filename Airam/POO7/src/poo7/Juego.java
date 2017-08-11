@@ -5,31 +5,58 @@
  */
 package poo7;
 
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author AIRAM
  */
 public class Juego{
     
-    int intentos;
-    String palabraIngresada="";
-    Juego compara=new Juego();
+    private List<String> Palabras;
+    String Palabra;
+
+  
     
-    
-    public void Juego(){
-        
-        Scanner unScanner = new Scanner(System.in);
-        System.out.println("Inserta una palabra");
-        palabraIngresada = unScanner.next();
-        
+    public Juego(){
+        listaPalabras();
     }
-    
-    public void addPalabraAdivina(Palabra unaPalabra){
-    
+     
+        
+    final public void listaPalabras(){
+       Palabras = new ArrayList<>(); 
+       
+       Palabras.add("Glaucoma");
+       Palabras.add("Arquitecto");
+       Palabras.add("Media");
+       Palabras.add("Sauna");
+       Palabras.add("Olla");
+       Palabras.add("Piso");
+       Palabras.add("Cama");
+       Palabras.add("Gorra");
+       Palabras.add("Gato");
+       Palabras.add("Cono");
+       Palabras.add("Gas");
+       
+       System.out.println(Palabras);
+         
     }
+      
+     public void Aleatorio(){
+        
+        double NumAleatorio = (int)(Math.random()*10);
+        System.out.println(NumAleatorio);
+        Palabra= (Palabras.get((int) NumAleatorio));
+        System.out.println(Palabra);
+       
+    }
+     
+     
+   
 
     
-  
+
+   
     
 }

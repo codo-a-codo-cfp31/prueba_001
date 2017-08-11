@@ -16,11 +16,19 @@ public class POO7 {
      */
     public static void main(String[] args) {
         
-       
-        PalabraAdivina unaPalabra=new PalabraAdivina();
+        Juego unaLista=new Juego();
         
-        unaPalabra.Aleatorio();
         
+        unaLista.listaPalabras();
+        
+        unaLista.Aleatorio();
+        
+        
+        
+        
+         
+        
+        // TODO code application logic here
     }
     
 }
