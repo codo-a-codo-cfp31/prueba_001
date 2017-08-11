@@ -17,21 +17,18 @@ public class POO7 {
     public static void main(String[] args) {
         
         Juego unaLista=new Juego();
-        PalabraAdivina unaPalabra= new PalabraAdivina();
         
-        unaLista.Juego();
+        
+        unaLista.listaPalabras();
         
         unaLista.Aleatorio();
         
-        unaLista.contarPalabra();
         
-        unaLista.mostrarPalabra();
         
-        unaPalabra.PalabraAdivina();
         
-        unaPalabra.contarPalabra();
+         
         
-     
+        // TODO code application logic here
     }
     
 }

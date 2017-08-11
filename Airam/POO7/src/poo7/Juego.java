@@ -12,21 +12,19 @@ import java.util.List;
  *
  * @author AIRAM
  */
-public class Juego implements IPalabra{
+public class Juego{
     
     private List<String> Palabras;
     String Palabra;
 
-    public String getPalabra() {
-        return Palabra;
-    }
-
-    public void setPalabra(String Palabra) {
-        this.Palabra = Palabra;
+  
+    
+    public Juego(){
+        listaPalabras();
     }
      
         
-    public void Juego(){
+    final public void listaPalabras(){
        Palabras = new ArrayList<>(); 
        
        Palabras.add("Glaucoma");
@@ -50,20 +48,12 @@ public class Juego implements IPalabra{
         double NumAleatorio = (int)(Math.random()*10);
         System.out.println(NumAleatorio);
         Palabra= (Palabras.get((int) NumAleatorio));
+        System.out.println(Palabra);
        
     }
      
      
-    @Override
-    public void contarPalabra() {
-       System.out.println("La Palabra para Adivinar tiene " +Palabra.length()+ " caracteres");
-    }
-
-    @Override
-    public void mostrarPalabra() {
-        System.out.println(Palabra);
-        
-    }
+   
 
     
 
