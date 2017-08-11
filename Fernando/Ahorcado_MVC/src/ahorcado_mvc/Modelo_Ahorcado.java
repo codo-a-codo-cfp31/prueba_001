@@ -26,8 +26,6 @@ public class Modelo_Ahorcado {
        listaPalabras.add("ESDRUJULA");
        listaPalabras.add("DINOSAURIO");
        listaPalabras.add("CASA" );
-       
-       System.out.println(listaPalabras);
     }
     
     public String getPalabra() {
@@ -40,7 +38,7 @@ public class Modelo_Ahorcado {
       
      public void Aleatorio(){
         int NumAleatorio = (int)(Math.random()*10);
-        Palabra= (listaPalabras.get((int) NumAleatorio));
+        Palabra=(listaPalabras.get((int) NumAleatorio));
     }
     
     public int contarPalabra() {
