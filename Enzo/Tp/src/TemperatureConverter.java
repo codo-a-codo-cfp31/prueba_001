@@ -1,8 +1,12 @@
 import java.io.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok 
  */
 public class TemperatureConverter {
+/**
+* 
+*@param  args the command line arguments
+*/
     public static void main(String args[]) throws IOException {
 		BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
 		double c;

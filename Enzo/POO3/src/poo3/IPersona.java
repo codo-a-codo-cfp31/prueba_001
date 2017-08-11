@@ -6,7 +6,7 @@
 package poo3;
 /**
  *
- * @AnalistaSistok
+ *@author @AnalistaSistok
  */
 public interface IPersona {
      public String comoTeLlamas();

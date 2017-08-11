@@ -5,7 +5,7 @@
  */
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
 public class CentroComercial {
     protected String nombre;

@@ -6,7 +6,7 @@
 package poo3;
 /**
  *
- * @AnalistaSistok
+ *@author @AnalistaSistok
  */
 import java.util.*;
 import java.io.*;

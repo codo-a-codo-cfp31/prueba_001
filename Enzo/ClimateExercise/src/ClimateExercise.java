@@ -5,7 +5,7 @@
  */
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
 import java.io.*;
 public class ClimateExercise {

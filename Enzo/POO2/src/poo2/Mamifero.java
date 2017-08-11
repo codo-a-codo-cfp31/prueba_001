@@ -6,8 +6,7 @@
 package poo2;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
 public class Mamifero extends Animal{
-    
-}
+    }

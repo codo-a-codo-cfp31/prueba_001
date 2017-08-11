@@ -6,7 +6,7 @@
 
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
 public class Cine {
     /**

@@ -1,8 +1,12 @@
 import java.io.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok 
  */
 public class TeacherConverter {
+/**
+* 
+*@param  args the command line arguments
+*/
 public static void imprimirmenu() {
 System.out.println("*************************************");
 System.out.println(" Seleccione una de las opciones");

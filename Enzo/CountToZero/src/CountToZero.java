@@ -6,12 +6,12 @@
 import java.util.Scanner;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
 public class CountToZero {
 /**
-     * @param args the command line arguments
-     */
+ * @param args the command line arguments
+*/
    
     public static void main(String[] args) {
         // TODO code application logic here

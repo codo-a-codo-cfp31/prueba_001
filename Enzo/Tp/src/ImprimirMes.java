@@ -1,10 +1,13 @@
 import java.io.*;
 import java.util.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok 
  */
 public class ImprimirMes {
-
+/**
+* 
+*@param  args the command line arguments
+*/
 	public static String mestexto(int numerodelmes) {
 		String imprimirmes;
 		switch (numerodelmes) {

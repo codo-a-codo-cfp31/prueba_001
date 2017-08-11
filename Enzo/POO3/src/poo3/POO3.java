@@ -6,10 +6,13 @@
 package poo3;
 import java.util.*;
 import java.io.*;
-
+/**
+ *
+ *@author @AnalistaSistok
+ */
 public class POO3 {
 /**
- * @AnalistaSistok  args the command line arguments
+ * @param   args the command line arguments
  */
     public static void main(String[] args)throws IOException {
         // TODO code application logic here

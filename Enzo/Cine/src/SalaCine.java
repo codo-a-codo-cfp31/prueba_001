@@ -5,7 +5,7 @@
  */
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok
  */
    public class SalaCine extends CentroComercial{
     protected int nrodesalas;
