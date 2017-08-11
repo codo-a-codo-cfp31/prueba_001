@@ -3,12 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo6;
+package poo7;
 
 /**
  *
- * @author CFP31-15
+ * @author AIRAM
  */
-public class Vistas implements IComposite<Vistas>{
+public interface IPalabra {
+    
+    public void contarPalabra();
+    
+   public void mostrarPalabra();
+
     
 }

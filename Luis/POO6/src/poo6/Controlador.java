@@ -14,7 +14,7 @@ public class Controlador {
     protected Vista unaVista;
 
     public Controlador(Vista unaVista) {
-       this.unaVista = unaVista;
+        this.unaVista = unaVista;
     }
 
     public void Run() {
@@ -24,6 +24,5 @@ public class Controlador {
         gerente.Add(subgerente);
 
         System.out.println(gerente);
-        Math.random()
     }
 }

@@ -16,12 +16,12 @@ public class POO6 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Empleado gerente = new Empleado(10000, 1, "Lun-Jue");
-        Empleado subgerente = new Empleado(9000, 3, "Lun-Vie");
-
-        gerente.Add(subgerente);
-
-        System.out.println(gerente);
+       
+        
+        Controlador unControlador = new Controlador(new Vista());
+        
+        unControlador.Run();
+        
     }
 
 }

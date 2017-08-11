@@ -17,15 +17,8 @@ public class Modelo_Ahorcado {
     
     String Palabra;
     private List<String> listaPalabras;
-
-    public String getPalabra() {
-        return Palabra;
-    }
-    public void setPalabra(String Palabra) {
-        this.Palabra = Palabra;
-    }
-    
-    public void Modelo_Ahorcado(){
+  
+    private void Modelo_Ahorcado(){
        listaPalabras = new ArrayList<>(); 
        
        listaPalabras.add("ENALAPRIL");
@@ -36,22 +29,25 @@ public class Modelo_Ahorcado {
        
        System.out.println(listaPalabras);
     }
-      
-     private void Aleatorio(){
-         
-        int NumAleatorio = (int)(Math.random()*10);
-        System.out.println(NumAleatorio);
-        Palabra= (listaPalabras.get((int) NumAleatorio));
-       
+    
+    public String getPalabra() {
+        return Palabra;
     }
-     
-    public void contarPalabra() {
-       System.out.println("La Palabra para Adivinar tiene " +Palabra.length()+ " caracteres");
+    
+    public void setPalabra(String Palabra) {
+        this.Palabra = Palabra;
+    }
+      
+     public void Aleatorio(){
+        int NumAleatorio = (int)(Math.random()*10);
+        Palabra= (listaPalabras.get((int) NumAleatorio));
+    }
+    
+    public int contarPalabra() {
+       return Palabra.length();
     }
 
     public void mostrarPalabra() {
-        System.out.println(Palabra);
-        
-    }
-    
+        System.out.println(Palabra);      
+    }   
 }

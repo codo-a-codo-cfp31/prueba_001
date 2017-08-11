@@ -16,11 +16,11 @@ public class Vista implements IComposite<Vista>{
     protected VistaPrincipal vistaSwing;
     
     public Vista() {
-        vistaSwing = new VistaPrincipal();
-        vistaSwing.getjTextArea1().setText("Hola");
-        
-        
-        vistaSwing.setVisible(true);
+       vistaSwing = new VistaPrincipal();
+       vistaSwing.getjTextField1().setText("Luis");
+       vistaSwing.getjTextField2().setText("Vera");
+       vistaSwing.getjTextField3().setText("95527661");
+       vistaSwing.setVisible(true);
     }
 
     
