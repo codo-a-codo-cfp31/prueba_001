@@ -10,5 +10,19 @@ package ahorcado_mvc;
  * @author ffhernan
  */
 public class Control_Ahorcado {
+
+    public Control_Ahorcado() {
+    
+    }
+
+    public void iniciaJego() {
+   
+    }
+        
+    public void finJego() {
+   
+    }
+
+    
     
 }
