@@ -7,7 +7,7 @@ package poo7;
 
 /**
  *
- * @author CFP31-07
+ * @author AIRAM
  */
 public class POO7 {
 
@@ -15,6 +15,19 @@ public class POO7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        Juego unaLista=new Juego();
+        
+        
+        unaLista.listaPalabras();
+        
+        unaLista.Aleatorio();
+        
+        
+        
+        
+         
+        
         // TODO code application logic here
     }
     

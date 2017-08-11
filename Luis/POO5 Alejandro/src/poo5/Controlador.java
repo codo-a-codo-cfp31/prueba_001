@@ -13,17 +13,17 @@ import java.util.Scanner;
  */
 public class Controlador {
     
-    protected UserProfile perfil;        
-    protected IView view;
+    protected UserProfile perfil;  //Variable      
+    protected IView view;  //Variable
     
     
 
-    public Controlador(IView view) {
+    public Controlador(IView view) { //Constructor
         this.view = view;
     }
     
     
-    public UserProfile getPerfil() {
+    public UserProfile getPerfil() {  //Metodo
         return perfil;
     }
 
