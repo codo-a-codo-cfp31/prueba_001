@@ -11,4 +11,7 @@ package ahorcado_mvc;
  */
 public class Control_Ahorcado {
     
+    private int intentos=3;
+    
+    
 }

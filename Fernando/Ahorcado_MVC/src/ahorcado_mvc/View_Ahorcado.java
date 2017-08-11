@@ -5,10 +5,18 @@
  */
 package ahorcado_mvc;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ffhernan
  */
 public class View_Ahorcado {
+    Scanner letar = new Scanner(System.in);
+    
+    
+    
+    
+    
     
 }
