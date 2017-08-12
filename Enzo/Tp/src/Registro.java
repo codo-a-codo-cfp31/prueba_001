@@ -4,7 +4,7 @@ import java.util.*;
  * @author @AnalistaSistok 
  */
 public class Registro {
-    /**
+ /**
  * @param args the command line arguments
  */
 public static void imprimirmenu() {

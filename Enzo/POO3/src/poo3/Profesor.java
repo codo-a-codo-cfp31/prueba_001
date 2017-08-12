@@ -6,7 +6,7 @@
 package poo3;
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEduca
  */
 public class Profesor extends Persona{
     public Profesor(){}

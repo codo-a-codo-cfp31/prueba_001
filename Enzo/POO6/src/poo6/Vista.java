@@ -5,10 +5,10 @@
  */
 package poo6;
 
-import java.util.List;
+import java.util.*;
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #SEduca #CFP31
  */
 public class Vista implements IComposite<Vista>{
     

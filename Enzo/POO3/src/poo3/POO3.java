@@ -8,7 +8,7 @@ import java.util.*;
 import java.io.*;
 /**
  *
- *@author @AnalistaSistok
+ *@author @AnalistaSistok #CFP31 #SEduca
  */
 public class POO3 {
 /**

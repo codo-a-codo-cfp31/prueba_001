@@ -6,7 +6,7 @@
 package poo6;
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #SEduca #CFP31
  */
 public class POO6 {
  /**

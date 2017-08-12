@@ -1,6 +1,6 @@
 import java.io.*;
 /**
- * @author @AnalistaSistok 
+ * @author @AnalistaSistok #SEduca #CFP31
  */
 public class TeacherConverter {
 /**

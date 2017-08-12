@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 package poo.objetos;
+/**
+*@author @AnalistaSistok #CFP31 #SEducA
+*/
 public class POO {
     /**
-     *@author @AnalistaSistok args the command line arguments
+     *@param args the command line arguments
      */
     public static void main(String[] args) {
         System.out.println("*************************************************************");

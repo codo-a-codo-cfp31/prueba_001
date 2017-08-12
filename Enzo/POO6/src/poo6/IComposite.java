@@ -5,11 +5,10 @@
  */
 package poo6;
 
-import java.util.List;
-
+import java.util.*;
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #SEduca #CFP31
  * @param <Type>
  */
 public interface IComposite <Type extends IComposite> {

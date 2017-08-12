@@ -6,7 +6,7 @@
 package poo2;
 /**
  *
- *@author @AnalistaSistok
+ *@author @AnalistaSistok #CFP31 #SEducA
  */
 public class Perro extends Mamifero implements Cuadrupedo{
 

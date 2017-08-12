@@ -5,7 +5,7 @@
  */
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
    public class SalaCine extends CentroComercial{
     protected int nrodesalas;

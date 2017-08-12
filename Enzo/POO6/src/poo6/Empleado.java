@@ -5,12 +5,10 @@
  */
 package poo6;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import java.util.*;
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #SEduca #CFP31
  */
 public class Empleado extends Persona{
     protected List<Empleado> listaDeEmeplados;
@@ -24,7 +22,6 @@ public class Empleado extends Persona{
         this.horarioLaboral = horarioLaboral;
         this.listaDeEmeplados = new ArrayList<>();
     }
-    
     
     /// Metodos de Composite
     public void Add(Empleado unEmpleado ){
@@ -43,6 +40,4 @@ public class Empleado extends Persona{
     public String toString() {
         return "ID empleado: " +this.ID+" Lista de subordinados: " + this.listaDeEmeplados;//To change body of generated methods, choose Tools | Templates.
     }
-    
-    
 }

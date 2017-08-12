@@ -6,7 +6,7 @@
 package poo3;
 /**
  *
- *@author @AnalistaSistok
+ *@author @AnalistaSistok #CFP31 #SEduca
  */
 public class Persona implements IPersona {
      protected String nombre="Philip";

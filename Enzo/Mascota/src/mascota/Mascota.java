@@ -1,7 +1,7 @@
 package mascota;
 import java.io.*;
 /**
- * @author @AnalistaSistok 
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Mascota {
 public static void imprimirmenu() {

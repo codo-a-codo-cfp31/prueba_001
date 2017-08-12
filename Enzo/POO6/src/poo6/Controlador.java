@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo6;
-
 /**
  *
- * @author @AnalistaSistok
+ * @author @AnalistaSistok #SEduca #CFP31
  */
 public class Controlador {
 
