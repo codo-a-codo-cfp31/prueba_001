@@ -29,7 +29,6 @@ public class Ropa {
     
     
     public String descripcionRopa() {
-        
         return "La ropa es talle: " +  talle + " Color : " +  color;
         
     }

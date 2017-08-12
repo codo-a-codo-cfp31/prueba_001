@@ -18,6 +18,8 @@ public class Vista implements IComposite<Vista>{
     public Vista() {
         vistaSwing = new VistaPrincipal();
         vistaSwing.getjTextArea1().setText("Hola");
+        
+        
         vistaSwing.setVisible(true);
     }
 

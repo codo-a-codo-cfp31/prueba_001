@@ -1,10 +1,12 @@
 import java.io.*;
 import java.util.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Registro {
-    
+ /**
+ * @param args the command line arguments
+ */
 public static void imprimirmenu() {
 System.out.println("*************************************");
 System.out.println("Bienvenido seleccione una de las opciones");
@@ -60,12 +62,10 @@ public static void confirm_password() throws IOException {
     BufferedReader bufEntrada = new BufferedReader(new InputStreamReader(System.in));
                 String caract_Mayus;
 		String caract_minisculas;
-                 String caract_numeros ;
-		String caract_password[];
+                 String caract_password[];
                 int clave_mayusculas;
                 int clave_minusculas;
                 int clave_numeros;
-                int clave_total;
                 int long_correcta;
 		int long_password;
 		String password;
@@ -78,63 +78,48 @@ public static void confirm_password() throws IOException {
                  long_correcta=0;
                    System.out.println("Ingrese una contraseña de 8 caracteres y al menos una mayuscula e numero");
 			password = bufEntrada.readLine();
-                        caract_password = new String[password.length()];
+                        long_password=password.length();
+                        caract_password = new String[long_password];
                       
-              for(int i=0;i<password.length();i++){
-		caract_password[password.length()-1]=password.substring(i,i+1);
-                       caract_Mayus=caract_password[password.length()-1].toUpperCase();
-                       caract_minisculas=caract_password[password.length()-1].toLowerCase();
-                     long_correcta=i;
-                       char mayus=password.charAt(i);
+              for(int i=0;i<long_password;i++){
+		caract_password[long_password-1]=password.substring(i,i+1);
+                       caract_Mayus=caract_password[long_password-1].toUpperCase();
+                       caract_minisculas=caract_password[long_password-1].toLowerCase();
+                    char mayus=password.charAt(i);
                        char minusculas=password.charAt(i);
                       if(caract_Mayus.contains(mayus+"")){
 		       clave_mayusculas++;}
                       if(caract_minisculas.contains(minusculas + "")){
                        clave_minusculas++;}
-                      if(caract_Mayus.contains(mayus+"")&&caract_minisculas.contains(minusculas + "")){
-                       clave_numeros++; }
                       }
-              
+               
+              System.out.println("Su contraseña tiene: "+(password.length()-clave_minusculas)+" Mayusc y tiene:"+(password.length()-clave_mayusculas)+" minusculas e tiene:"+((clave_mayusculas+clave_minusculas)-password.length())+" numeros");
                if(password.length()!=8){
-                   long_correcta=0;
+                   long_correcta=1;
               System.out.println("Su contraseña debe tener 8 caracteres");
-             continue;}
-              if(clave_minusculas>=7&&clave_minusculas<9){
-                    long_correcta=0;
-                      System.out.println("Se requiere que la contraseña tenga al menos una mayuscula"); 
-                System.out.println("Se requiere que la contraseña tenga al menos un numero");
-         System.out.println("Su contraseña tiene: "+(password.length()-clave_minusculas)+" Mayusc y tiene:"+(password.length()-clave_mayusculas)+" minusculas e tiene:"+((clave_mayusculas+clave_minusculas)-password.length())+" numeros");
-               continue;}
-               if(clave_mayusculas>=7&&clave_mayusculas<9){
-                    long_correcta=0;
-               System.out.println("Se requiere que la contraseña tenga al menos una minuscula");
-               System.out.println("Se requiere que la contraseña tenga al menos un numero");
-               System.out.println("Su contraseña tiene: "+(password.length()-clave_minusculas)+" Mayusc y tiene:"+(password.length()-clave_mayusculas)+" minusculas e tiene:"+((clave_mayusculas+clave_minusculas)-password.length())+" numeros");
-              continue;}
-                if(clave_numeros>=7&&clave_numeros<9){
-            long_correcta=0;
-             System.out.println("Se requiere que la contraseña tenga al menos una mayuscula"); 
-              System.out.println("Se requiere que la contraseña tenga al menos una minuscula");
-          continue;}
-               if(clave_mayusculas<1){
-                    long_correcta=0;
-              System.out.println("Se requiere que la contraseña tenga al menos una mayuscula"); 
-               System.out.println("Su contraeña tiene: "+(password.length()-clave_minusculas)+" Mayusc y tiene:"+(password.length()-clave_mayusculas)+" minusculas e tiene:"+((clave_mayusculas+clave_minusculas)-password.length())+" numeros");
-              continue;}
-               if(clave_minusculas<1){
-                    long_correcta=0;
-               System.out.println("Se requiere que la contraseña tenga al menos una minuscula");
-         System.out.println("Su contraseña tiene: "+(password.length()-clave_minusculas)+" Mayusc y tiene:"+(password.length()-clave_mayusculas)+" minusculas e tiene:"+((clave_mayusculas+clave_minusculas)-password.length())+" numeros");
-               continue;}
-         if(clave_numeros<=(password.length()-(clave_mayusculas+clave_minusculas))){
-            long_correcta=0;
-             System.out.println("Se requiere que la contraseña tenga al menos un numero");
-          continue;}
-        
-          if((clave_mayusculas==4&&clave_minusculas==2&&clave_numeros==2)||(clave_mayusculas==2&&clave_minusculas==2&&clave_numeros==4)||(clave_mayusculas==2&&clave_minusculas==4&&clave_numeros==2)||(clave_mayusculas==3&&clave_minusculas==2&&clave_numeros==3)||(clave_mayusculas==2&&clave_minusculas==3&&clave_numeros==3)||(clave_mayusculas==3&&clave_minusculas==3&&clave_numeros==2)||(clave_mayusculas==6&&clave_minusculas==1&&clave_numeros==1)||(clave_mayusculas==1&&clave_minusculas==6&&clave_numeros==1)||(clave_mayusculas==1&&clave_minusculas==1&&clave_numeros==6)||(clave_mayusculas==5&&clave_minusculas==1&&clave_numeros==2)||(clave_mayusculas==5&&clave_minusculas==2&&clave_numeros==1)||(clave_mayusculas==2&&clave_minusculas==5&&clave_numeros==1)||(clave_mayusculas==1&&clave_minusculas==5&&clave_numeros==2)||(clave_mayusculas==1&&clave_minusculas==2&&clave_numeros==5)||(clave_mayusculas==2&&clave_minusculas==1&&clave_numeros==5)){
-           long_correcta=long_correcta+1;
-            continue;}
-            }while(long_correcta==0);
+             }
+               if((password.length()-clave_minusculas)==0){
+                    long_correcta=1;
+               } 
+               if((password.length()-clave_mayusculas)==0){
+                    long_correcta=1;
+                }
+               if(((clave_mayusculas+clave_minusculas)-password.length())==0){
+            long_correcta=1;
+             } 
+                if((password.length()-clave_minusculas)==8){
+            long_correcta=1;
+            System.out.println("Se requiere que la contraseña tenga al menos un numero e minuscula"); 
+              }
+               if((password.length()-clave_mayusculas)==8){
+                    long_correcta=1;
+                  System.out.println("Se requiere que la contraseña tenga al menos un numero e mayuscula"); 
+               } 
+              if(((clave_mayusculas+clave_minusculas)-password.length())==8){
+                    long_correcta=1;
+                     System.out.println("Se requiere que la contraseña tenga al menos una minuscula e mayuscula"); 
+              } 
+         }while(long_correcta==1);
         System.out.println("Confirme su clave");
         password1 = bufEntrada.readLine();
         if (password.equals(password1)) {

@@ -6,12 +6,12 @@
 package poo2;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public interface Cuadrupedo {
-    public void Trotar();
+    public void trotar();
     
-    public void Moverse();
+    public void moverse();
     
-    public void Correr();
-}
+    public void correr();
+     }
