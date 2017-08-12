@@ -6,7 +6,7 @@
 package poo6;
 /**
  *
- * @author @AnalistaSistok #SEduca #CFP31
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Persona implements IPersona {
      protected String nombre;

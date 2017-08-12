@@ -1,6 +1,6 @@
 import java.io.*;
 /**
- * @author @AnalistaSistok #SEduca #CFP31
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Credenciales {
 /**

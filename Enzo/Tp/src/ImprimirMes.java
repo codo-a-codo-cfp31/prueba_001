@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 /**
- * @author @AnalistaSistok #SEduca #CFP31
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class ImprimirMes {
 /**

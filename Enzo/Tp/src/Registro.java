@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 /**
- * @author @AnalistaSistok 
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Registro {
  /**
