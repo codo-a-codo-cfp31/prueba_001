@@ -14,7 +14,7 @@ public class POO6 {
   */
     public static void main(String[] args) {
         // TODO code application logic here
-       Controlador unControlador = new Controlador(new Vista());  
+       Controller unControlador = new Controller(new Vista());  
         unControlador.Run();   
     }
 }
