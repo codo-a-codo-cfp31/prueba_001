@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package POO7;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
 /**
  *
@@ -12,8 +12,35 @@ import java.util.List;
  */
 public class Juego {
     
+    protected Palabra laPalabraAleatoria;
+    
+
+
+        
+public Juego(){
+    
+    ObtenerPalabra();
+
+}
+
+public final void ObtenerPalabra(){
     
     
+    laPalabraAleatoria = new Palabra();
+    System.out.println(laPalabraAleatoria.getPalabraAleatoria());
     
+    //for (int i = 0; i < laPalabraAleatoria.length(); i++){
+           
+           //Character letras_de_palabra;
+           //letras_de_palabra = PalabraAleatoria.charAt(i);
+           //System.out.println(letras_de_palabra);
+           
+       // }
     
 }
+
+}
+
+
+    
+

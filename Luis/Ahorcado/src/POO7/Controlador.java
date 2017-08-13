@@ -9,15 +9,12 @@ package POO7;
  *
  * @author Luis Vera
  */
-public class POO7 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+public class Controlador {
+    
+    public void Run(){
         
-        Controlador unControlador = new Controlador();
-        unControlador.Run();
+        Juego unJuego = new Juego();
+        unJuego.ObtenerPalabra();    
         
     }
     
