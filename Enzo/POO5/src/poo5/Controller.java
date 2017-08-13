@@ -35,7 +35,7 @@ public class Controller {
         
         perfil = new UserProfile();
 
-        view.Draw("Perfil de usuario" + perfil.comoTeLlamas());
+        view.Draw("Perfil de usuario\nNombre:"+perfil.comoTeLlamas()+"\nApellido:"+perfil.cualEsTuApellido());
 
       do {
 view.Draw("Ingrese su Nombre de Usuario");
@@ -44,7 +44,7 @@ long_usuario = username.length();
 if(long_usuario>2){
 view.Draw("**************************************************\n*******SU NOMBRE DE USUARIO CREADO CON EXITO******\n**************************************************");
       }else {
-System.out.println("**************************************************\n**********LONGITUD de USUARIO ES MENOR 2**********\n**************************************************");
+view.Draw("**************************************************\n**********LONGITUD de USUARIO ES MENOR 2**********\n**************************************************");
     }} while (long_usuario<=2);
 
            String arroba="@";
@@ -53,7 +53,7 @@ System.out.println("**************************************************\n********
                 do{
           cantidadArroba= 0;
           long_correcta=0;
-                System.out.println("Ingrese su direccion de correo");
+                view.Draw("Ingrese su direccion de correo");
 			email = bufEntrada.readLine();
        	for (int i = 0; i < email.length(); i++) {
 			char arroba1= email.charAt(i);

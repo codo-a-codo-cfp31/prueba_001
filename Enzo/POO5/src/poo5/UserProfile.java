@@ -12,7 +12,6 @@ public class UserProfile extends Persona{
     
     protected String username;
     private String password;
-
     protected String email;
 
     /**

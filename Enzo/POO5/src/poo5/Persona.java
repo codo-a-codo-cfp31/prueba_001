@@ -9,8 +9,8 @@ package poo5;
  * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Persona implements IPersona {
-     protected String nombre;
-     protected String apellido;
+     protected String nombre="Philip";
+     protected String apellido="Fry";
      protected Integer edad;
      protected int dni;
      protected Ropa suRopa;
