@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo6;
+package poo7;
 /**
  *
  * @author @AnalistaSistok #SEducA #CFP31
  */
-public class POO6 {
- /**
-  * @param args the command line arguments
-  */
+public class POO7 {
+/**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
+       PalabraAdivina palabra=new PalabraAdivina();
+        palabra.PalabraAdivina();
+        Juego unaLista=new Juego();  
+        //unaLista.listaPalabras();
+        unaLista.Aleatorio();
         // TODO code application logic here
-       Controller unControlador = new Controller(new Vista());  
-        unControlador.Run();   
     }
 }

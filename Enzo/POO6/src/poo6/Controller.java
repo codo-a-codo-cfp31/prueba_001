@@ -8,11 +8,11 @@ package poo6;
  *
  * @author @AnalistaSistok #SEducA #CFP31
  */
-public class Controlador {
+public class Controller {
 
     protected Vista unaVista;
 
-    public Controlador(Vista unaVista) {
+    public Controller(Vista unaVista) {
        this.unaVista = unaVista;
     }
 
