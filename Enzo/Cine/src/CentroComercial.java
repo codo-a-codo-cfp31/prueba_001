@@ -5,8 +5,7 @@
  */
 /**
  *
- * @AnalistaSistok
- */
+ * @author @AnalistaSistok #CFP31 #SEduca */
 public class CentroComercial {
     protected String nombre;
     protected String direccion;

@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author AIRAM
  */
-public class PalabraAdivina extends Juego implements IPalabra{
+public class PalabraAdivina{
     
     int intentos;
     String palabraIngresada="";
@@ -23,30 +23,12 @@ public class PalabraAdivina extends Juego implements IPalabra{
         Scanner unScanner = new Scanner(System.in);
         System.out.println("Inserta una palabra");
         palabraIngresada = unScanner.next();
+    }
+
+   
         
     }
 
-    @Override
-    public void contarPalabra() {
-        
-       compara.getPalabra();
-        
-       
-        if (palabraIngresada.equalsIgnoreCase(Palabra))
-                {
-                    
-                 System.out.println("Son iguales");
-                }
-        else
-        {
-            System.out.println("No son iguales");
-        }
-        
-    }
-
-    @Override
-    public void mostrarPalabra() {
-        
-    }
+    
     
 }

@@ -4,13 +4,12 @@
  * and open the template in the editor.
  */
 package poo5;
-
 /**
  *
- * @AnalistaSistok 
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public interface IView {
-     public void Draw(String text);
+    public void Draw(String text);
     
-    public void Clear();   
+    public void Clear();
 }

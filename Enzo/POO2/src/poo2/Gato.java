@@ -6,18 +6,19 @@
 package poo2;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Gato extends Mamifero implements Cuadrupedo{
-    public void Trotar(){   
+
+    public void trotar(){   
       }
     
-    public void Moverse(){  
+    public void moverse(){  
     }
     
-    public void Correr(){   
+    public void correr(){   
     }
     
-    public void Ladrar(){
+    public void maulla(){
     }
 }

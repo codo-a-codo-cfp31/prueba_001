@@ -14,12 +14,19 @@ import java.util.List;
  */
 public class Palabra {
     
-    private String PalabraAleatoria;
-    private List<String> lista_de_palabras;
-    private double NumAleatorio;
+    protected String PalabraAleatoria;
+    protected List<String> lista_de_palabras;
+    protected double NumAleatorio;
     
-    public void Palabra(){
-        
+    
+    public Palabra(){
+        //implementar clases, properties y responsabilidades
+       ListaDePalabras();
+       
+    }
+    
+    final public void ListaDePalabras(){
+         
         lista_de_palabras = new ArrayList<>();
         lista_de_palabras.add(0,"Composicion");
         lista_de_palabras.add(1,"Alergico");
@@ -32,22 +39,18 @@ public class Palabra {
         lista_de_palabras.add(8,"Guachafa");
         lista_de_palabras.add(9,"Cancionero");
         
-        System.out.println(lista_de_palabras);
-        
     }
-    
-    public void Aleatorio(){
-        
-        NumAleatorio = (Math.random()*10);
-        System.out.println(NumAleatorio);
-        
-    }
-    
-    
 
+  
+    public void PalabraRandom(){
+        
+        NumAleatorio = (int)(Math.random()*10);
+        PalabraAleatoria = (lista_de_palabras.get((int)NumAleatorio));
+        
+    }
     
-    
-    
-    
-    
-}
+    public String getPalabraAleatoria() {
+        return PalabraAleatoria;
+    }
+   
+    }

@@ -15,10 +15,9 @@ public class POO7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Palabra unaLista = new Palabra();
-        unaLista.Palabra();
-        Palabra NumAle = new Palabra();
-        NumAle.Aleatorio();
+        
+        Controlador unControlador = new Controlador();
+        unControlador.Run();
         
     }
     

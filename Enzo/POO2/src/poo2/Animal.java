@@ -6,7 +6,7 @@
 package poo2;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Animal {
     
