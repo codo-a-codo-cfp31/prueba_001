@@ -11,17 +11,21 @@ package poo7;
  */
 public class Controlador {
     protected Juego Juego;
+    protected String LetraIngresada;
     
     public Controlador(){
-        //Juego ElJuego = new Juego();
-       // Palabra LaPalabra = new Palabra();
+
     }
       
-    public void Run(){
+    public void Run(){        
         Juego ElJuego = new Juego();
         Palabra LaPalabra = new Palabra();
         System.out.println(LaPalabra.getPalabraElegida());
         System.out.println(LaPalabra.getLong());
+        LaPalabra.recorrerYCompararLetras();
+       
+        
          }
-    }
+
+}
 
