@@ -1,7 +1,7 @@
 package mascota;
 import java.io.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Mascota {
 public static void imprimirmenu() {

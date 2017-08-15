@@ -6,32 +6,41 @@
 package poo5;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class Persona implements IPersona {
      protected String nombre="Philip";
      protected String apellido="Fry";
-     protected int edad=25;
+     protected Integer edad;
      protected int dni;
      protected Ropa suRopa;
-    final static boolean print_ropa= false;
+     
+     final static boolean PRINT_ROPA_DESCRIPTION = false;
      
      public Persona(){
          //Esta NO ES la responsabiliadd de esta class
          //Scanner unScanner = new Scanner(System.in);
          //nombre = unScanner.next();
-          suRopa = new Ropa();
+         suRopa = new Ropa();
      }
      
      public Persona(String unNombre, String unApellido){
          nombre = unNombre;
          apellido = unApellido;
-         suRopa = new Ropa();
+          suRopa = new Ropa();
+         
+          if (PRINT_ROPA_DESCRIPTION) {
+              System.out.println(suRopa.descripcionRopa());
+         }
      }
      
      public Persona(int nuevaEdad){
          edad = nuevaEdad;
          suRopa = new Ropa();
+         
+         if (PRINT_ROPA_DESCRIPTION) {
+              System.out.println(suRopa.descripcionRopa());
+         }
      }
      
      public Persona(int nuevaEdad, int nuevoDNI){
@@ -39,39 +48,53 @@ public class Persona implements IPersona {
          dni = nuevoDNI;
      }
      
-     public String comoTeLlamas(){
-         return "Nombre: "+nombre;
+    /**
+     *
+     * @return
+     */
+     @Override
+     final public String comoTeLlamas(){
+         return nombre;
      }
      
-     public void ahoraTeLlamas(String tuNuevoNombre){
+    /**
+     *asdakdadad
+     * @param tuNuevoNombre
+     */
+     @Override
+    public void ahoraTeLlamas(String tuNuevoNombre){
          nombre = tuNuevoNombre;
      }
      
-     public String cualEsTuApellido(){
-         return "Apellido: "+apellido;
+    /**
+     *
+     * @return
+     */
+     @Override
+    public String cualEsTuApellido(){
+         return apellido;
      }
      
-     public void ahoraTuApellidoEs(String tuNuevoApellido){
+    /**
+     *
+     * @param tuNuevoApellido
+     */
+     @Override
+    public void ahoraTuApellidoEs(String tuNuevoApellido){
          apellido = tuNuevoApellido;
      }
      
-     public int cualEsTuEdad(){
+    /**
+     *
+     * @return
+     */
+     @Override
+    public int cualEsTuEdad(){
          return edad;
      }
      
-      public void ahoraTuEdadEs(int tuNuevaEdad){
-         edad = tuNuevaEdad;
+     @Override
+     public String toString(){
+         return "Nombre: " + nombre + " y Apellido:  " + apellido + "edad " + edad;
      }
-     
-     public int cualEsTuDNI(){
-         return dni;
-     }
-     
-     public void ahoraTuDNIEs(int tuNuevoDNI){
-         dni = tuNuevoDNI;
-     }
-     
-      public String toString(){
-        return "Nombre: " + nombre + " Apellido: " + apellido;
-    }
 }
