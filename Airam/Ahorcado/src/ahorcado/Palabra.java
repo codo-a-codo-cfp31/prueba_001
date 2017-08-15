@@ -56,7 +56,7 @@ public class Palabra {
              
           }
         }
-         public String Enviar(String EscondePalabraAdivina){
+         public String Enviar(){
              return EscondePalabraAdivina;
              // JFrameAhorcado.txtPalabraAdivina.setText(EscondePalabraAdivina);
           

@@ -15,7 +15,7 @@ public class Controlador {
     
     
     protected VistaPrevia vista;
-    String palabraEscondida;
+    
     
     public Controlador(VistaPrevia vista){
         this.vista=vista;
@@ -26,7 +26,8 @@ public class Controlador {
     {
         Palabra unaPalabra=new Palabra();
         
-        vista.Ver("La Palabra tiene: " +unaPalabra.Enviar(palabraEscondida)+ " letras");
+        
+        vista.Ver("La Palabra tiene: " +unaPalabra.Enviar()+ " letras");
     
     }
     
