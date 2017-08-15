@@ -6,7 +6,7 @@
 package poo3;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 
 public class Ropa {

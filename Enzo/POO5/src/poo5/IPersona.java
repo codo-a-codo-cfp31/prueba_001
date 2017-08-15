@@ -4,10 +4,9 @@
  * and open the template in the editor.
  */
 package poo5;
-
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public interface IPersona {
      public String comoTeLlamas();
@@ -19,5 +18,4 @@ public interface IPersona {
      public void ahoraTuApellidoEs(String tuNuevoApellido);
      
      public int cualEsTuEdad();
-
 }
