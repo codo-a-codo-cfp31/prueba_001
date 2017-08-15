@@ -27,6 +27,7 @@ public final void ObtenerPalabra(){
     
     
     laPalabraAleatoria = new Palabra();
+    laPalabraAleatoria.PalabraRandom();
     System.out.println(laPalabraAleatoria.getPalabraAleatoria());
     
     //for (int i = 0; i < laPalabraAleatoria.length(); i++){
