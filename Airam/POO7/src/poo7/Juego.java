@@ -25,7 +25,7 @@ public class Juego implements IPalabra{
         this.Palabra = Palabra;
     }
      
-        
+ 
     public void Juego(){
        Palabras = new ArrayList<>(); 
        
