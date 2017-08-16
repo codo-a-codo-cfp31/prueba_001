@@ -14,28 +14,20 @@ public class Juego {
     
     protected Palabra laPalabraAleatoria;
     
-
-
         
 public Juego(){
     
-    ObtenerPalabra();
+
 
 }
 
 public final void ObtenerPalabra(){
     
-    
     laPalabraAleatoria = new Palabra();
+    laPalabraAleatoria.PalabraRandom(); //Este inicializa la variable "laPalabraAleatoria" porque dentro de este metodo se le dio valor a esta variable
     System.out.println(laPalabraAleatoria.getPalabraAleatoria());
     
-    //for (int i = 0; i < laPalabraAleatoria.length(); i++){
-           
-           //Character letras_de_palabra;
-           //letras_de_palabra = PalabraAleatoria.charAt(i);
-           //System.out.println(letras_de_palabra);
-           
-       // }
+    
     
 }
 

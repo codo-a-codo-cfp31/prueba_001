@@ -21,6 +21,8 @@ public class Controller {
         Empleado subgerente = new Empleado(9000, 3, "Lun-Vie");
 
         gerente.Add(subgerente);
+        
+        unaVista.getVistaSwing().getjTextArea1().setText(gerente.toString());
 
         System.out.println(gerente);
         Math.random();
