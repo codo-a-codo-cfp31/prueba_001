@@ -49,16 +49,15 @@ public class Palabra {
          String[] LetrasDePalabraAdivina = PalabraAdivina.split("");
          
           for (int i = 0; i < LetrasDePalabraAdivina.length; i++) {
-            EscondePalabraAdivina = EscondePalabraAdivina +"*";
+            EscondePalabraAdivina = EscondePalabraAdivina +" _ ";
             //System.out.println(LetrasDePalabraAdivina[i]);
           //   System.out.println(EscondePalabraAdivina);
-             
              
           }
         }
          public String Enviar(){
              return EscondePalabraAdivina;
-             // JFrameAhorcado.txtPalabraAdivina.setText(EscondePalabraAdivina);
+             
           
           }   
        

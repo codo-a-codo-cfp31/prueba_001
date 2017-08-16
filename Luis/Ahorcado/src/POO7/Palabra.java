@@ -17,11 +17,15 @@ public class Palabra {
     protected String PalabraAleatoria;
     protected List<String> lista_de_palabras;
     protected double NumAleatorio;
+    protected Character letras_de_palabra;
     
     
     public Palabra(){
         //implementar clases, properties y responsabilidades
        ListaDePalabras();
+       PalabraRandom();
+      
+       
        
     }
     
@@ -42,12 +46,21 @@ public class Palabra {
     }
 
   
-    public void PalabraRandom(){
+    final public void  PalabraRandom(){
         
         NumAleatorio = (int)(Math.random()*10);
         PalabraAleatoria = (lista_de_palabras.get((int)NumAleatorio));
         
+        for (int i = 0; i < PalabraAleatoria.length(); i++){
+           
+           
+           letras_de_palabra = PalabraAleatoria.charAt(i);
+           System.out.println(letras_de_palabra);
+           
+        }
+        
     }
+    
     
     public String getPalabraAleatoria() {
         return PalabraAleatoria;
