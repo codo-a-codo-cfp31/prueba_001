@@ -15,13 +15,11 @@ public class Ahorcado {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       /* JFrameAhorcado JFrame=new JFrameAhorcado();
-        
-        JFrame.setVisible(true);*/
+      
        
-        VistaPrevia unaVista = new VistaPrevia();
-        
-        Controlador unControlador=new Controlador(unaVista);
+        //VistaPrevia unaVista = new VistaPrevia();
+        //Controlador unControlador=new Controlador(unaVista);
+        Controlador unControlador=new Controlador();
         
         unControlador.Run();
         
