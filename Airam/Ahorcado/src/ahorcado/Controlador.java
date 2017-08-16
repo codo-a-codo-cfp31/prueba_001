@@ -25,7 +25,7 @@ public class Controlador {
     public void Run()
     {
         Palabra unaPalabra=new Palabra();
-        
+        unaPalabra.PalabraAleatoria();
         
         vista.Ver("La Palabra tiene: " +unaPalabra.Enviar()+ " letras");
     

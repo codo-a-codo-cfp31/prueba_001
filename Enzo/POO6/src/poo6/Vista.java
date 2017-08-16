@@ -13,10 +13,14 @@ import java.util.*;
 public class Vista implements IComposite<Vista>{
     
     protected VistaPrincipal vistaSwing;
+
+    public VistaPrincipal getVistaSwing() {
+        return vistaSwing;
+    }
     
     public Vista() {
         vistaSwing = new VistaPrincipal();
-        vistaSwing.getjTextArea1().setText("Hola");
+        //vistaSwing.getjTextArea1().setText("Hola lalalalallala");
         vistaSwing.setVisible(true);
     }
 

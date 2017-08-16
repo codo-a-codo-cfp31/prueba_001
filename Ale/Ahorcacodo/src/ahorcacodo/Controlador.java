@@ -11,4 +11,17 @@ package ahorcacodo;
  */
 public class Controlador {
     
+    protected Vista unaVista;
+
+    public Controlador() {
+        unaVista  = new Vista();
+        unaVista.setVisible(true);
+    }
+    
+    public void Run(){
+        
+    }
+    
+    
+    
 }

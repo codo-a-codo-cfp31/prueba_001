@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ahorcacodo;
+package ahorcado;
 
 /**
  *
- * @author CFP31-15
+ * @author alejandro.medici
  */
-public class Ahorcacodo {
+public class Ahorcado {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Controller mainController = new Controller();
         
-        Controlador unControlador = new Controlador();
-        
-        unControlador.Run();
+        mainController.Run();
     }
     
 }
