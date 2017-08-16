@@ -11,20 +11,22 @@ package poo7;
  */
 public class Controlador {
     protected Juego Juego;
-    protected String LetraIngresada;
+    protected Vista UnaVista;
     
     public Controlador(){
-
+    Vista unaVista = new Vista();
+    //unaVista.setVisible(true);
     }
       
     public void Run(){        
         Juego ElJuego = new Juego();
-        Palabra LaPalabra = new Palabra();
-        System.out.println(LaPalabra.getPalabraElegida());
-        System.out.println(LaPalabra.getLong());
-        LaPalabra.recorrerYCompararLetras();
-       
         
+        ElJuego.ObtenerPalabra();
+        System.out.println(ElJuego.ObtenerPalabra().PalabraOculta);
+      
+
+
+      
          }
 
 }
