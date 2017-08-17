@@ -34,8 +34,8 @@ public class Palabra {
         ListaDeLetras = new ArrayList();
         PalabraOculta = new ArrayList();
         Long =0;
-        LetraIngresada = "A";
-        PalabraElegida = null;
+        LetraIngresada = " ";
+        PalabraElegida = " ";
         
     }
 
@@ -55,17 +55,27 @@ public class Palabra {
         return Long;
     }  //con este metodo obtengo la longitud de la palabra.
 
-    public List llenarPalabraOculta() {
-     
-            for (int i = 0; i < Long; i++) {
-                ListaDeLetras.add(PalabraElegida.substring(i, i + 1));
-                if (ListaDeLetras.get(i).equalsIgnoreCase(LetraIngresada)) {
-                   PalabraOculta.add(i,(ListaDeLetras.get(i)));
-                }else{
-                   PalabraOculta.add(i,"-");
+    public void llenarPalabraOculta() {
+
+        for (int i = 0; i < Long; i++) {
+            ListaDeLetras.add(PalabraElegida.substring(i, i + 1));
+            if (ListaDeLetras.get(i).equalsIgnoreCase(LetraIngresada)) {
+                PalabraOculta.add(i, (ListaDeLetras.get(i)));
+            } else {
+                PalabraOculta.add(i, "-");
+            }
+        }
+    }
+    
+    public void compararPalabraOculta() {
+        for (int i = 0; i < Long; i++) {
+            if (ListaDeLetras.get(i).equalsIgnoreCase(LetraIngresada)) {
+                if (PalabraOculta.get(i).equals("-")) {
+                    PalabraOculta.add(i, (ListaDeLetras.get(i)));
+                } else {
+                    PalabraOculta.get(i);
                 }
             }
-        return PalabraOculta;
+        }
     }
 }
-    
