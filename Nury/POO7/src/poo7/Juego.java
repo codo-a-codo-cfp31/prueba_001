@@ -12,20 +12,20 @@ import java.util.*;
  * @author CFP31-10
  */
 public class Juego {
-       protected Palabra LaPalabra; 
-       
-       public Juego(){
-        LaPalabra = new Palabra(); 
 
-       }
-       
-       public Palabra ObtenerPalabra(){
-          LaPalabra.getPalabraElegida();
-          LaPalabra.getLong();
-          LaPalabra.llenarPalabraOculta();
+    protected Palabra LaPalabra;
+
+    public Juego() {
+        LaPalabra = new Palabra();
+
+    }
+
+    public Palabra ObtenerPalabra() {
+        LaPalabra.getPalabraElegida();
+        LaPalabra.getLong();
+        LaPalabra.llenarPalabraOculta();
+        LaPalabra.compararPalabraOculta();
         return LaPalabra;
-       }
-     
-       }
-
+    }
+}
         
