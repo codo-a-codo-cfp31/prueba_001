@@ -7,6 +7,7 @@ package poo7;
 
 import java.util.*;
 import java.math.*;
+import java.util.Scanner;
 
 /**
  *
@@ -22,6 +23,7 @@ public class Palabra {
     protected List<String> PalabraOculta;
 
     public Palabra() {
+
         ListaDePalabras = new ArrayList<>();
         ListaDePalabras.add("PALA");
         ListaDePalabras.add("OTORRINOLARINGOLOGO");
@@ -35,13 +37,15 @@ public class Palabra {
         PalabraOculta = new ArrayList();
         Long =0;
         LetraIngresada = " ";
-        PalabraElegida = " ";
-        
+        PalabraElegida = " ";        
     }
 
     public String getPalabraElegida() {
         int max = ListaDePalabras.size();
         PalabraElegida = ListaDePalabras.get((int) (Math.random() * max));
+        for (int i = 0; i < PalabraElegida.length(); i++) {
+            PalabraOculta.add(i, "-");
+        }
         return PalabraElegida;
     }
 
@@ -55,15 +59,10 @@ public class Palabra {
         return Long;
     }  //con este metodo obtengo la longitud de la palabra.
 
-    public void llenarPalabraOculta() {
+    public void llenarListaDeLetras() {
 
         for (int i = 0; i < Long; i++) {
-            ListaDeLetras.add(PalabraElegida.substring(i, i + 1));
-            if (ListaDeLetras.get(i).equalsIgnoreCase(LetraIngresada)) {
-                PalabraOculta.add(i, (ListaDeLetras.get(i)));
-            } else {
-                PalabraOculta.add(i, "-");
-            }
+            ListaDeLetras.add(PalabraElegida.substring(i, i + 1));              
         }
     }
     
@@ -71,11 +70,16 @@ public class Palabra {
         for (int i = 0; i < Long; i++) {
             if (ListaDeLetras.get(i).equalsIgnoreCase(LetraIngresada)) {
                 if (PalabraOculta.get(i).equals("-")) {
-                    PalabraOculta.add(i, (ListaDeLetras.get(i)));
+                    PalabraOculta.set(i,(ListaDeLetras.get(i)));
                 } else {
                     PalabraOculta.get(i);
                 }
             }
         }
+    }
+    
+    public void Ingresar(String dato) {
+        
+            LetraIngresada = dato;
     }
 }

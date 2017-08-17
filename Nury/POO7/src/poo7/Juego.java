@@ -14,6 +14,7 @@ import java.util.*;
 public class Juego {
 
     protected Palabra LaPalabra;
+    protected String dato;
 
     public Juego() {
         LaPalabra = new Palabra();
@@ -23,8 +24,15 @@ public class Juego {
     public Palabra ObtenerPalabra() {
         LaPalabra.getPalabraElegida();
         LaPalabra.getLong();
-        LaPalabra.llenarPalabraOculta();
+        LaPalabra.llenarListaDeLetras();
+        do{     
+             System.out.println(LaPalabra.PalabraOculta);
+            Scanner unScanner = new Scanner(System.in);
+            dato=unScanner.nextLine();
+        LaPalabra.Ingresar(dato);
         LaPalabra.compararPalabraOculta();
+       
+        }while(!LaPalabra.LetraIngresada.equalsIgnoreCase("salir"));
         return LaPalabra;
     }
 }
