@@ -12,17 +12,26 @@ package POO7;
 public class Controlador {
     
     protected Vista unaVista;
+    protected Juego unJuego;
     
     public Controlador(){
         
         unaVista = new Vista();
-        unaVista.setVisible(true);   
+        unaVista.setVisible(true);
+        
+        Keyboard teclado = new Keyboard();
+        
+        unaVista.getjPanel1().add(teclado);
+        unJuego = new Juego();
+        
+        teclado.AddListener(unJuego);
     }
     
     public void Run(){
         
-        Juego unJuego = new Juego();
-        unJuego.ObtenerPalabra();       
+        
+        unJuego.ObtenerPalabra();    
+        
     }
     
 }

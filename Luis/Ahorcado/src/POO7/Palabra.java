@@ -24,9 +24,7 @@ public class Palabra {
         //implementar clases, properties y responsabilidades
        ListaDePalabras();
        PalabraRandom();  //Este inicializa la variable "laPalabraAleatoria" porque dentro de este metodo se le dio valor a esta variable
-      
-       
-       
+         
     }
     
     final public void ListaDePalabras(){
@@ -44,8 +42,7 @@ public class Palabra {
         lista_de_palabras.add(9,"Cancionero");
         
     }
-
-  
+    
     final public void  PalabraRandom(){
         
         NumAleatorio = (int)(Math.random()*10);
@@ -54,12 +51,16 @@ public class Palabra {
         for (int i = 0; i < PalabraAleatoria.length(); i++){
            
            letras_de_palabra = PalabraAleatoria.charAt(i);
-           System.out.println(letras_de_palabra);
-           
+           System.out.println(letras_de_palabra);  
         }
         
     }
     
+    final public void PalabraOculta(){
+        
+        for (int i = 0; i < PalabraAleatoria.length(); i++);
+        
+    }
     
     public String getPalabraAleatoria() {
         return PalabraAleatoria;

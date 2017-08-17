@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 package POO7;
+import java.awt.Event;
+import java.awt.event.ActionEvent;
 import java.util.*;
 import java.util.List;
 /**
  *
  * @author Luis Vera
  */
-public class Juego {
+public class Juego implements IKeyGameListener{
     
     protected Palabra laPalabraAleatoria;
     
@@ -29,6 +31,12 @@ public final void ObtenerPalabra(){
     
     
 }
+
+    @Override
+    public void listen(Event event) {
+        ActionEvent ae = (ActionEvent)event.target;
+        System.out.println("Llego a Game: " + ae.getActionCommand());
+    }
 
 }
 
