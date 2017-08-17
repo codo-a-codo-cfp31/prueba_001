@@ -24,7 +24,6 @@ public Juego(){
 public final void ObtenerPalabra(){
     
     laPalabraAleatoria = new Palabra();
-    laPalabraAleatoria.PalabraRandom(); //Este inicializa la variable "laPalabraAleatoria" porque dentro de este metodo se le dio valor a esta variable
     System.out.println(laPalabraAleatoria.getPalabraAleatoria());
     
     

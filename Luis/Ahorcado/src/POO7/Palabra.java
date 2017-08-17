@@ -23,7 +23,7 @@ public class Palabra {
     public Palabra(){
         //implementar clases, properties y responsabilidades
        ListaDePalabras();
-       PalabraRandom();
+       PalabraRandom();  //Este inicializa la variable "laPalabraAleatoria" porque dentro de este metodo se le dio valor a esta variable
       
        
        

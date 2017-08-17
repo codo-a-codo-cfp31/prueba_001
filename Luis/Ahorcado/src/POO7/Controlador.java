@@ -16,15 +16,13 @@ public class Controlador {
     public Controlador(){
         
         unaVista = new Vista();
-        unaVista.setVisible(true);
-        
+        unaVista.setVisible(true);   
     }
     
     public void Run(){
         
         Juego unJuego = new Juego();
-        unJuego.ObtenerPalabra();    
-        
+        unJuego.ObtenerPalabra();       
     }
     
 }
