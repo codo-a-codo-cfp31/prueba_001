@@ -5,13 +5,15 @@
  */
 package poo7;
 
+import java.awt.Event;
+import java.awt.event.ActionEvent;
 import java.util.*;
 
 /**
  *
  * @author CFP31-10
  */
-public class Juego {
+public class Juego implements IKeyGameListener {
 
     protected Palabra LaPalabra;
 
@@ -27,5 +29,10 @@ public class Juego {
         LaPalabra.compararPalabraOculta();
         return LaPalabra;
     }
+
+    @Override
+    public void listen(Event event) {
+        ActionEvent ae = (ActionEvent) event.target;
+        System.out.println("Llego a Game: " + ae.getActionCommand());
+    }
 }
-        
