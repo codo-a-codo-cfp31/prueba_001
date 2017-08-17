@@ -53,7 +53,6 @@ public class Palabra {
         
         for (int i = 0; i < PalabraAleatoria.length(); i++){
            
-           
            letras_de_palabra = PalabraAleatoria.charAt(i);
            System.out.println(letras_de_palabra);
            
