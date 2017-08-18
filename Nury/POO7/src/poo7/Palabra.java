@@ -21,6 +21,7 @@ public class Palabra {
     protected String PalabraElegida;
     protected List<String> ListaDeLetras;
     protected List<String> PalabraOculta;
+    protected int Esta;
 
     public Palabra() {
 
@@ -79,7 +80,6 @@ public class Palabra {
     }
     
     public void Ingresar(String dato) {
-        
-            LetraIngresada = dato;
+        LetraIngresada=dato;
     }
 }
