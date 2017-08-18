@@ -28,8 +28,6 @@ public final void ObtenerPalabra(){
     laPalabraAleatoria = new Palabra();
     System.out.println(laPalabraAleatoria.getPalabraAleatoria());
     
-    
-    
 }
 
     @Override
