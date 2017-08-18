@@ -15,14 +15,24 @@ public class Controlador {
     
     public Controlador(){
     Vista unaVista = new Vista();
-    //unaVista.setVisible(true);
+    unaVista.setVisible(true);
+    Keyboard teclado = new Keyboard();
+    
+    unaVista.getjPanel1().add(teclado);
+    Juego = new Juego();
+    
+    teclado.AddListener(Juego);
+            
     }
       
     public void Run(){        
-        Juego ElJuego = new Juego();
         
-       // ElJuego.ObtenerPalabra();
-        System.out.println(ElJuego.ObtenerPalabra().PalabraOculta);
+
+       Juego.ObtenerPalabra();
+       Juego.seAcabo();
+        System.out.println(Juego.ObtenerPalabra().PalabraOculta);
+
+
       
 
 
