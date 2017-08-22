@@ -33,6 +33,7 @@ public class Juego implements IKeyGameListener {
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent) event.target;
-        System.out.println("Llego a Game: " + ae.getActionCommand());
+        String caracter = ae.getActionCommand();
+        System.out.println("Llego a Game: " + caracter );
     }
 }

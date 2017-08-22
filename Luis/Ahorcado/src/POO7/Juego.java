@@ -36,7 +36,10 @@ public final void ObtenerPalabra(){
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent)event.target;
+        String datoNuevo = ae.getActionCommand();
         System.out.println("Llego a Game: " + ae.getActionCommand());
+        
+        laPalabraAleatoria.compararCaracter(datoNuevo);
     }
 
 }
