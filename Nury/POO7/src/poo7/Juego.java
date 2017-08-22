@@ -16,6 +16,7 @@ import java.util.*;
 public class Juego implements IKeyGameListener {
 
     protected Palabra LaPalabra;
+    protected String dato;
 
     public Juego() {
         LaPalabra = new Palabra();
@@ -25,15 +26,34 @@ public class Juego implements IKeyGameListener {
     public Palabra ObtenerPalabra() {
         LaPalabra.getPalabraElegida();
         LaPalabra.getLong();
-        LaPalabra.llenarPalabraOculta();
-        LaPalabra.compararPalabraOculta();
+        LaPalabra.llenarListaDeLetras();
+        do {
+            System.out.println(LaPalabra.PalabraElegida);
+            System.out.println(LaPalabra.PalabraOculta);
+            Scanner unScanner = new Scanner(System.in);
+            dato = unScanner.nextLine();
+            LaPalabra.Ingresar(dato);
+            LaPalabra.compararPalabraOculta();
+            } while (!LaPalabra.LetraIngresada.equalsIgnoreCase("salir"));
         return LaPalabra;
     }
 
+    public void seAcabo(){
+        int cont=3;
+        if (!LaPalabra.PalabraOculta.contains(dato)){
+            cont=cont--;
+            System.out.println("PERDISTE");
+        }
+         
+    }
+    
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent) event.target;
-        String caracter = ae.getActionCommand();
-        System.out.println("Llego a Game: " + caracter );
+        dato = ae.getActionCommand();
+        System.out.println("Llego a Game: " + dato);
+        LaPalabra.Ingresar(dato);
+        LaPalabra.compararPalabraOculta();
+        System.out.println(LaPalabra.PalabraOculta);
     }
 }

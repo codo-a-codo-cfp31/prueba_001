@@ -27,9 +27,12 @@ public class Controlador {
       
     public void Run(){        
         
-        
-       // ElJuego.ObtenerPalabra();
+
+       Juego.ObtenerPalabra();
+       Juego.seAcabo();
         System.out.println(Juego.ObtenerPalabra().PalabraOculta);
+
+
       
 
 
