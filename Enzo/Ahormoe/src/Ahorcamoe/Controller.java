@@ -19,6 +19,6 @@ public class Controller {
 
     public void Run() {
  unaVista.getVistaSwing().setjTextPane1("");
-        Math.random();
+  Math.random();
     }
 }
