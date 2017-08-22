@@ -1,42 +1,29 @@
+package Ahorcamoe;
+
+import java.util.List;
+import javax.swing.Icon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo6;
-
-import java.util.*;
-import javax.swing.*;
 /**
  *
  * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Vista implements IComposite<Vista>{
+    protected Main vistaSwing;
     
-    protected VistaPrincipal vistaSwing;
-
-    public VistaPrincipal getVistaSwing() {
+ public Main getVistaSwing() {
         return vistaSwing;
     }
     
-    public Vista() {
-        vistaSwing = new VistaPrincipal();
-        vistaSwing.getjTextArea1().setText("Hola");
-       vistaSwing.getjLabel().setText("Cuadro Empleado");
-      vistaSwing.getjButton1().setText("Get");
-      vistaSwing.getjButton2().setText("Add");
-       vistaSwing.getjButton3().setText("Delete");
-       String[] items = {""};
-    for (int i = 0; i < items.length; i++) {
-      vistaSwing.getjList1().setListData(items);
-}
-    
-  String[] items1 = {""};
-    for (int i = 0; i < items1.length; i++) {
-      vistaSwing.getjList2().setListData(items1);
-}  
-    vistaSwing.setVisible(true);
-    }
+public Vista() {
+        vistaSwing = new Main();
+}          
 
     @Override
     public void Add(Vista element) {
@@ -52,4 +39,32 @@ public class Vista implements IComposite<Vista>{
     public List<Vista> getElementList() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-}
+
+    Object getjButton2() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class Netbeans {
+ private static Icon png;
+ public Netbeans() {
+        }
+    }
+
+    private static class seduca {
+ private static Icon png;
+ public seduca() {
+        }
+    }
+
+    private static class Logo {
+ private static Icon jpg;
+ public Logo() {
+        }
+    }
+
+    private static class codoacodo {
+ private static Icon png;
+  public codoacodo() {
+        }
+    }
+}           
