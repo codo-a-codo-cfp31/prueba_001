@@ -39,7 +39,7 @@ public class Keyboard extends JInternalFrame implements ActionListener{
             "Q", "S", "D", "F", "G", "H", "J", "K", "L", "M", "ù", "µ",
             "4", "5", "6"}, {"Shift", "<", "W", "X", "C", "V", "B",
             "N", ",", ";", ":", "=", "Shift", "Up", "1", "2", "3", "Enter"},
-        {"Ctrl", "Fn", "Win", "Alt", "Space", "AltGr", "Context",
+        {"Ctrl", "Fn", "Win", "Alt", "Space", "AltGr", "Reiniciar",
             "Ctrl", "Left", "Down", "Right", "0", "."}};
 
     public Keyboard() {
