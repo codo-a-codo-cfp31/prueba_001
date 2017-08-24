@@ -4,18 +4,20 @@
  * and open the template in the editor.
  */
 package poo5;
-import javax.swing.*;
+
+import javax.swing.JOptionPane;
 /**
  *
- * @AnalistaSistok 
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class ViewJPanel implements IView {
-  @Override
+
+    @Override
     public void Draw(String text) {
-        JOptionPane.showInputDialog(text);
+        JOptionPane.showMessageDialog(null, text);
     }
 
     @Override
     public void Clear() {
-    }  
+    }
 }

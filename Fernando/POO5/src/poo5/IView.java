@@ -7,12 +7,10 @@ package poo5;
 
 /**
  *
- * @author CFP31-04
+ * @author CFP31-15
  */
 public interface IView {
+    public void Draw(String text);
     
-     public void Draw(String text);
-
-     public void Clear();
-    
+    public void Clear();
 }

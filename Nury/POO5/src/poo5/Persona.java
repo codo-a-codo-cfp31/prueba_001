@@ -5,6 +5,8 @@
  */
 package poo5;
 
+import poo5.IPersona;
+
 /**
  *
  * @author CFP31-15

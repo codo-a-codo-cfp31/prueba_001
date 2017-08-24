@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 package poo5;
-
 /**
  *
- * @AnalistaSistok 
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
-public class ViewConsole implements IView {
+public class ViewConsole implements IView{
+
     @Override
     public void Draw(String text) {
         System.out.println(text);
@@ -17,6 +17,5 @@ public class ViewConsole implements IView {
 
     @Override
     public void Clear() {
-  
-    } 
+    }
 }

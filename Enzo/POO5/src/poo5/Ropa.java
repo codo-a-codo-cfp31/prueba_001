@@ -6,27 +6,26 @@
 package poo5;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
-
 public class Ropa {
     protected String talle;
-   protected String color;
+    protected String color;
     protected String tipo;
-     
-     public Ropa(){
-    talle = "untalle";
-    color = "uncolor";
-    tipo = "lala";
-    }
-     
-//Constructor - constructor
-    public Ropa (String talleRopa, String colorRopa, String tipoRopa){
-        talle = talleRopa;
-        color = colorRopa;
-        tipo = tipoRopa;
+    
+    public Ropa(){
+        talle = "untalle";
+        color = "rojo";
+        tipo = "lala";
     }
     
-     public String cualEsTuRopa() {
-    return "La ropa es talle: " +  talle + " Color : " +  color;}
+    public Ropa(String nuevotalle, String nuevocolor, String nuevotipo){
+        talle = nuevotalle;
+        color = nuevocolor;
+        tipo = nuevotipo;
+    }
+    
+    public String descripcionRopa() {
+         return "La ropa es talle: " +  talle + " Color : " +  color;
+    }
 }

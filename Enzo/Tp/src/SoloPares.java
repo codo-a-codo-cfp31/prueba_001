@@ -1,9 +1,12 @@
 import java.io.*;
 /**
- * @AnalistaSistok args the command line arguments
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class SoloPares {
-
+/**
+* 
+*@param  args the command line arguments
+*/
 	public static void main(String args[]) {
 		double entero;
 		entero = 0;

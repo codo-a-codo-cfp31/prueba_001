@@ -6,7 +6,7 @@
 import java.util.*;
 /**
  *
- * @AnalistaSistok
+ * @author @AnalistaSistok #CFP31 #SEducA
  */
 public class CountNumberPairsOfANumber {
     /**

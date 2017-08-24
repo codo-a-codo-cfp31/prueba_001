@@ -4,17 +4,20 @@
  * and open the template in the editor.
  */
 package poo2;
+/**
+ *
+ * @author @AnalistaSistok #CFP31 #SEducA
+ */
 public class POO2 {
    /**
-     * @AnalistaSistok args the command line arguments
+     * @param  args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cuadrupedo unPerro = new Perro();
+       Cuadrupedo unPerro = new Perro();
         
-        unPerro.Trotar();
-        //unPerro.Ladrar();
-        
-        String unTexto = "lalalal";
-    }  
+        unPerro.trotar();
+       
+         String unTexto = "lalalal";
+          }
 }
