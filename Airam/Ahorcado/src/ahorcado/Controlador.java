@@ -5,7 +5,6 @@
  */
 package ahorcado;
 
-import static ahorcado.Palabra.EscondePalabraAdivina;
 
 
 
@@ -16,19 +15,9 @@ import static ahorcado.Palabra.EscondePalabraAdivina;
 public class Controlador {
     
     
-    //protected VistaPrevia vista;
-    
-    protected JFrameAhorcado unaVista;
-    protected String LetraAdivina;
-    
-    
-   /* public Controlador(VistaPrevia vista){
-        this.vista=vista;
-    
-    }*/
+  
      public Controlador(){
-        unaVista= new JFrameAhorcado();
-        unaVista.setVisible(true);
+       
     }
     
     public void Run()
@@ -36,14 +25,11 @@ public class Controlador {
         Palabra unaPalabra=new Palabra();
         
         unaPalabra.PalabraAleatoria();
-            
-        JFrameAhorcado.txtPalabraAdivina.setText(EscondePalabraAdivina);
-        LetraAdivina = JFrameAhorcado.txtLetraAdivina.getText();
-              
         
         
-        //vista.Ver("La Palabra tiene: " +unaPalabra.Enviar()+ " letras");
-        //unaPalabra.Enviar();
+           
+        
+      
     
     }
     
