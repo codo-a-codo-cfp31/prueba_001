@@ -17,34 +17,20 @@ public class Juego implements IKeyGameListener {
 
     protected Palabra LaPalabra;
     protected String dato;
+    protected int Vidas;
 
     public Juego() {
         LaPalabra = new Palabra();
+        Vidas=3;
 
     }
 
-    public Palabra ObtenerPalabra() {
+    public void ComenzarJuego() {
         LaPalabra.getPalabraElegida();
         LaPalabra.getLong();
         LaPalabra.llenarListaDeLetras();
-        do {
             System.out.println(LaPalabra.PalabraElegida);
             System.out.println(LaPalabra.PalabraOculta);
-            Scanner unScanner = new Scanner(System.in);
-            dato = unScanner.nextLine();
-            LaPalabra.Ingresar(dato);
-            LaPalabra.compararPalabraOculta();
-            } while (!LaPalabra.LetraIngresada.equalsIgnoreCase("salir"));
-        return LaPalabra;
-    }
-
-    public void seAcabo(){
-        int cont=3;
-        if (!LaPalabra.PalabraOculta.contains(dato)){
-            cont=cont--;
-            System.out.println("PERDISTE");
-        }
-         
     }
     
     @Override
@@ -52,8 +38,29 @@ public class Juego implements IKeyGameListener {
         ActionEvent ae = (ActionEvent) event.target;
         dato = ae.getActionCommand();
         System.out.println("Llego a Game: " + dato);
-        LaPalabra.Ingresar(dato);
-        LaPalabra.compararPalabraOculta();
-        System.out.println(LaPalabra.PalabraOculta);
+        if (!TerminoElJuego()) {
+            LaPalabra.Ingresar(dato);
+            LaPalabra.compararPalabraOculta();
+            System.out.println(LaPalabra.PalabraOculta);
+        }
+        if (!LaPalabra.PalabraOculta.contains(dato)) {
+            --Vidas;//=Vidas-1;
+        }
+    }
+  
+    public boolean TerminoElJuego(){
+        if (Vidas<=0){
+        return true;
+        }else{       
+        return false;
+        }
+    }
+    
+    public String toString() {
+        String lala = "";
+        for (int i = 0; i < LaPalabra.Long; i++) {
+            lala = lala + LaPalabra.PalabraOculta.get(i);
+        }
+        return lala;
     }
 }
