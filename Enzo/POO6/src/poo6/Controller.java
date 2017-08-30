@@ -16,15 +16,14 @@ public class Controller {
        this.unaVista = unaVista;
     }
 
+    
     public void Run() {
         Empleado gerente = new Empleado(10000, 1, "Lun-Jue");
         Empleado subgerente = new Empleado(9000, 3, "Lun-Vie");
 
         gerente.Add(subgerente);
-        
-        unaVista.getVistaSwing().getjTextArea1().setText(gerente.toString());
-
-        System.out.println(gerente);
+ unaVista.getVistaSwing().getjTextArea1().setText(gerente.toString());
+System.out.println(gerente);
         Math.random();
     }
 }

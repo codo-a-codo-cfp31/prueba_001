@@ -5,21 +5,41 @@
  */
 package ahorcado;
 
+/*import javax.swing.JOptionPane;
+import javax.swing.JTextField;*/
+
 /**
  *
  * @author AIRAM
  */
 public class Juego {
-    
-    public Juego()
-    {
-    
+
+    int oportunidades;
+    String letra;
+   
+   
+
+    public Juego() {
+
     }
-    
-    public void Ingresar(){
-    
-        
+
+    public void Compara() {
+
+        Palabra unaPalabra = new Palabra();
+
+        unaPalabra.PalabraAleatoria();
+
+        letra = JFrameAhorcado.txtPalabraAdivina11.getText();
+        oportunidades = 0;
+
+        for (int x = 0; x < a; x++) {
+            if (LetrasDePalabraAdivina[x].equals(letra)) {
+                JOptionPane.showInputDialog(null, "Letra Valida");
+                oportunidades=0;
+            }
+
+        }
+
     }
-    
-    
+
 }

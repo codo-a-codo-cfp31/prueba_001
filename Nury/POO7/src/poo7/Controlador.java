@@ -11,10 +11,10 @@ package poo7;
  */
 public class Controlador {
     protected Juego Juego;
-    protected Vista UnaVista;
+    protected Vista unaVista;
     
     public Controlador(){
-    Vista unaVista = new Vista();
+    unaVista = new Vista();
     unaVista.setVisible(true);
     Keyboard teclado = new Keyboard();
     
@@ -28,13 +28,13 @@ public class Controlador {
     public void Run(){        
         
 
-       Juego.ObtenerPalabra();
-       Juego.seAcabo();
-        System.out.println(Juego.ObtenerPalabra().PalabraOculta);
-
-
-      
-
+      Juego.ComenzarJuego();
+      // System.out.println(Juego.ObtenerPalabra().PalabraOculta);
+      while (!Juego.TerminoElJuego()){
+          unaVista.getjTextField1().setText(Juego.toString());
+          
+      }
+      System.out.println("Termino el juego");
 
       
          }

@@ -6,6 +6,7 @@
 package poo6;
 
 import java.util.*;
+import javax.swing.*;
 /**
  *
  * @author @AnalistaSistok #SEducA #CFP31
@@ -20,8 +21,21 @@ public class Vista implements IComposite<Vista>{
     
     public Vista() {
         vistaSwing = new VistaPrincipal();
-        //vistaSwing.getjTextArea1().setText("Hola lalalalallala");
-        vistaSwing.setVisible(true);
+        vistaSwing.getjTextArea1().setText("Hola");
+       vistaSwing.getjLabel().setText("Cuadro Empleado");
+      vistaSwing.getjButton1().setText("Get");
+      vistaSwing.getjButton2().setText("Add");
+       vistaSwing.getjButton3().setText("Delete");
+       String[] items = {""};
+    for (int i = 0; i < items.length; i++) {
+      vistaSwing.getjList1().setListData(items);
+}
+    
+  String[] items1 = {""};
+    for (int i = 0; i < items1.length; i++) {
+      vistaSwing.getjList2().setListData(items1);
+}  
+    vistaSwing.setVisible(true);
     }
 
     @Override

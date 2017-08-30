@@ -11,7 +11,7 @@ import java.util.*;
  * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Empleado extends Persona{
-    protected List<Empleado> listaDeEmeplados;
+    protected List<Empleado> listaDeEmpleados;
     protected Integer salario;
     protected Integer ID;
     protected String horarioLaboral;
@@ -20,24 +20,24 @@ public class Empleado extends Persona{
         this.salario = salario;
         this.ID = ID;
         this.horarioLaboral = horarioLaboral;
-        this.listaDeEmeplados = new ArrayList<>();
+        this.listaDeEmpleados = new ArrayList<>();
     }
     
     /// Metodos de Composite
     public void Add(Empleado unEmpleado ){
-        listaDeEmeplados.add(unEmpleado);
+        listaDeEmpleados.add(unEmpleado);
     }
     
     public void Remove(Empleado unEmpleado){
-        listaDeEmeplados.remove(unEmpleado);
+        listaDeEmpleados.remove(unEmpleado);
     }
     
     public List<Empleado> getListaEmeplados() {
-        return listaDeEmeplados;
+        return listaDeEmpleados;
     }
 
     @Override
     public String toString() {
-        return "ID empleado: " +this.ID+" Lista de subordinados: " + this.listaDeEmeplados;//To change body of generated methods, choose Tools | Templates.
+        return "ID empleado: " +this.ID+" Lista de subordinados: "+this.listaDeEmpleados;//To change body of generated methods, choose Tools | Templates.
     }
 }
