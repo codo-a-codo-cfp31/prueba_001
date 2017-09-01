@@ -3,24 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conversor;
-<<<<<<< HEAD
-import java.awt.Event;
-/**
- *
- * @author CFP31-10
- */
-public interface IViewEventListener {
-    public void Listen(Event event);
-=======
+package convertidor.de.grados;
 
-import java.awt.Event;
-
-/**
+import java.awt.Event;/**
  *
- * @author CFP31-15
+ * @author cfp31-06
  */
 public interface IViewEventListener {
     public void listen(Event event);
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
+    
 }
