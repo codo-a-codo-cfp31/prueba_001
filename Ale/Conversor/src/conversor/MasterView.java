@@ -5,19 +5,37 @@
  */
 package conversor;
 
+import java.awt.Event;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+
 /**
  *
  * @author CFP31-15
  */
 public class MasterView extends javax.swing.JFrame {
-
+    
+    protected List<IViewEventListener> list_listeners;
+    
     /**
      * Creates new form MasterView
      */
     public MasterView() {
         initComponents();
+        list_listeners = new ArrayList<>();
     }
-
+    
+    public void AddViewEvenListener(IViewEventListener listener){
+        list_listeners.add(listener);
+    }
+    
+    public void RemoveViewEventListener(IViewEventListener listener){
+        list_listeners.remove(listener);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,11 +53,18 @@ public class MasterView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextField1.setText("jTextField1");
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        jTextField1.setText("0.0");
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("0.0");
 
         jButton1.setText("Convertir");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertButton(evt);
+            }
+        });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K", " " }));
 
@@ -80,6 +105,24 @@ public class MasterView extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButton
+        // TODO add your handling code here:
+        
+        for (int i = 0; i < list_listeners.size(); i++) {
+            IViewEventListener listener = list_listeners.get(i);
+            Event event = new Event(evt, 0, evt);
+            listener.listen(event);
+        }
+    }//GEN-LAST:event_convertButton
+
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JLabel getjLabel1() {
+        return jLabel1;
+    }
 
  
 
