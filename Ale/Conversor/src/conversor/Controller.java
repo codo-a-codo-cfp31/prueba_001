@@ -5,11 +5,14 @@
  */
 package conversor;
 
+import java.awt.Event;
+import java.awt.event.ActionEvent;
+
 /**
  *
  * @author CFP31-15
  */
-public class Controller {
+public class Controller implements IViewEventListener {
     protected MasterView main_view;
     protected Conversor conversor;
 
@@ -17,18 +20,49 @@ public class Controller {
         main_view = new MasterView();
         main_view.setVisible(true);
         
+        main_view.AddViewEvenListener(this);
+        
         conversor = new Conversor();      
     }
     
     
     public void Run(){
         
-        conversor.setTemperature((float) 232.4, "C");
+        // conversor.setTemperature((float) 23.4, "C");
         
         float valorConvertido = conversor.getTemperature("k");
         
         System.out.println("El Valor " +  valorConvertido);
         
+    }
+
+    @Override
+    public void Listen(Event event) {
+        
+        ActionEvent ae = (ActionEvent) event.target;
+        
+        String valorEntring = main_view.getjTextField1().getText();
+        
+        float valor = (float) Double.parseDouble(valorEntring);
+        
+        System.out.println(valorEntring);
+        
+        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("C"))
+        {
+        conversor.getTemperature(valorEntring);
+            
+        }
+
+                
+        conversor.setTemperature(valor, "C");
+        
+        float valorConvertido = conversor.getTemperature("k");
+
+        System.out.println("El Valor es " + valorConvertido);
+        
+        main_view.getjLabel1().setText("" + valorConvertido);
+        
+        System.out.println(event);
     }
     
     
