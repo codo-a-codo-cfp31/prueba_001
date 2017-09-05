@@ -4,34 +4,17 @@
  * and open the template in the editor.
  */
 package conversor;
-<<<<<<< HEAD
 import java.util.*;
 import java.awt.Event;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-=======
-
-import java.awt.Event;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
 /**
  *
  * @author CFP31-15
  */
 public class MasterView extends javax.swing.JFrame {
-<<<<<<< HEAD
         private List<IViewEventListener> list_listeners;
-=======
-    
-    protected List<IViewEventListener> list_listeners;
-    
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
     /**
      * Creates new form MasterView
      */
@@ -70,7 +53,6 @@ public class MasterView extends javax.swing.JFrame {
         setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
         setForeground(java.awt.Color.gray);
 
-<<<<<<< HEAD
         jTextField1.setText("0.0");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -80,18 +62,10 @@ public class MasterView extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setText("jLabel1");
-=======
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0.0");
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("0.0");
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
 
         jButton1.setText("Convertir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<<<<<<< HEAD
                 covertbutton(evt);
             }
         });
@@ -107,9 +81,6 @@ public class MasterView extends javax.swing.JFrame {
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
-=======
-                convertButton(evt);
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
             }
         });
 
@@ -174,7 +145,6 @@ public class MasterView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
@@ -194,17 +164,6 @@ public class MasterView extends javax.swing.JFrame {
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
-=======
-    private void convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertButton
-        // TODO add your handling code here:
-        
-        for (int i = 0; i < list_listeners.size(); i++) {
-            IViewEventListener listener = list_listeners.get(i);
-            Event event = new Event(evt, 0, evt);
-            listener.listen(event);
-        }
-    }//GEN-LAST:event_convertButton
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
 
     public JTextField getjTextField1() {
         return jTextField1;
@@ -214,7 +173,6 @@ public class MasterView extends javax.swing.JFrame {
         return jLabel1;
     }
 
-<<<<<<< HEAD
     public JComboBox<String> getjComboBox1() {
         return jComboBox1;
     }
@@ -223,8 +181,6 @@ public class MasterView extends javax.swing.JFrame {
         return jComboBox2;
     }
 
-=======
->>>>>>> 55f60b11774fe592070d0ddd2777e5672422ae78
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
