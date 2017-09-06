@@ -117,8 +117,8 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="km"/>
-            <StringItem index="1" value="mi"/>
+            <StringItem index="0" value="kg"/>
+            <StringItem index="1" value="lb"/>
           </StringArray>
         </Property>
       </Properties>
@@ -133,8 +133,8 @@
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
-            <StringItem index="0" value="km"/>
-            <StringItem index="1" value="mi"/>
+            <StringItem index="0" value="kg"/>
+            <StringItem index="1" value="lb"/>
           </StringArray>
         </Property>
       </Properties>
