@@ -15,7 +15,7 @@ import java.awt.event.ActionEvent;
 public class Controller implements IViewEventListener {
 
     protected MasterView main_view;
-    protected Conversor conversor;
+    protected ConversorDistancia conversor;
 
     public Controller() {
         main_view = new MasterView();
@@ -23,7 +23,7 @@ public class Controller implements IViewEventListener {
 
         main_view.AddViewEvenListener(this);
 
-        conversor = new Conversor();
+        conversor = new ConversorDistancia();
     }
 
     public void Run() {
@@ -41,17 +41,11 @@ public class Controller implements IViewEventListener {
 
         System.out.println(valorEntring);
 
-        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-            if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-                main_view.getjLabel1().setText(valorEntring);
-            }
 
-        }
-
-        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-            if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
-                conversor.setTemperature(valor, "C");
-                float valorConvertido = conversor.getTemperature("K");
+        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("km")) {
+            if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("mi")) {
+                conversor.setDistance(valor, "km");
+                float valorConvertido = conversor.getDistance("mi");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {
@@ -60,10 +54,10 @@ public class Controller implements IViewEventListener {
 
         }
 
-        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
-            if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-                conversor.setTemperature(valor, "K");
-                float valorConvertido = conversor.getTemperature("C");
+        if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("mi")) {
+            if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("km")) {
+                conversor.setDistance(valor, "mi");
+                float valorConvertido = conversor.getDistance("km");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {

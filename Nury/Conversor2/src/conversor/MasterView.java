@@ -70,14 +70,14 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "km", "mi" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "km", "mi" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
