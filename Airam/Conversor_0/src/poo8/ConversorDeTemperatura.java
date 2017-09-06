@@ -9,14 +9,14 @@ package poo8;
  *
  * @author CFP31-09
  */
-public class Conversor {
+public class ConversorDeTemperatura {
 
     protected String unidad1;
     protected float temperatura;
 
-    public Conversor() {
-        unidad1="";
-        
+    public ConversorDeTemperatura() {
+        unidad1 = "";
+
     }
 
     public float getTemperatura(String unidad2) {
@@ -27,7 +27,7 @@ public class Conversor {
             }
         } else { //mensaje de error
         }
-        if (unidad1.equalsIgnoreCase("F"))  {
+        if (unidad1.equalsIgnoreCase("F")) {
             if (unidad2.equalsIgnoreCase("C")) {
                 temperatura = (float) ((temperatura * 1.8000) + 32.00);
             }
