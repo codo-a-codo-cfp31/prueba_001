@@ -14,11 +14,11 @@ import java.awt.event.ActionEvent;
  */
 public class Controlador implements IViewEventListener {
 
-    private ConversorDeEnergia conversor;
+    private ConversorDeDatosBinarios conversor;
     protected JFramePOO8 main_view;
 
     public Controlador() {
-        conversor = new ConversorDeEnergia();
+        conversor = new ConversorDeDatosBinarios();
         main_view = new JFramePOO8();
         main_view.setVisible(true);
         main_view.AddViewEventListener(this);
@@ -39,23 +39,25 @@ public class Controlador implements IViewEventListener {
 
         String valorEntring = main_view.getjTextField1().getText();
 
-        if (botonUnidad.equalsIgnoreCase("J")) {
+        if (botonUnidad.equalsIgnoreCase("D")) {
 
-            float valor = (float) Double.parseDouble(valorEntring);
-            conversor.setenergia(valor, botonUnidad);
-            float valorConvertido = conversor.getenergia("Kwh");
+            //float valor = (float) Double.parseDouble(valorEntring);
+            String valor = valorEntring;
+            conversor.setdatosBinarios(valor, botonUnidad);
+            float valorConvertido = conversor.getdatosBinarios("Hd");
 
             System.out.println("Valor a C: " + valorConvertido);
-            main_view.getjTextField2().setText("" + valorConvertido + "Kwh");
+            main_view.getjTextField2().setText("" + valorConvertido + "Hd");
             System.out.println(botonUnidad);
             System.out.println(event);
         } else {
-            float valor = (float) Double.parseDouble(valorEntring);
-            conversor.setenergia(valor, botonUnidad);
-            float valorConvertido = conversor.getenergia("J");
+            //float valor = (float) Double.parseDouble(valorEntring);
+            
+            conversor.setdatosBinarios(valor, botonUnidad);
+            float valorConvertido = conversor.getdatosBinarios("D");
 
             System.out.println("Valor a C: " + valorConvertido);
-            main_view.getjTextField2().setText("" + valorConvertido + "J");
+            main_view.getjTextField2().setText("" + valorConvertido + "D");
             System.out.println(botonUnidad);
             System.out.println(event);
         }

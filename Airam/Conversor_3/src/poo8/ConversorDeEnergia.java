@@ -23,13 +23,13 @@ public class ConversorDeEnergia {
         //temperatura= (JFramePOO8.jTextField1.getText());
         if (unidad1.equalsIgnoreCase("J")) {
             if (unidad2.equalsIgnoreCase("Kwh")) {
-                energia = (float) ((energia * 1.60) / 1.0);
+                energia = (float) ((energia * 0.0000002778) / 1.0);
             }
         } else { //mensaje de error
         }
         if (unidad1.equalsIgnoreCase("Kwh")) {
             if (unidad2.equalsIgnoreCase("J")) {
-                energia = (float) ((energia * 0.62) / 1.0);
+                energia = (float) ((energia * 3600000) / 1.0);
             }
         } else { //mensaje de error
         }
@@ -37,8 +37,8 @@ public class ConversorDeEnergia {
         return energia;
     }
 
-    public void setenergia(float longitud, String unidad2) {
-        this.energia = longitud;
+    public void setenergia(float energia, String unidad2) {
+        this.energia = energia;
         this.unidad1 = unidad2;
     }
 

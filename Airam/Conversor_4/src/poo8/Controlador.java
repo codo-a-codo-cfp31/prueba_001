@@ -14,11 +14,11 @@ import java.awt.event.ActionEvent;
  */
 public class Controlador implements IViewEventListener {
 
-    private ConversorDeEnergia conversor;
+    private ConversorDeDatos conversor;
     protected JFramePOO8 main_view;
 
     public Controlador() {
-        conversor = new ConversorDeEnergia();
+        conversor = new ConversorDeDatos();
         main_view = new JFramePOO8();
         main_view.setVisible(true);
         main_view.AddViewEventListener(this);
@@ -39,23 +39,23 @@ public class Controlador implements IViewEventListener {
 
         String valorEntring = main_view.getjTextField1().getText();
 
-        if (botonUnidad.equalsIgnoreCase("J")) {
+        if (botonUnidad.equalsIgnoreCase("B")) {
 
             float valor = (float) Double.parseDouble(valorEntring);
-            conversor.setenergia(valor, botonUnidad);
-            float valorConvertido = conversor.getenergia("Kwh");
+            conversor.setdatos(valor, botonUnidad);
+            float valorConvertido = conversor.getdatos("Kb");
 
             System.out.println("Valor a C: " + valorConvertido);
-            main_view.getjTextField2().setText("" + valorConvertido + "Kwh");
+            main_view.getjTextField2().setText("" + valorConvertido + "Kb");
             System.out.println(botonUnidad);
             System.out.println(event);
         } else {
             float valor = (float) Double.parseDouble(valorEntring);
-            conversor.setenergia(valor, botonUnidad);
-            float valorConvertido = conversor.getenergia("J");
+            conversor.setdatos(valor, botonUnidad);
+            float valorConvertido = conversor.getdatos("B");
 
             System.out.println("Valor a C: " + valorConvertido);
-            main_view.getjTextField2().setText("" + valorConvertido + "J");
+            main_view.getjTextField2().setText("" + valorConvertido + "B");
             System.out.println(botonUnidad);
             System.out.println(event);
         }

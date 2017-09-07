@@ -53,14 +53,14 @@ public class JFramePOO8 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("J");
+        jButton1.setText("B");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPresionado(evt);
             }
         });
 
-        jButton2.setText("Kwh");
+        jButton2.setText("Kb");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPresionado(evt);
@@ -73,7 +73,7 @@ public class JFramePOO8 extends javax.swing.JFrame {
             }
         });
 
-        jTextField3.setText("Conversor de Energía");
+        jTextField3.setText("Conversor de Datos");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,7 +95,7 @@ public class JFramePOO8 extends javax.swing.JFrame {
                                         .addComponent(jButton1)
                                         .addGap(18, 18, 18)
                                         .addComponent(jButton2)))))
-                        .addGap(0, 23, Short.MAX_VALUE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
