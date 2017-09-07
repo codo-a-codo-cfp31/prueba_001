@@ -5,17 +5,27 @@
  */
 package convertidor.de.grados;
 
+import java.awt.Event;
+import java.awt.event.ActionEvent;
+
 /**
  *
  * @author cfp31-06
  */
-public class Controlador {
+public class Controlador implements IViewEventListener {
     
+    protected Vista unaVista;
     protected Conversor unConversor;
     
     public Controlador(){
+         
+        unaVista = new Vista();
+        unaVista.setVisible(true);
+        unaVista.AddViewEventListener(this);
         
-         unConversor = new Conversor();
+        
+        unConversor = new Conversor();
+         
         
     }
         
@@ -28,6 +38,32 @@ public class Controlador {
         float valorconvertido = unConversor.getValorSalida();
         
         System.out.println("El valor convertido es "+ valorconvertido);
+    }
+
+    @Override
+    public void listen(Event event) {
+        
+        ActionEvent ae = (ActionEvent)event.target;
+        String BotonPresionado = ae.getActionCommand();
+        
+        String unidadAConvertir = unaVista.getjTextField1().getText();
+        
+        
+        float valor = (float)Double.parseDouble(unidadAConvertir);
+        unConversor.setUnidadDeTemperaturaEntrada("F");
+        
+         unConversor.setValorDeEntrada(valor);
+         unConversor.Conversion();
+        float valorconvertido = unConversor.getValorSalida();
+        
+        System.out.println("El valor convertido es "+ valorconvertido);
+        
+        unaVista.getjTextField2().setText(""+ valorconvertido);
+        
+        System.out.println(BotonPresionado);
+        
+        
+       
     }
     
     
