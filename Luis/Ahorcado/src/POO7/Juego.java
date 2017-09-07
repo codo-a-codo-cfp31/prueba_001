@@ -32,8 +32,14 @@ public final void ObtenerPalabra(){
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent)event.target;
+        String datoNuevo = ae.getActionCommand();
         System.out.println("Llego a Game: " + ae.getActionCommand());
+<<<<<<< HEAD
         letraTeclado = ae.getActionCommand();
+=======
+        
+        laPalabraAleatoria.compararCaracter(datoNuevo);
+>>>>>>> 0447ab7355ff268ac7eb5c06a6298810e4306972
     }
     
 //comparar actioncommand con el substring de la palabra oculta 
