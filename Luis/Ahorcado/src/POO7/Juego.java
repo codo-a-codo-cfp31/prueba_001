@@ -15,27 +15,40 @@ import java.util.List;
 public class Juego implements IKeyGameListener{
     
     protected Palabra laPalabraAleatoria;
+    protected String letraTeclado;
     
         
 public Juego(){
     
-
-
+    AdivinarCaracter();
+    
 }
 
 public final void ObtenerPalabra(){
     
-    laPalabraAleatoria = new Palabra();
-    System.out.println(laPalabraAleatoria.getPalabraAleatoria());
-    
+    laPalabraAleatoria = new Palabra(); 
 }
 
     @Override
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent)event.target;
         System.out.println("Llego a Game: " + ae.getActionCommand());
+        letraTeclado = ae.getActionCommand();
     }
-
+    
+//comparar actioncommand con el substring de la palabra oculta 
+final public void AdivinarCaracter(){
+    Palabra CompararLetra = new Palabra();
+    CompararLetra.compararCaracter(letraTeclado);
+    System.out.println(letraTeclado);
+    
+}
+    
+public void ContadorDeOportunidades (){
+    //for (int i = 0; i < ; i++) {
+        
+    //}
+}
 }
 
 
