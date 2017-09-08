@@ -21,7 +21,7 @@ public class ConversorDeDatosBinarios {
 
     }
 
-    public float getdatosBinarios(String unidad2) {
+    public String getdatosBinarios2(String unidad2) {
         //temperatura= (JFramePOO8.jTextField1.getText());
         if (unidad1.equalsIgnoreCase("D")) {
             if (unidad2.equalsIgnoreCase("Hd")) {
@@ -32,16 +32,17 @@ public class ConversorDeDatosBinarios {
         }
         if (unidad1.equalsIgnoreCase("Hd")) {
             if (unidad2.equalsIgnoreCase("D")) {
-                datosBinarios2 = Integer.toBinaryString(datosBinarios);
+                datosBinarios2 = Integer.toString(datosBinarios);
+                int valor = 0xff;
             }
         } else { //mensaje de error
         }
 
-        return datosBinarios;
+        return datosBinarios2;
     }
 
-    public void setdatosBinarios(int datosBinarios, String unidad2) {
-        this.datosBinarios = datosBinarios;
+    public void setdatosBinarios2(int datosBinarios2, String unidad2) {
+        this.datosBinarios = datosBinarios2;
         this.unidad1 = unidad2;
     }
 
