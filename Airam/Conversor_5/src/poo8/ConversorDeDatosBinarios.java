@@ -40,7 +40,7 @@ public class ConversorDeDatosBinarios {
         return datosBinarios;
     }
 
-    public void setdatosBinarios(int datosBinarios, String unidad2) {
+    public void setdatosBinarios( datosBinarios, String unidad2) {
         this.datosBinarios = datosBinarios;
         this.unidad1 = unidad2;
     }
