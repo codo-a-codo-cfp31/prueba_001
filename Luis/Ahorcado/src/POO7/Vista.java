@@ -16,8 +16,6 @@ public class Vista extends javax.swing.JFrame {
     public JPanel getjPanel1() {
         return jPanel1;
     }
-
-    
     /**
      * Creates new form Vista
      */

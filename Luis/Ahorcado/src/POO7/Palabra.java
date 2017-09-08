@@ -18,16 +18,15 @@ public class Palabra {
     protected List<String> lista_de_palabras;
     protected double NumAleatorio;
     protected Character letras_de_palabra;
-    protected int longitud_de_palabra;
     protected String palabra_oculta;
-    protected int longitud_palabra_oculta;
+    
 
     public Palabra() {
         //implementar clases, properties y responsabilidades
         ListaDePalabras();
         PalabraRandom();
         mostrarPalabraOculta();//Este inicializa la variable "laPalabraAleatoria" porque dentro de este metodo se le dio valor a esta variable
-
+        compararCaracter();
     }
 
     final public void ListaDePalabras() {
@@ -57,7 +56,6 @@ public class Palabra {
 
         for (int i = 0; i < PalabraAleatoria.length(); i++) {
             letras_de_palabra = PalabraAleatoria.charAt(i);
-            System.out.println(letras_de_palabra);
         }
     }
 
@@ -69,17 +67,24 @@ public class Palabra {
         }
         System.out.println(palabra_oculta);
     }
+    
 
-    public void compararCaracter(String datoIngresado) { //de esta manera este metodo puede ser llamado desde afuera. Se define la variable "datoIngresado" como cualquier nombre y definir el comportamiento del metodo.
+    final public void compararCaracter(String datoIngresado) { //de esta manera este metodo puede ser llamado desde afuera. Se define la variable "datoIngresado" como cualquier nombre y definir el comportamiento del metodo.
+               
         for (int i = 0; i < PalabraAleatoria.length(); i++) {
+            
             if (datoIngresado.equalsIgnoreCase(PalabraAleatoria.substring(i, i))) {
                 palabra_oculta = palabra_oculta + datoIngresado;
             } else {
                 palabra_oculta = palabra_oculta + "-";
             }
-        }
+        } 
     }
-
+    
+    public String getPalabraOculta(){
+        return palabra_oculta;
+    }
+    
     public String getPalabraAleatoria() {
         return PalabraAleatoria;
     }
