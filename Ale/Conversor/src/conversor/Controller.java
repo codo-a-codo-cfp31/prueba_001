@@ -31,7 +31,7 @@ public class Controller implements IViewEventListener {
     }
 
     @Override
-    public void Listen(Event event) {
+    public void listen(Event event) {
 
         ActionEvent ae = (ActionEvent) event.target;
 
