@@ -1,9 +1,11 @@
+package convertidor.de.grados;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package convertidor.de.grados;
+
 import java.awt.Event;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,7 +51,7 @@ public class Vista extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Convertidor de Grados C a F");
+        jLabel1.setText("Convertidor de Centigrados a Farenheit");
 
         jLabel2.setText("Ingrese la temperatura a convertir");
 
@@ -59,14 +61,14 @@ public class Vista extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText(" C");
+        jButton1.setText("C");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPresionado(evt);
             }
         });
 
-        jButton2.setText(" F");
+        jButton2.setText("F");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 botonPresionado(evt);
@@ -78,7 +80,7 @@ public class Vista extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(105, Short.MAX_VALUE)
+                .addContainerGap(68, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2)
                     .addGroup(layout.createSequentialGroup()
