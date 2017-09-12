@@ -5,8 +5,7 @@
  */
 package conversor;
 
-import nuevoPackage.IConversor;
-import nuevoPackage.ConversorDistancia;
+import nuevoPackage.*;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
@@ -21,16 +20,24 @@ public class Controller implements IViewEventListener {
 
     public Controller() {
         main_view = new MasterView();
-       // main_view.setVisible(true);
+        // main_view.setVisible(true);
 
         main_view.AddViewEvenListener(this);
 
-        conversor = new ConversorDistancia();
-//new ConversorTemperatura();
+        //new ConversorTemperatura();
     }
 
     public void Run() {
-            
+        //1- prueba de conversion de temperatura
+        conversor = ConversorFactory.crearConversor("temperatura");
+
+        conversor.setValor(0.0f, "C");
+        float valorNuevo = conversor.getValor("F");
+        System.out.println("El resultado 1 es: " + valorNuevo);
+
+        //2- PRueba de conversion de distancia
+        conversor = ConversorFactory.crearConversor("distancia");
+        conversor.setValor(valorNuevo, "km");
     }
 
     @Override
