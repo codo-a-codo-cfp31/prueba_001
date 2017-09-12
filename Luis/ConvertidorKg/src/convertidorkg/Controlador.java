@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package convertidor.de.grados;
+package convertidorkg;
 
 
 import java.awt.Event;
@@ -47,10 +47,10 @@ public class Controlador implements IViewEventListener {
 
         String unidadAConvertir = unaVista.getjTextField1().getText();
 
-        if (BotonPresionado.equalsIgnoreCase("C")) {
+        if (BotonPresionado.equalsIgnoreCase("Kg")) {
 
             float valor = (float) Double.parseDouble(unidadAConvertir);
-            unConversor.setUnidadDeTemperaturaEntrada("F");
+            unConversor.setUnidadDeTemperaturaEntrada("Lb");
 
             unConversor.setValorDeEntrada(valor);
             unConversor.Conversion();
@@ -65,7 +65,7 @@ public class Controlador implements IViewEventListener {
         } else {
 
             float valor = (float) Double.parseDouble(unidadAConvertir);
-            unConversor.setUnidadDeTemperaturaEntrada("C");
+            unConversor.setUnidadDeTemperaturaEntrada("Kg");
 
             unConversor.setValorDeEntrada(valor);
             unConversor.Conversion();
