@@ -5,6 +5,7 @@
  */
 package conversor;
 
+import nuevoPackage.*;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
@@ -15,19 +16,28 @@ import java.awt.event.ActionEvent;
 public class Controller implements IViewEventListener {
 
     protected MasterView main_view;
-    protected Conversor conversor;
+    protected IConversor conversor;
 
     public Controller() {
         main_view = new MasterView();
-        main_view.setVisible(true);
+        // main_view.setVisible(true);
 
         main_view.AddViewEvenListener(this);
 
-        conversor = new Conversor();
+        //new ConversorTemperatura();
     }
 
     public void Run() {
+        //1- prueba de conversion de temperatura
+        conversor = ConversorFactory.crearConversor("temperatura");
 
+        conversor.setValor(0.0f, "C");
+        float valorNuevo = conversor.getValor("F");
+        System.out.println("El resultado 1 es: " + valorNuevo);
+
+        //2- PRueba de conversion de distancia
+        conversor = ConversorFactory.crearConversor("distancia");
+        conversor.setValor(valorNuevo, "km");
     }
 
     @Override
@@ -50,8 +60,8 @@ public class Controller implements IViewEventListener {
 
         if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
             if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
-                conversor.setTemperature(valor, "C");
-                float valorConvertido = conversor.getTemperature("K");
+                conversor.setValor(valor, "C");
+                float valorConvertido = conversor.getValor("K");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {
@@ -62,8 +72,8 @@ public class Controller implements IViewEventListener {
 
         if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
             if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-                conversor.setTemperature(valor, "K");
-                float valorConvertido = conversor.getTemperature("C");
+                conversor.setValor(valor, "K");
+                float valorConvertido = conversor.getValor("C");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {

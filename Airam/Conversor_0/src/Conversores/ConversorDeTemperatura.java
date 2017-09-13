@@ -3,13 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poo8;
+package Conversores;
+
+import java.util.ArrayList;
+import java.util.List;
+import poo8.*;
 
 /**
  *
  * @author CFP31-09
  */
-public class ConversorDeTemperatura {
+public class ConversorDeTemperatura implements IConversor {
 
     protected String unidad1;
     protected float temperatura;
@@ -19,7 +23,7 @@ public class ConversorDeTemperatura {
 
     }
 
-    public float getTemperatura(String unidad2) {
+    public float getValor(String unidad2) {
         //temperatura= (JFramePOO8.jTextField1.getText());
         if (unidad1.equalsIgnoreCase("C")) {
             if (unidad2.equalsIgnoreCase("F")) {
@@ -37,9 +41,19 @@ public class ConversorDeTemperatura {
         return temperatura;
     }
 
-    public void setTemperatura(float temperatura, String unidad2) {
+    public void setValor(float temperatura, String unidad2) {
         this.temperatura = temperatura;
         this.unidad1 = unidad2;
     }
+
+    @Override
+    public List<String> getUnitList() {
+        List<String> lista=new ArrayList<>();
+        lista.add("C");
+        lista.add("F");
+        return lista;
+          }
+
+   
 
 }
