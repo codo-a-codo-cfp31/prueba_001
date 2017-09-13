@@ -12,6 +12,7 @@ package convertidor.de.grados;
 public class Conversor {
     
     protected String UnidadDeTemperaturaEntrada;
+   
     protected Float ValorDeEntrada;
     protected Float ValorSalida;
     
@@ -57,7 +58,7 @@ public class Conversor {
     public void Conversion(){
         
         if (UnidadDeTemperaturaEntrada.equalsIgnoreCase("C")){
-            ValorSalida = ValorDeEntrada*(9/5)+32;
+            ValorSalida = ValorDeEntrada*1.8f+32;
             }
         
         else{
@@ -65,7 +66,7 @@ public class Conversor {
         
             
         if (UnidadDeTemperaturaEntrada.equalsIgnoreCase("F"))
-            ValorSalida = (ValorDeEntrada-32)*(5.0f/9.0f);
+            ValorSalida = ValorDeEntrada/1.8f-32;
         
         else{
             ValorSalida = ValorDeEntrada;

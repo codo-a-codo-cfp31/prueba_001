@@ -42,9 +42,9 @@ public class Controlador implements IViewEventListener {
         if (botonUnidad.equalsIgnoreCase("D")) {
 
             //float valor = (float) Double.parseDouble(valorEntring);
-            String valor = valorEntring;
-            conversor.setdatosBinarios(valor, botonUnidad);
-            float valorConvertido = conversor.getdatosBinarios("Hd");
+            int valor = Integer.parseInt(valorEntring);
+            conversor.setdatosBinarios2(valor, botonUnidad);
+            String valorConvertido = conversor.getdatosBinarios2("Hd");
 
             System.out.println("Valor a C: " + valorConvertido);
             main_view.getjTextField2().setText("" + valorConvertido + "Hd");
@@ -53,8 +53,9 @@ public class Controlador implements IViewEventListener {
         } else {
             //float valor = (float) Double.parseDouble(valorEntring);
             
-            conversor.setdatosBinarios(valor, botonUnidad);
-            float valorConvertido = conversor.getdatosBinarios("D");
+            int valor = Integer.parseInt(valorEntring, 16);
+            conversor.setdatosBinarios2(valor, botonUnidad);
+            String valorConvertido = conversor.getdatosBinarios2("D");
 
             System.out.println("Valor a C: " + valorConvertido);
             main_view.getjTextField2().setText("" + valorConvertido + "D");

@@ -5,6 +5,7 @@
  */
 package convertidor.de.grados;
 
+
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
@@ -13,58 +14,70 @@ import java.awt.event.ActionEvent;
  * @author cfp31-06
  */
 public class Controlador implements IViewEventListener {
-    
+
     protected Vista unaVista;
     protected Conversor unConversor;
-    
-    public Controlador(){
-         
+
+    public Controlador() {
+
         unaVista = new Vista();
         unaVista.setVisible(true);
         unaVista.AddViewEventListener(this);
-        
-        
+
         unConversor = new Conversor();
-         
-        
+
     }
-        
-    public void Run(){
-        unConversor.setUnidadDeTemperaturaEntrada("f");
+
+    public void Run() {
+        /*unConversor.setUnidadDeTemperaturaEntrada("f");
         unConversor.setValorDeEntrada(33f);
         
         
         unConversor.Conversion();
         float valorconvertido = unConversor.getValorSalida();
         
-        System.out.println("El valor convertido es "+ valorconvertido);
+        System.out.println("El valor convertido es "+ valorconvertido);*/
     }
 
     @Override
     public void listen(Event event) {
-        
-        ActionEvent ae = (ActionEvent)event.target;
+
+        ActionEvent ae = (ActionEvent) event.target;
         String BotonPresionado = ae.getActionCommand();
-        
+
         String unidadAConvertir = unaVista.getjTextField1().getText();
-        
-        
-        float valor = (float)Double.parseDouble(unidadAConvertir);
-        unConversor.setUnidadDeTemperaturaEntrada("F");
-        
-         unConversor.setValorDeEntrada(valor);
-         unConversor.Conversion();
-        float valorconvertido = unConversor.getValorSalida();
-        
-        System.out.println("El valor convertido es "+ valorconvertido);
-        
-        unaVista.getjTextField2().setText(""+ valorconvertido);
-        
-        System.out.println(BotonPresionado);
-        
-        
-       
+
+        if (BotonPresionado.equalsIgnoreCase("C")) {
+
+            float valor = (float) Double.parseDouble(unidadAConvertir);
+            unConversor.setUnidadDeTemperaturaEntrada("F");
+
+            unConversor.setValorDeEntrada(valor);
+            unConversor.Conversion();
+            float valorconvertido = unConversor.getValorSalida();
+
+            System.out.println("El valor convertido es " + valorconvertido);
+
+            unaVista.getjTextField2().setText("" + valorconvertido);
+
+            System.out.println(BotonPresionado);
+
+        } else {
+
+            float valor = (float) Double.parseDouble(unidadAConvertir);
+            unConversor.setUnidadDeTemperaturaEntrada("C");
+
+            unConversor.setValorDeEntrada(valor);
+            unConversor.Conversion();
+            float valorconvertido = unConversor.getValorSalida();
+
+            System.out.println("El valor convertido es " + valorconvertido);
+
+            unaVista.getjTextField2().setText("" + valorconvertido);
+
+            System.out.println(BotonPresionado);
+        }
+
     }
-    
-    
+
 }
