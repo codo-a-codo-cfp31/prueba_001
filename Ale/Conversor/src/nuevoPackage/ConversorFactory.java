@@ -5,13 +5,16 @@
  */
 package nuevoPackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author CFP31-15
  */
 public class ConversorFactory {
     
-    public IConversor crearConversor(String tipo){
+    public static IConversor crearConversor(String tipo){
         
         IConversor conversor = null;
         
@@ -19,9 +22,19 @@ public class ConversorFactory {
             conversor = new ConversorTemperatura();
         } else if (tipo.equalsIgnoreCase("distancia")) {
             conversor = new ConversorDistancia();
-        }
+        } 
         
         return conversor;
     }
+    
+    public static List<String> getListaConversores(){
+        List<String> lista = new ArrayList<>();
+        
+        lista.add("temperatura");
+        lista.add("distancia");
+        
+        return lista;
+    }
+    
     
 }

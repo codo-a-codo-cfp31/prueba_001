@@ -20,7 +20,7 @@ public class Controller implements IViewEventListener {
 
     public Controller() {
         main_view = new MasterView();
-        // main_view.setVisible(true);
+        main_view.setVisible(true);
 
         main_view.AddViewEvenListener(this);
 
@@ -33,11 +33,14 @@ public class Controller implements IViewEventListener {
 
         conversor.setValor(0.0f, "C");
         float valorNuevo = conversor.getValor("F");
+        System.out.println("Unidades disponibles: " + conversor.getUnitList());
         System.out.println("El resultado 1 es: " + valorNuevo);
 
         //2- PRueba de conversion de distancia
         conversor = ConversorFactory.crearConversor("distancia");
         conversor.setValor(valorNuevo, "km");
+          System.out.println("Unidades disponibles: " + conversor.getUnitList());
+      
     }
 
     @Override
