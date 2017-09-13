@@ -5,6 +5,7 @@
  */
 package conversor;
 
+import Conversores.*;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
 
@@ -15,7 +16,7 @@ import java.awt.event.ActionEvent;
 public class Controller implements IViewEventListener {
 
     protected MasterView main_view;
-    protected Conversor conversor;
+    protected IConversor conversor;
 
     public Controller() {
         main_view = new MasterView();
@@ -23,11 +24,46 @@ public class Controller implements IViewEventListener {
 
         main_view.AddViewEvenListener(this);
 
-        conversor = new Conversor();
+        //conversor = ConversorFactory.crearConversor("Temperatura");
     }
 
     public void Run() {
+        //1
+        conversor = ConversorFactory.crearConversor("Temperatura");
+        conversor.setMedida(23,"C");
+        float Resultado=conversor.getMedida("K");
+        System.out.println(conversor.getUnitList());
+        System.out.println("El resultado 1 es " + Resultado);
 
+        
+        //2
+        conversor = ConversorFactory.crearConversor("Distancia");
+        conversor.setMedida(23,"km");
+        Resultado=conversor.getMedida("mi");
+        System.out.println(conversor.getUnitList());
+        System.out.println("El resultado 2 es " + Resultado);
+        
+        //3
+        conversor = ConversorFactory.crearConversor("Peso");
+        conversor.setMedida(23,"Kg");
+        Resultado=conversor.getMedida("Lb");
+        System.out.println(conversor.getUnitList());
+        System.out.println("El resultado 3 es " + Resultado);
+        
+        //4
+        conversor = ConversorFactory.crearConversor("Energia");
+        conversor.setMedida(23,"J");
+        Resultado=conversor.getMedida("kWh");
+        System.out.println(conversor.getUnitList());
+        System.out.println("El resultado 4 es " + Resultado);
+        
+        //5
+        conversor = ConversorFactory.crearConversor("Datos");
+        conversor.setMedida(23,"b");
+        Resultado=conversor.getMedida("KB");
+        System.out.println(conversor.getUnitList());
+        System.out.println("El resultado 1 es " + Resultado);
+        
     }
 
     @Override
@@ -50,8 +86,8 @@ public class Controller implements IViewEventListener {
 
         if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
             if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
-                conversor.setTemperature(valor, "C");
-                float valorConvertido = conversor.getTemperature("K");
+                conversor.setMedida(valor, "C");
+                float valorConvertido = conversor.getMedida("K");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {
@@ -62,8 +98,8 @@ public class Controller implements IViewEventListener {
 
         if (main_view.getjComboBox1().getModel().getSelectedItem().toString().equalsIgnoreCase("K")) {
             if (main_view.getjComboBox2().getModel().getSelectedItem().toString().equalsIgnoreCase("C")) {
-                conversor.setTemperature(valor, "K");
-                float valorConvertido = conversor.getTemperature("C");
+                conversor.setMedida(valor, "K");
+                float valorConvertido = conversor.getMedida("C");
                 String valorResultado = Double.toString(valorConvertido);
                 main_view.getjLabel1().setText(valorResultado);
             } else {
