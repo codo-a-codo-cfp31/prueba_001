@@ -55,7 +55,7 @@ public class ConversorTemperatura implements IConversor{
       List<String> lista= new ArrayList<>();
         
         lista.add("C");
-        lista.add("F");
+        lista.add("K");
         
         return lista;
     }

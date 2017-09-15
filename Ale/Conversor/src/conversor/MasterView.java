@@ -19,6 +19,10 @@ public class MasterView extends javax.swing.JFrame {
 
         private List<IViewEventListener> list_listeners;
 
+    public JComboBox<String> getjComboBox3() {
+        return jComboBox3;
+    }
+
     public JComboBox<String> getjComboBox1() {
         return jComboBox1;
     }
@@ -92,6 +96,15 @@ public class MasterView extends javax.swing.JFrame {
         jLabel4.setText("hasta:");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "temperatura", "distancia", "masa", "energia" }));
+        jComboBox3.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                convertComboBox(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -163,6 +176,15 @@ public class MasterView extends javax.swing.JFrame {
             listener.listen(event);
         }
     }//GEN-LAST:event_convertButton
+
+    private void convertComboBox(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_convertComboBox
+        // TODO add your handling code here:
+        for (int i = 0; i < list_listeners.size(); i++) {
+            IViewEventListener listener = list_listeners.get(i);
+            Event event = new Event(evt, 0, evt);
+            listener.listen(event);
+        }
+    }//GEN-LAST:event_convertComboBox
 
 
     public JTextField getjTextField1() {
