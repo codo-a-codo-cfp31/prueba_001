@@ -16,7 +16,7 @@ import java.awt.event.ActionEvent;
 public class Controlador implements IViewEventListener {
 
     protected Vista unaVista;
-    protected Conversor unConversor;
+    protected ConversorKg unConversor;
 
     public Controlador() {
 
@@ -24,7 +24,7 @@ public class Controlador implements IViewEventListener {
         unaVista.setVisible(true);
         unaVista.AddViewEventListener(this);
 
-        unConversor = new Conversor();
+        unConversor = new ConversorKg();
 
     }
 

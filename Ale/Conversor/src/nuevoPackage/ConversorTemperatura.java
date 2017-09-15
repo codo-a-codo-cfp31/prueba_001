@@ -5,6 +5,9 @@
  */
 package nuevoPackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author CFP31-15
@@ -46,4 +49,14 @@ public class ConversorTemperatura implements IConversor{
         
         return temperatureResult;
     }    
+
+    @Override
+    public List<String> getUnitList() {
+      List<String> lista= new ArrayList<>();
+        
+        lista.add("C");
+        lista.add("K");
+        
+        return lista;
+    }
 }
