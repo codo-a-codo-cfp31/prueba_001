@@ -3,36 +3,36 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package convertidor.de.grados;
+package convertidorkg;
 
 /**
  *
  * @author cfp31-06
  */
-public class Conversor {
+public class ConversorKg {
     
-    protected String UnidadDeTemperaturaEntrada;
+    protected String UnidadDePesoEntrada;
    
     protected Float ValorDeEntrada;
     protected Float ValorSalida;
     
-    public Conversor(){
+    public ConversorKg(){
         
-        UnidadDeTemperaturaEntrada="";
+        UnidadDePesoEntrada="";
         ValorDeEntrada=0f;
         ValorSalida=0f;
      
     }
 
-    public Conversor(String UnidadDeTemperaturaEntrada, Float ValorDeEntrada, Float ValorSalida) {
-        this.UnidadDeTemperaturaEntrada = UnidadDeTemperaturaEntrada;
+    public ConversorKg(String UnidadDePesoEntrada, Float ValorDeEntrada, Float ValorSalida) {
+        this.UnidadDePesoEntrada = UnidadDePesoEntrada;
         this.ValorDeEntrada = ValorDeEntrada;
         this.ValorSalida = ValorSalida;
     }
     
 
-    public void setUnidadDeTemperaturaEntrada(String UnidadDeTemperaturaEntrada) {
-        this.UnidadDeTemperaturaEntrada = UnidadDeTemperaturaEntrada;
+    public void setUnidadDeTemperaturaEntrada(String UnidadDePesoEntrada) {
+        this.UnidadDePesoEntrada = UnidadDePesoEntrada;
     }
 
     public void setValorDeEntrada(Float ValorDeEntrada) {
@@ -47,8 +47,8 @@ public class Conversor {
         return ValorSalida;
     }
     
-    public String getUnidadDeTemperaturaEntrada() {
-        return UnidadDeTemperaturaEntrada;
+    public String getUnidadDePesoEntrada() {
+        return UnidadDePesoEntrada;
     }
 
     public Float getValorDeEntrada() {
@@ -57,16 +57,16 @@ public class Conversor {
     
     public void Conversion(){
         
-        if (UnidadDeTemperaturaEntrada.equalsIgnoreCase("C")){
-            ValorSalida = ValorDeEntrada*1.8f+32;
+        if (UnidadDePesoEntrada.equalsIgnoreCase("Kg")){
+            ValorSalida = ValorDeEntrada*2.2046f;
             }
         
         else{
             ValorSalida = ValorDeEntrada;
         
             
-        if (UnidadDeTemperaturaEntrada.equalsIgnoreCase("F"))
-            ValorSalida = ValorDeEntrada/1.8f-32;
+        if (UnidadDePesoEntrada.equalsIgnoreCase("Lb"))
+            ValorSalida = ValorDeEntrada/2.2046f;
         
         else{
             ValorSalida = ValorDeEntrada;

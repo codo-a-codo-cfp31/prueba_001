@@ -14,7 +14,6 @@ public class ConversorDeDatosBinarios {
     protected String unidad1;
     protected int datosBinarios;
     protected String datosBinarios2;
-    
 
     public ConversorDeDatosBinarios() {
         unidad1 = "";
@@ -25,7 +24,7 @@ public class ConversorDeDatosBinarios {
         //temperatura= (JFramePOO8.jTextField1.getText());
         if (unidad1.equalsIgnoreCase("D")) {
             if (unidad2.equalsIgnoreCase("Hd")) {
-                
+
                 datosBinarios2 = Integer.toHexString(datosBinarios);
             }
         } else { //mensaje de error
@@ -41,8 +40,8 @@ public class ConversorDeDatosBinarios {
         return datosBinarios2;
     }
 
-    public void setdatosBinarios2(int datosBinarios2, String unidad2) {
-        this.datosBinarios = datosBinarios2;
+    public void setdatosBinarios2(Integer datosbinarios2, String unidad2) {
+        this.datosBinarios= datosbinarios2;
         this.unidad1 = unidad2;
     }
 

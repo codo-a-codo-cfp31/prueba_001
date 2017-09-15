@@ -42,7 +42,7 @@ public class Controlador implements IViewEventListener {
         if (botonUnidad.equalsIgnoreCase("D")) {
 
             //float valor = (float) Double.parseDouble(valorEntring);
-            int valor = Integer.parseInt(valorEntring,16);
+            int valor = Integer.parseInt(valorEntring);
             conversor.setdatosBinarios2(valor, botonUnidad);
             String valorConvertido = conversor.getdatosBinarios2("Hd");
 
@@ -53,7 +53,7 @@ public class Controlador implements IViewEventListener {
         } else {
             //float valor = (float) Double.parseDouble(valorEntring);
             
-            int valor = Integer.parseInt(valorEntring);
+            int valor = Integer.parseInt(valorEntring, 16);
             conversor.setdatosBinarios2(valor, botonUnidad);
             String valorConvertido = conversor.getdatosBinarios2("D");
 
