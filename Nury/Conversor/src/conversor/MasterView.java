@@ -4,17 +4,21 @@
  * and open the template in the editor.
  */
 package conversor;
+
 import java.util.*;
 import java.awt.Event;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+
 /**
  *
  * @author CFP31-15
  */
 public class MasterView extends javax.swing.JFrame {
-        private List<IViewEventListener> list_listeners;
+
+    private List<IViewEventListener> list_listeners;
+
     /**
      * Creates new form MasterView
      */
@@ -22,15 +26,15 @@ public class MasterView extends javax.swing.JFrame {
         initComponents();
         list_listeners = new ArrayList<>();
     }
-    
-    public void AddViewEvenListener(IViewEventListener listener){
+
+    public void AddViewEvenListener(IViewEventListener listener) {
         list_listeners.add(listener);
     }
-    
-    public void RemoveViewEventListener(IViewEventListener listener){
+
+    public void RemoveViewEventListener(IViewEventListener listener) {
         list_listeners.remove(listener);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -69,14 +73,12 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox1ActionPerformed(evt);
             }
         });
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
@@ -90,7 +92,15 @@ public class MasterView extends javax.swing.JFrame {
 
         jLabel4.setText("hasta:");
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Temperatura", "Distancia", "Peso", "Energia", "Datos" }));
+        jComboBox3.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                ConvertComboBox(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
         jComboBox3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox3ActionPerformed(evt);
@@ -101,19 +111,6 @@ public class MasterView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(32, 32, 32))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(149, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -132,6 +129,19 @@ public class MasterView extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(32, 32, 32))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,10 +178,10 @@ public class MasterView extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
-
+//convertir toque de boton a evento
     private void covertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_covertbutton
         // TODO add your handling code here:
-        for (IViewEventListener listener : list_listeners){
+        for (IViewEventListener listener : list_listeners) {
             Event event = new Event(evt, 0, evt);
             listener.Listen(event);
         }
@@ -184,6 +194,13 @@ public class MasterView extends javax.swing.JFrame {
     private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
+//convertir seleccion de combobox a evento
+    private void ConvertComboBox(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_ConvertComboBox
+        for (IViewEventListener listener : list_listeners) {
+            Event event = new Event(evt, 0, evt);
+            listener.Listen(event);
+        }
+    }//GEN-LAST:event_ConvertComboBox
 
     public JTextField getjTextField1() {
         return jTextField1;
@@ -201,7 +218,10 @@ public class MasterView extends javax.swing.JFrame {
         return jComboBox2;
     }
 
- 
+    public JComboBox<String> getjComboBox3() {
+        return jComboBox3;
+    }
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
