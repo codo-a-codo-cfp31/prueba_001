@@ -31,7 +31,7 @@ public class Controller implements IViewEventListener {
         
         ConversorListModel modelConversores = new ConversorListModel(ConversorFactory.getListaConversores());
         main_view.getjComboBox3().setModel(modelConversores);
-        
+        /*
         //1
         conversor = ConversorFactory.crearConversor("Temperatura");
         //ConversorListModel modelTemperatura = new ConversorListModel(conversor.getUnitList());
@@ -76,15 +76,45 @@ public class Controller implements IViewEventListener {
         Resultado=conversor.getMedida("KB");
         System.out.println(conversor.getUnitList());
         System.out.println("El resultado 1 es " + Resultado);
-        
+        */   
     }
-
+    
     @Override
     public void Listen(Event event) {
 
-        ActionEvent ae = (ActionEvent) event.target;
+        String tipoDeEvento = event.target.getClass().getCanonicalName();
+        
+        if(tipoDeEvento.equalsIgnoreCase("java.awt.event.ActionEvent")){
+            
+            String valorAConvertirString = main_view.getjTextField1().getText();
+            Double valorAConvertir = Double.parseDouble(valorAConvertirString);
+            
+            String unidadOrigen = (String) main_view.getjComboBox1().getModel().getSelectedItem();
+            String unidadDestino = (String) main_view.getjComboBox2().getModel().getSelectedItem();
+            
+            conversor.setMedida(valorAConvertir.floatValue(), unidadOrigen);
+            
+            float valorConvertido = conversor.getMedida(unidadDestino);
+            
+            main_view.getjLabel1().setText("" + valorConvertido);
+        
+        }else {
+            
+            String tipo = (String) main_view.getjComboBox3().getModel().getSelectedItem();
+            
+            conversor=ConversorFactory.crearConversor(tipo);
+            
+            ConversorListModel movel1 = new ConversorListModel(conversor.getUnitList());
+            
+            main_view.getjComboBox1().setModel(movel1);
+            
+            ConversorListModel movel2 = new ConversorListModel(conversor.getUnitList());
+            
+            main_view.getjComboBox2().setModel(movel2);
+           
+        }
 
-        String valorEntring = main_view.getjTextField1().getText();
+        /*String valorEntring = main_view.getjTextField1().getText();
 
         float valor = (float) Double.parseDouble(valorEntring);
 
@@ -120,5 +150,6 @@ public class Controller implements IViewEventListener {
         }
 
     }}
-
+*/
+    }
 }

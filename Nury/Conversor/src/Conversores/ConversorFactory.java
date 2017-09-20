@@ -28,6 +28,8 @@ public class ConversorFactory {
             conversor = new ConversorEnergia();
         } else if (tipo.equalsIgnoreCase("Datos")){
             conversor = new ConversorDataSize();
+        } else if (tipo.equalsIgnoreCase("Velocidad")){
+            conversor = new ConversorVelocidad();
         }
         return conversor;   
     }
@@ -40,6 +42,7 @@ public class ConversorFactory {
         ListConversores.add("Peso");
         ListConversores.add("Energia");
         ListConversores.add("Datos");
+        ListConversores.add("Velocidad");
 
                 
         return ListConversores;

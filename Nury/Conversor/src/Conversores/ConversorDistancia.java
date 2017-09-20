@@ -38,7 +38,7 @@ public class ConversorDistancia implements IConversor {
                 //de C a C no hago Nada de Nada
             }
         } else {
-            if (toUnit.equalsIgnoreCase("C")) {
+            if (toUnit.equalsIgnoreCase("km")) {
                 distanceResult = distance / 0.621f;
             } else {
                 //de K a K No hago nada de nada
@@ -53,8 +53,8 @@ public class ConversorDistancia implements IConversor {
     public List<String> getUnitList() {
         List<String> UnitList = new ArrayList();
 
-        UnitList.add("Km");
-        UnitList.add("Mi");
+        UnitList.add("km");
+        UnitList.add("mi");
 
         return UnitList;
     }
