@@ -7,6 +7,7 @@ package poo8;
 
 import java.util.List;
 import javax.swing.ComboBoxModel;
+import javax.swing.ListModel;
 import javax.swing.event.ListDataListener;
 
 /**
@@ -22,37 +23,32 @@ public class ConversorListModel implements ComboBoxModel {
         list_values = lista;
         selected_index = 0;
     }
-
-    @Override
-    public void setSelectedItem(Object anItem) {
-        selected_index = list_values.indexOf(anItem);
-
-    }
-
-    @Override
-    public Object getSelectedItem() {
-        return list_values.get(selected_index);
-
-    }
-
-    @Override
+ @Override
     public int getSize() {
         return list_values.size();
-
     }
 
     @Override
     public Object getElementAt(int index) {
         return list_values.get(index);
-
     }
 
     @Override
     public void addListDataListener(ListDataListener l) {
+        
     }
 
     @Override
     public void removeListDataListener(ListDataListener l) {
     }
 
+    @Override
+    public void setSelectedItem(Object anItem) {
+        selected_index = list_values.indexOf(anItem);
+    }
+
+    @Override
+    public Object getSelectedItem() {
+        return list_values.get(selected_index);
+    }
 }
