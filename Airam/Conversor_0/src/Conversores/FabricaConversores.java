@@ -29,6 +29,9 @@ public class FabricaConversores {
             conversor = new ConversorDeEnergia();
         } else if (tipo.equalsIgnoreCase("datos")) {
             conversor = new ConversorDeDatos();
+        
+        } else if (tipo.equalsIgnoreCase("velocidad")) {
+            conversor = new ConversorDeVelocidad();
         }
 
         return conversor;
@@ -41,6 +44,7 @@ public class FabricaConversores {
         lista.add("energia");
         lista.add("masa");
         lista.add("datos");
+        lista.add("velocidad");
         
         return lista;
     }
