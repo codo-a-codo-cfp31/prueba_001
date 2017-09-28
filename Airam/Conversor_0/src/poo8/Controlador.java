@@ -45,6 +45,10 @@ public class Controlador implements IViewEventListener {
        /* System.out.println("Las conversiones disponibles son= " +FabricaConversores.getListaConversores());
         //prueba 1 de conversion temperatura
         conversor= FabricaConversores.crearConversor("temperatura");
+        
+        ConversorListModel model_tipos = new ConversorListModel(FabricaConversores.getListaConversores());
+        main_view.getjComboBox1().setModel(model_tipos);
+        
         conversor.setValor((float) 1.0, "C");
         float valorConvertido = conversor.getValor("F");
         System.out.println("Unidades disponibles= " +conversor.getUnitList());
@@ -78,7 +82,23 @@ public class Controlador implements IViewEventListener {
     }
     @Override
     public void listen(Event event) {
+        
+        System.out.println("El evento viene de: "+event.target.getClass());
+        
+        String tipoDeEvento = event.target.getClass().getCanonicalName();
+        
+        if(tipoDeEvento.equalsIgnoreCase("java.awt.event.ActionEvent")){
+            
+        }
+        
+        else{
+            PopupMenuEvent evento = (PopupManuEvent) event.target;
+            System.out.println(""+evento);
+                   
+        }
 
+<<<<<<< HEAD
+=======
        String tipoDeEvento = event.target.getClass().getCanonicalName();
        
         if( tipoDeEvento.equalsIgnoreCase("java.awt.event.ActionEvent")) {
@@ -114,6 +134,7 @@ public class Controlador implements IViewEventListener {
 
             main_view.getjComboBox2().setModel(nuevoModel2);
         
+>>>>>>> 607f4361075f51c0ec6f6f2a475abf258cc30454
         /*ActionEvent ae = (ActionEvent) event.target;
         String botonUnidad = ae.getActionCommand();
 
@@ -137,8 +158,13 @@ public class Controlador implements IViewEventListener {
             System.out.println("Valor a C: " + valorConvertido);
             main_view.getjTextField2().setText("" + valorConvertido + "°C");
             System.out.println(botonUnidad);
+<<<<<<< HEAD
+            System.out.println(event);
+        }*/
+=======
             System.out.println(event);*/
         }
+>>>>>>> 607f4361075f51c0ec6f6f2a475abf258cc30454
 
     }
 }

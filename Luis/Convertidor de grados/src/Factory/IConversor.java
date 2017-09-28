@@ -5,6 +5,7 @@
  */
 package Factory;
 import convertidor.de.grados.*;
+import java.util.List;
 
 /**
  *
@@ -16,6 +17,7 @@ public interface IConversor {
 
     public float getValor(String unidad);
     
+    public List<String> getUnitList();
    
     
 }

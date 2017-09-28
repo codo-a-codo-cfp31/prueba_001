@@ -32,6 +32,8 @@ public class ConversorFactory {
         
         lista.add("temperatura");
         lista.add("distancia");
+        lista.add("masa");
+        lista.add("energia");
         
         return lista;
     }
