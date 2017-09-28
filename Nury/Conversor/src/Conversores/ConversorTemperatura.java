@@ -3,29 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package conversor;
+package Conversores;
+
+import conversor.*;
+import java.util.*;
 
 /**
  *
  * @author CFP31-15
  */
-public class Conversor {
+public class ConversorTemperatura implements IConversor{
     
     protected float temperature;
     protected String unit;
 
-    public Conversor() {
+    public ConversorTemperatura() {
         temperature = 0.0f;
         unit = "";
     }
     
-    public void setTemperature(float newTemperature, String newUnit){
+    @Override
+    public void setMedida(float newTemperature, String newUnit){
         temperature = newTemperature;
         unit = newUnit;
     }
     
     
-    public float getTemperature(String toUnit){
+    @Override
+    public float getMedida(String toUnit){
         float temperatureResult=0;
         if (unit.equalsIgnoreCase("C")) {
             if (toUnit.equalsIgnoreCase("K")) {
@@ -44,5 +49,18 @@ public class Conversor {
         
         return temperatureResult;
     }
+
+    @Override
+    public List<String> getUnitList(){
+        List<String> UnitList= new ArrayList();
+        
+        UnitList.add("C");
+        UnitList.add("K");
+        
+        
+        return UnitList;
+        
+    }
+
          
 }

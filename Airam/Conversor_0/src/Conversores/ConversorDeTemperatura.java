@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Conversores;
 
 import java.util.ArrayList;
 import java.util.List;
-import poo8.*;
 
 /**
  *
@@ -27,13 +22,14 @@ public class ConversorDeTemperatura implements IConversor {
         //temperatura= (JFramePOO8.jTextField1.getText());
         if (unidad1.equalsIgnoreCase("C")) {
             if (unidad2.equalsIgnoreCase("F")) {
-                temperatura = (float) ((temperatura - 32) / 1.8000);
+                temperatura = (float) ((temperatura* 1.8000) + 32.00);
             }
         } else { //mensaje de error
         }
         if (unidad1.equalsIgnoreCase("F")) {
             if (unidad2.equalsIgnoreCase("C")) {
-                temperatura = (float) ((temperatura * 1.8000) + 32.00);
+                
+                temperatura = (float) ((temperatura- 32) / 1.8000) ;
             }
         } else { //mensaje de error
         }

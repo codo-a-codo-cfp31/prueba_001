@@ -19,6 +19,10 @@ public class MasterView extends javax.swing.JFrame {
 
         private List<IViewEventListener> list_listeners;
 
+    public JComboBox<String> getjComboBox3() {
+        return jComboBox3;
+    }
+
     public JComboBox<String> getjComboBox1() {
         return jComboBox1;
     }
@@ -60,6 +64,7 @@ public class MasterView extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
@@ -90,6 +95,17 @@ public class MasterView extends javax.swing.JFrame {
 
         jLabel4.setText("hasta:");
 
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "temperatura", "distancia", "masa", "energia" }));
+        jComboBox3.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt) {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt) {
+                convertComboBox(evt);
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -113,8 +129,13 @@ public class MasterView extends javax.swing.JFrame {
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(18, Short.MAX_VALUE))))
             .addGroup(layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(39, 39, 39)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -137,7 +158,9 @@ public class MasterView extends javax.swing.JFrame {
                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
-                .addGap(55, 55, 55))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
 
         pack();
@@ -154,6 +177,15 @@ public class MasterView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_convertButton
 
+    private void convertComboBox(javax.swing.event.PopupMenuEvent evt) {//GEN-FIRST:event_convertComboBox
+        // TODO add your handling code here:
+        for (int i = 0; i < list_listeners.size(); i++) {
+            IViewEventListener listener = list_listeners.get(i);
+            Event event = new Event(evt, 0, evt);
+            listener.listen(event);
+        }
+    }//GEN-LAST:event_convertComboBox
+
 
     public JTextField getjTextField1() {
         return jTextField1;
@@ -169,6 +201,7 @@ public class MasterView extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

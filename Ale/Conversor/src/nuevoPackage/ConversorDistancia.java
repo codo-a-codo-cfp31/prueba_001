@@ -5,12 +5,15 @@
  */
 package nuevoPackage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author CFP31-15
  */
-public class ConversorDistancia implements IConversor{
-    
+public class ConversorDistancia implements IConversor {
+
     protected float temperature;
     protected String unit;
 
@@ -18,17 +21,16 @@ public class ConversorDistancia implements IConversor{
         temperature = 0.0f;
         unit = "";
     }
-    
+
     @Override
-    public void setValor(float newTemperature, String newUnit){
+    public void setValor(float newTemperature, String newUnit) {
         temperature = newTemperature;
         unit = newUnit;
     }
-    
-    
+
     @Override
-    public float getValor(String toUnit){
-        float temperatureResult=0;
+    public float getValor(String toUnit) {
+        float temperatureResult = 0;
         if (unit.equalsIgnoreCase("C")) {
             if (toUnit.equalsIgnoreCase("K")) {
                 temperatureResult = temperature + 273.15f;
@@ -41,9 +43,20 @@ public class ConversorDistancia implements IConversor{
             } else {
                 //de K a K No hago nada de nada
             }
-            
+
         }
-        
+
         return temperatureResult;
-    }    
+    }
+
+    @Override
+    public List<String> getUnitList() {
+        List<String> lista = new ArrayList<>();
+
+        lista.add("Km");
+        lista.add("cm");
+        lista.add("millas");
+
+        return lista;
+    }
 }

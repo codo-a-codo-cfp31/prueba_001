@@ -5,6 +5,8 @@
  */
 package nuevoPackage;
 
+import java.util.List;
+
 /**
  *
  * @author CFP31-15
@@ -15,4 +17,8 @@ public interface IConversor {
     
     //O public float getMagnitud(Sring unit);
     public float getValor(String unit);
+    
+    public List<String> getUnitList();
+
+  
 }
