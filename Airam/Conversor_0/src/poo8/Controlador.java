@@ -5,11 +5,14 @@
  */
 package poo8;
 
+import com.sun.org.apache.bcel.internal.generic.INSTANCEOF;
 import Conversores.*;
 //import Conversores.IConversor;
 //import Conversores.ConversorDeMasa;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
+import javax.swing.DefaultListSelectionModel;
+import javax.swing.event.PopupMenuEvent;
 
 /**
  *
@@ -33,8 +36,13 @@ public class Controlador implements IViewEventListener {
     }
 
     public void Run() {
+        ConversorListModel model_tipos = new ConversorListModel(FabricaConversores.getListaConversores());
+        main_view.getjComboBox3().setModel(model_tipos);
         
-        System.out.println("Las conversiones disponibles son= " +FabricaConversores.getListaConversores());
+        
+        
+        
+       /* System.out.println("Las conversiones disponibles son= " +FabricaConversores.getListaConversores());
         //prueba 1 de conversion temperatura
         conversor= FabricaConversores.crearConversor("temperatura");
         
@@ -69,7 +77,7 @@ public class Controlador implements IViewEventListener {
         conversor.setValor((float) 1.0, "B");
         valorConvertido = conversor.getValor("Kb");
         System.out.println("Unidades disponibles= " +conversor.getUnitList());
-        System.out.println("El Valor de la conversion de datos es: " + valorConvertido);
+        System.out.println("El Valor de la conversion de datos es: " + valorConvertido);*/
 
     }
     @Override
@@ -89,6 +97,44 @@ public class Controlador implements IViewEventListener {
                    
         }
 
+<<<<<<< HEAD
+=======
+       String tipoDeEvento = event.target.getClass().getCanonicalName();
+       
+        if( tipoDeEvento.equalsIgnoreCase("java.awt.event.ActionEvent")) {
+            ActionEvent ae = (ActionEvent) event.target;
+            System.out.println("" + ae.getActionCommand());
+            
+            String valorAConvertirString = main_view.getjTextField1().getText();
+            Double valorAConvertir = Double.parseDouble(valorAConvertirString);
+            
+            String unidadOrigen = (String)  main_view.getjComboBox1().getModel().getSelectedItem();
+            String unidadDestingo = (String) main_view.getjComboBox2().getModel().getSelectedItem();
+            
+            
+            conversor.setValor(valorAConvertir.floatValue(), unidadOrigen);
+            
+            float valorConvertido = conversor.getValor(unidadDestingo);
+            
+            main_view.getjTextField2().setText("" +  valorConvertido);
+            
+            
+            
+        } else {
+            PopupMenuEvent evento = (PopupMenuEvent) event.target;
+            String tipo = (String) main_view.getjComboBox3().getModel().getSelectedItem();
+            System.out.println(""  +tipo );
+            
+            conversor = FabricaConversores.crearConversor(tipo);
+            ConversorListModel nuevoModel = new ConversorListModel(conversor.getUnitList());
+
+            main_view.getjComboBox1().setModel(nuevoModel);
+            
+             ConversorListModel nuevoModel2 = new ConversorListModel(conversor.getUnitList());
+
+            main_view.getjComboBox2().setModel(nuevoModel2);
+        
+>>>>>>> 607f4361075f51c0ec6f6f2a475abf258cc30454
         /*ActionEvent ae = (ActionEvent) event.target;
         String botonUnidad = ae.getActionCommand();
 
@@ -112,8 +158,13 @@ public class Controlador implements IViewEventListener {
             System.out.println("Valor a C: " + valorConvertido);
             main_view.getjTextField2().setText("" + valorConvertido + "°C");
             System.out.println(botonUnidad);
+<<<<<<< HEAD
             System.out.println(event);
         }*/
+=======
+            System.out.println(event);*/
+        }
+>>>>>>> 607f4361075f51c0ec6f6f2a475abf258cc30454
 
     }
 }

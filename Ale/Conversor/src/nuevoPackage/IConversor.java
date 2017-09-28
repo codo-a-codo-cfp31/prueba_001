@@ -19,4 +19,6 @@ public interface IConversor {
     public float getValor(String unit);
     
     public List<String> getUnitList();
+
+  
 }
