@@ -98,112 +98,112 @@ public class MasterView extends javax.swing.JFrame {
         jButton2.setText("7");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton3.setText("9");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton4.setText("6");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton5.setText("5");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton6.setText("4");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton7.setText("3");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton8.setText("2");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton9.setText("1");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton10.setText("C");
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton11.setText("0");
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton12.setText(",");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton13.setText("-");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton14.setText("X");
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton15.setText("/");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton16.setText("=");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16convertButton(evt);
+                convertButton(evt);
             }
         });
 
         jButton17.setText("+");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton17convertButton(evt);
+                convertButton(evt);
             }
         });
 
@@ -316,70 +316,6 @@ public class MasterView extends javax.swing.JFrame {
             listener.listen(event);
         }
     }//GEN-LAST:event_convertComboBox
-
-    private void jButton2convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2convertButton
-
-    private void jButton3convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3convertButton
-
-    private void jButton4convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4convertButton
-
-    private void jButton5convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5convertButton
-
-    private void jButton6convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6convertButton
-
-    private void jButton7convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7convertButton
-
-    private void jButton8convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton8convertButton
-
-    private void jButton9convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9convertButton
-
-    private void jButton10convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10convertButton
-
-    private void jButton11convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11convertButton
-
-    private void jButton12convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12convertButton
-
-    private void jButton13convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton13convertButton
-
-    private void jButton14convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14convertButton
-
-    private void jButton15convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15convertButton
-
-    private void jButton16convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16convertButton
-
-    private void jButton17convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17convertButton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton17convertButton
 
 
     public JTextField getjTextField1() {
