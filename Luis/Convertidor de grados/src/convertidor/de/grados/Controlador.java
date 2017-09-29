@@ -34,13 +34,13 @@ public class Controlador implements IViewEventListener {
         unConversor = FabricaDeConversores.crearConversor("temperatura");
         unConversor.setValor((float) 1.0, "C");
         float valorConvertido = unConversor.getValor("C");
-        //System.out.println("Unidades disponibles= " +unConversor.getUnitList());
+        System.out.println("Unidades disponibles= " +unConversor.getUnitList());
         System.out.println("El Valor de la conversion de temperatura es: " + valorConvertido+ "C");
         
         unConversor= FabricaDeConversores.crearConversor("masa");
         unConversor.setValor((float) 1.0, "Kg");
         valorConvertido = unConversor.getValor("Kg");
-        //System.out.println("Unidades disponibles= " +unConversor.getUnitList());
+        System.out.println("Unidades disponibles= " +unConversor.getUnitList());
         System.out.println("El Valor de la conversion de masa es: " + valorConvertido+ "Kg");
        
     }
