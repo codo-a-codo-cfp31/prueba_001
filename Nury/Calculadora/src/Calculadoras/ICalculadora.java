@@ -15,7 +15,7 @@ public interface ICalculadora {
     
     
     public void BinaryOperation(float elemento1,String Operador, float elemento2);
-    public float Result();
+    public float getResult();
    // public List<String>getUnitList();
 
 }

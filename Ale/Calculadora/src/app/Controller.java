@@ -5,8 +5,10 @@
  */
 package app;
 
+import calculadora.CalculadoraFactory;
 import calculadora.ICalculadora;
 import java.awt.Event;
+import java.awt.event.ActionEvent;
 
 /**
  *
@@ -15,7 +17,7 @@ import java.awt.Event;
 public class Controller implements IViewEventListener {
 
     protected MasterView main_view;
-    protected ICalculadora conversor;
+    protected ICalculadora calculadora;
 
     public Controller() {
         main_view = new MasterView();
@@ -27,14 +29,34 @@ public class Controller implements IViewEventListener {
     }
 
     public void Run() {
-      
+         calculadora = CalculadoraFactory.createCalculadora("simple");
+        //1- Operacion suma
+        float elemento1 = (float)Math.random() * 10;
+        float elemento2 = (float)Math.random() * 10;
+        calculadora.binaryOperation(elemento1, "+", elemento2);
+        System.out.println("El resultado (+) para los elementos es: " + calculadora.getResult());
+        
+        //2- Operacion resta
+        elemento1 = (float)Math.random() * 10;
+        elemento2 = (float)Math.random() * 10;
+        calculadora.binaryOperation(elemento1, "-", elemento2);
+        System.out.println("El resultado (-) para los elementos es: " + calculadora.getResult());
+   
     }
 
     @Override
     public void listen(Event event) {
-        
+        ActionEvent ae = (ActionEvent)event.target;
+        System.out.println("Tecla " + ae.getActionCommand());
       
-   
+        String tecla = ae.getActionCommand();
+        
+        //Verifica si el string es un numero
+        if(tecla.matches("\\d") ) {
+
+            System.out.println("Es numero");
+        } else {
+        }
     }
 
 }

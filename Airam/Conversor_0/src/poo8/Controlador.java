@@ -177,6 +177,6 @@ adjuntar los demas conversores y cambiarle los nombres del get y set
 Paso 3
 crear un packages y pasar la interfaz y los conversores con el fin de separar
 Paso 4
-Crear en el packages la clase fabrica que es con la que 
+Crear en el packages la clase fabrica que es un objeto que crea objetos, para llamarlos de forma dinamica
 
 */
