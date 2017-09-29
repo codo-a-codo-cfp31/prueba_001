@@ -12,14 +12,14 @@ import java.util.List;
  *
  * @author CFP31-15
  */
-public class ColculadoraFactory {
+public class CalculadoraFactory {
     
     public static ICalculadora createCalculadora(String tipo){
         
         ICalculadora conversor = null;
         
       if (tipo.equalsIgnoreCase("simple")) {
-            conversor = new CalculdoraSimple();
+            conversor = new CalculadoraSimple();
         } 
         
         return conversor;

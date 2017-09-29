@@ -23,14 +23,6 @@ public class MasterView extends javax.swing.JFrame {
         return jComboBox3;
     }
 
-    public JComboBox<String> getjComboBox1() {
-        return jComboBox1;
-    }
-
-    public JComboBox<String> getjComboBox2() {
-        return jComboBox2;
-    }
-
     /**
      * Creates new form MasterView
      */
@@ -57,43 +49,40 @@ public class MasterView extends javax.swing.JFrame {
     private void initComponents() {
 
         jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jComboBox3 = new javax.swing.JComboBox<>();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        jButton16 = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setAlwaysOnTop(true);
         setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
         setForeground(java.awt.Color.gray);
 
+        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField1.setText("0.0");
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel1.setText("0.0");
-
-        jButton1.setText("Convertir");
+        jButton1.setText("8");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 convertButton(evt);
             }
         });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "C", "K" }));
-
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 0, 102));
-        jLabel2.setText("Conversor de Temperatura");
-
-        jLabel3.setText("desde:");
-
-        jLabel4.setText("hasta:");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "temperatura", "distancia", "masa", "energia" }));
         jComboBox3.addPopupMenuListener(new javax.swing.event.PopupMenuListener() {
@@ -106,61 +95,203 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setText("7");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2convertButton(evt);
+            }
+        });
+
+        jButton3.setText("9");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3convertButton(evt);
+            }
+        });
+
+        jButton4.setText("6");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4convertButton(evt);
+            }
+        });
+
+        jButton5.setText("5");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5convertButton(evt);
+            }
+        });
+
+        jButton6.setText("4");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6convertButton(evt);
+            }
+        });
+
+        jButton7.setText("3");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7convertButton(evt);
+            }
+        });
+
+        jButton8.setText("2");
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton8convertButton(evt);
+            }
+        });
+
+        jButton9.setText("1");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9convertButton(evt);
+            }
+        });
+
+        jButton10.setText("C");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10convertButton(evt);
+            }
+        });
+
+        jButton11.setText("0");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11convertButton(evt);
+            }
+        });
+
+        jButton12.setText(",");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12convertButton(evt);
+            }
+        });
+
+        jButton13.setText("-");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13convertButton(evt);
+            }
+        });
+
+        jButton14.setText("X");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14convertButton(evt);
+            }
+        });
+
+        jButton15.setText("/");
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton15convertButton(evt);
+            }
+        });
+
+        jButton16.setText("=");
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton16convertButton(evt);
+            }
+        });
+
+        jButton17.setText("+");
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton17convertButton(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
-                        .addGap(32, 32, 32))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(18, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(13, 13, 13)
+                            .addComponent(jButton6)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton5)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton4)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(13, 13, 13)
+                            .addComponent(jButton9)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton8)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton7)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton14))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(13, 13, 13)
+                            .addComponent(jButton12)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton11)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton10)
+                            .addGap(7, 7, 7)
+                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(151, 151, 151)
+                            .addComponent(jButton16))
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButton2)
+                                    .addGap(7, 7, 7)
+                                    .addComponent(jButton1)
+                                    .addGap(7, 7, 7)
+                                    .addComponent(jButton3)
+                                    .addGap(7, 7, 7)
+                                    .addComponent(jButton17))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel4))
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(4, 4, 4)
-                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(13, 13, 13)
                 .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(24, 24, 24))
+                .addGap(7, 7, 7)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1)
+                    .addComponent(jButton3)
+                    .addComponent(jButton17))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton6)
+                    .addComponent(jButton5)
+                    .addComponent(jButton4)
+                    .addComponent(jButton13))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton9)
+                    .addComponent(jButton8)
+                    .addComponent(jButton7)
+                    .addComponent(jButton14))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton12)
+                    .addComponent(jButton11)
+                    .addComponent(jButton10)
+                    .addComponent(jButton15))
+                .addGap(7, 7, 7)
+                .addComponent(jButton16))
         );
 
         pack();
@@ -186,26 +317,97 @@ public class MasterView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_convertComboBox
 
+    private void jButton2convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2convertButton
+
+    private void jButton3convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3convertButton
+
+    private void jButton4convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton4convertButton
+
+    private void jButton5convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton5convertButton
+
+    private void jButton6convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton6convertButton
+
+    private void jButton7convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton7convertButton
+
+    private void jButton8convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton8convertButton
+
+    private void jButton9convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton9convertButton
+
+    private void jButton10convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10convertButton
+
+    private void jButton11convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton11convertButton
+
+    private void jButton12convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton12convertButton
+
+    private void jButton13convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13convertButton
+
+    private void jButton14convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton14convertButton
+
+    private void jButton15convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton15convertButton
+
+    private void jButton16convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton16convertButton
+
+    private void jButton17convertButton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton17convertButton
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton17convertButton
+
 
     public JTextField getjTextField1() {
         return jTextField1;
     }
 
-    public JLabel getjLabel1() {
-        return jLabel1;
-    }
-
+  
  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
+    private javax.swing.JButton jButton17;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

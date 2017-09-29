@@ -14,4 +14,5 @@ import java.util.List;
 public interface ICalculadora {
 
     public void binaryOperation(float elemento1, String operacion, float elemento2);
+    public float getResult();
 }
