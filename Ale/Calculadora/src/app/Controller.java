@@ -29,33 +29,52 @@ public class Controller implements IViewEventListener {
     }
 
     public void Run() {
-         calculadora = CalculadoraFactory.createCalculadora("simple");
+        calculadora = CalculadoraFactory.createCalculadora("simple");
         //1- Operacion suma
-        float elemento1 = (float)Math.random() * 10;
-        float elemento2 = (float)Math.random() * 10;
+        float elemento1 = (float) Math.random() * 10;
+        float elemento2 = (float) Math.random() * 10;
         calculadora.binaryOperation(elemento1, "+", elemento2);
         System.out.println("El resultado (+) para los elementos es: " + calculadora.getResult());
-        
+
         //2- Operacion resta
-        elemento1 = (float)Math.random() * 10;
-        elemento2 = (float)Math.random() * 10;
+        elemento1 = (float) Math.random() * 10;
+        elemento2 = (float) Math.random() * 10;
         calculadora.binaryOperation(elemento1, "-", elemento2);
         System.out.println("El resultado (-) para los elementos es: " + calculadora.getResult());
-   
+
     }
 
     @Override
     public void listen(Event event) {
-        ActionEvent ae = (ActionEvent)event.target;
+        ActionEvent ae = (ActionEvent) event.target;
         System.out.println("Tecla " + ae.getActionCommand());
-      
-        String tecla = ae.getActionCommand();
-        
-        //Verifica si el string es un numero
-        if(tecla.matches("\\d") ) {
 
-            System.out.println("Es numero");
+        String tecla = ae.getActionCommand();
+        String numero = main_view.getjTextField1().getText();
+        Integer longitud = numero.length();
+        //Verifica si el string es un numero
+        if (tecla.matches("\\d")) {
+            if (longitud <= 10) {
+                numero = numero + tecla;
+            }
+            main_view.getjTextField1().setText(numero);
+            System.out.println("numero en display " + numero);
         } else {
+            if (tecla.equals("C")) {
+                main_view.getjTextField1().setText("");
+                longitud = 0;
+            } else if (tecla.equals("<X")) {
+                numero = numero.substring(0, longitud-1);
+                main_view.getjTextField1().setText(numero);
+            } else if (tecla.equals("+")) {
+                
+            }
+        }
+
+        if (longitud > 10) {
+            main_view.getjLabel1().setText("Numero maximo alcanzado: " + longitud);
+        } else {
+            main_view.getjLabel1().setText("");
         }
     }
 

@@ -13,6 +13,9 @@ import java.util.List;
  * @author CFP31-15
  */
 public class CalculadoraSimple implements ICalculadora {
+    protected float elemento1;
+    protected float elementos2;
+    protected String operador;
     protected float resultado;
     public CalculadoraSimple() {
        resultado = 0.0f;
@@ -33,6 +36,21 @@ public class CalculadoraSimple implements ICalculadora {
     public float getResult() {
         return resultado;
    }
+
+    @Override
+    public void setElement1(float elemento1) {
+        this.elemento1 = elemento1;
+    }
+
+    @Override
+    public void setOperator(String operator) {
+        this.operador = operator;
+    }
+
+    @Override
+    public void setElement2(float elemento2) {
+        this.elementos2 = elemento2;
+    }
 
     
 }
