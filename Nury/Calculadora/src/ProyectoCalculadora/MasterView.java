@@ -78,9 +78,10 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 36)); // NOI18N
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField1.setFont(new java.awt.Font("Microsoft JhengHei", 0, 18)); // NOI18N
         jTextField1.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        jTextField1.setText("0.0");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -222,7 +223,7 @@ public class MasterView extends javax.swing.JFrame {
         jButton6.setText("CE");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -234,7 +235,7 @@ public class MasterView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jTextField1)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -295,7 +296,7 @@ public class MasterView extends javax.swing.JFrame {
                         .addGap(34, 34, 34)
                         .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(14, 14, 14)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton10)
@@ -348,10 +349,6 @@ public class MasterView extends javax.swing.JFrame {
             listener.Listen(event);
         }
     }//GEN-LAST:event_ConvertComboBox
-
-    private void jButton6convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6convertbutton
 
     public JTextField getjTextField1() {
         return jTextField1;

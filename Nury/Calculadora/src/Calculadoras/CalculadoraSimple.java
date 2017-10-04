@@ -17,13 +17,44 @@ public class CalculadoraSimple implements ICalculadora {
     protected float b;
     protected String op;
     protected float result;
-
+    
     public CalculadoraSimple() {
         a = 0.0f;
         b = 0.0f;
         op = "";
         result = 0.0f;
     }
+
+    @Override
+    public float getA() {
+        return a;
+    }
+
+    @Override
+    public void setA(float a) {
+        this.a = a;
+    }
+
+    @Override
+    public float getB() {
+        return b;
+    }
+
+    @Override
+    public void setB(float b) {
+        this.b = b;
+    }
+
+    @Override
+    public String getOp() {
+        return op;
+    }
+
+    @Override
+    public void setOp(String op) { 
+        this.op = op;
+    }
+
 
     @Override
     public void BinaryOperation(float elemento1, String operador, float elemento2) {
@@ -43,8 +74,9 @@ public class CalculadoraSimple implements ICalculadora {
     }
 
     @Override
-    public float getResult() {
-        return result;
+    public String getResultString() {
+        String resultString= Double.toString(result);
+        return resultString;
     }
 
 }
