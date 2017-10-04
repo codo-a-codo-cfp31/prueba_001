@@ -13,25 +13,28 @@ import java.util.List;
  * @author CFP31-15
  */
 public class CalculadoraFactory {
-    
-    public static ICalculadora createCalculadora(String tipo){
+
+    public static ICalculadora createCalculadora(String tipo) {
+
+        ICalculadora calculadora = null;
+        if (tipo.equalsIgnoreCase("simple")) {
+            calculadora = new CalculadoraSimple();
+        } else if (tipo.equalsIgnoreCase("cientifica")) {
+            calculadora = new CalculadoraCientifica();
+        }
         
-        ICalculadora conversor = null;
-        
-      if (tipo.equalsIgnoreCase("simple")) {
-            conversor = new CalculadoraSimple();
-        } 
-        
-        return conversor;
+        // EVITAR EL CASTEO
+        //CalculadoraSimple nuevaVariable = (CalculadoraSimple) calculadora;
+
+        return calculadora;
     }
-    
-    public static List<String> getListCalcuadora(){
+
+    public static List<String> getListCalcuadora() {
         List<String> lista = new ArrayList<>();
-        
+
         lista.add("simple");
-        
+
         return lista;
     }
-    
-    
+
 }

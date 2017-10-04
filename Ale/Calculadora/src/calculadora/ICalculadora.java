@@ -15,4 +15,13 @@ public interface ICalculadora {
 
     public void binaryOperation(float elemento1, String operacion, float elemento2);
     public float getResult();
+    
+    // Plan B
+    public void setElement1(float elemento1);
+    public void setOperator(String operator);
+    public void setElement2(float elemento2);
+    
+    
+    
+    
 }
