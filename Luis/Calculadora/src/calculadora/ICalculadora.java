@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Calculadoras;
+package calculadora;
 
-//import java.util.List;
+import java.util.List;
 
 /**
  *
- * @author CFP31-10
+ * @author CFP31-15
  */
 public interface ICalculadora {
-    
-    
-    public void BinaryOperation(float elemento1,String Operador, float elemento2);
-    public float getResult();
-   // public List<String>getUnitList();
 
+    public void binaryOperation(float elemento1, String operacion, float elemento2);
+    
+    public float getResultado();
 }
