@@ -69,34 +69,112 @@ public class Controller implements IViewEventListener {
         } else {
             if (tecla.equals("C")) {
                 main_view.getjTextField1().setText("");
+                calculadora.setA(0);
+                calculadora.setB(0);
+                calculadora.setOp("");
+                calculadora.getResultString().equals("");
             }
             if (tecla.equals("CE")) {
                 String elemento = main_view.getjTextField1().getText();
                 int longitud = elemento.length();
                 elemento = elemento.substring(0, longitud - 1);
+
+                if (!elemento.equals("")) {
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                    //acá obtengo el operador que esta en uso y lo guardo en una variable 
+                    String tempOperator = calculadora.getOp();
+                    //aca fijo el operador suma para obtener el resultado
+                    calculadora.BinaryOperation((float) Double.parseDouble(elemento), "+", 0.f);
+                    // aca vuelco a setear el operador que estoy utilizando en realidad (y no es +)
+                    calculadora.setOp(tempOperator);
+                    /*aca sumo el valor de elemento mas cero que me queda el valor intacto
+                    y elemento va a ser lo que sea que este en la pantalla.
+                     */
+                }
                 main_view.getjTextField1().setText(elemento);
             }
             if (tecla.equals("+")) {
-                calculadora.setOp("+");
-                if (calculadora.getA() == 0) {
-                    String elemento = main_view.getjTextField1().getText();
 
-                    calculadora.setA((float) Double.parseDouble(elemento));
-                    main_view.getjTextField1().setText("");
-                }else{ 
-                    main_view.getjTextField1().setText("");
+                if (calculadora.getOp().equals("")) {
+                    calculadora.setOp("+");
+                    if (calculadora.getA() == 0) {
+                        String elemento = main_view.getjTextField1().getText();
+
+                        calculadora.setA((float) Double.parseDouble(elemento));
+                    } else {
+                        calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                    }
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
                 }
+
+                main_view.getjTextField1().setText("");
+
             }
+
             if (tecla.equals("-")) {
 
-            }
-            if (tecla.equals("=")) {
-                String elemento=main_view.getjTextField1().getText();
-             calculadora.setB((float) Double.parseDouble(elemento));
+                if (calculadora.getOp().equals("")) {
+                    calculadora.setOp("-");
+                    if (calculadora.getA() == 0) {
+                        String elemento = main_view.getjTextField1().getText();
 
-             calculadora.BinaryOperation(calculadora.getA(),calculadora.getOp(),calculadora.getB());
-             main_view.getjTextField1().setText(calculadora.getResultString());
-             calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                        calculadora.setA((float) Double.parseDouble(elemento));
+                    } else {
+                        calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                    }
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+
+            if (tecla.equals("X")) {
+
+                if (calculadora.getOp().equals("")) {
+                    calculadora.setOp("X");
+                    if (calculadora.getA() == 0) {
+                        String elemento = main_view.getjTextField1().getText();
+
+                        calculadora.setA((float) Double.parseDouble(elemento));
+                    } else {
+                        calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                    }
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+
+            if (tecla.equals("/")) {
+
+                if (calculadora.getOp().equals("")) {
+                    calculadora.setOp("/");
+                    if (calculadora.getA() == 0) {
+                        String elemento = main_view.getjTextField1().getText();
+
+                        calculadora.setA((float) Double.parseDouble(elemento));
+                    } else {
+                        calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                    }
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+
+            if (tecla.equals("=")) {
+                String elemento = main_view.getjTextField1().getText();
+                calculadora.setB((float) Double.parseDouble(elemento));
+
+                calculadora.BinaryOperation(calculadora.getA(), calculadora.getOp(), calculadora.getB());
+                main_view.getjTextField1().setText(calculadora.getResultString());
             }
         }
     }

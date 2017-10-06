@@ -66,7 +66,7 @@ public class CalculadoraSimple implements ICalculadora {
             result = a + b;
         } else if (op.equalsIgnoreCase("-")) {
             result = a - b;
-        } else if (op.equalsIgnoreCase("*")) {
+        } else if (op.equalsIgnoreCase("x")) {
             result = a * b;
         } else if (op.equalsIgnoreCase("/")) {
             result = a / b;
