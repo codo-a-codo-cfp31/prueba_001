@@ -41,11 +41,19 @@ public class Controller implements IViewEventListener {
         elemento2 = (float) Math.random() * 10;
         calculadora.binaryOperation(elemento1, "-", elemento2);
         System.out.println("El resultado (-) para los elementos es: " + calculadora.getResult());
-
+        
+        ConversorListModel model = new ConversorListModel(CalculadoraFactory.getListCalcuadora());
+        
+        main_view.getjComboBox3().setModel(model);
     }
 
     @Override
     public void listen(Event event) {
+        
+        if ( event.target.getClass().getCanonicalName().equals("javax.swing.event.PopupMenuEvent")){
+            return;
+        }
+        
         ActionEvent ae = (ActionEvent) event.target;
         System.out.println("Tecla " + ae.getActionCommand());
 
@@ -67,7 +75,7 @@ public class Controller implements IViewEventListener {
                 numero = numero.substring(0, longitud-1);
                 main_view.getjTextField1().setText(numero);
             } else if (tecla.equals("+")) {
-                
+                Double valorNumerico = Double.parseDouble(numero);
             }
         }
 
