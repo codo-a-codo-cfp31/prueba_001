@@ -9,6 +9,7 @@ import Calculadoras.CalculadoraFactory;
 import Calculadoras.ICalculadora;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
+import java.math.*;
 
 /**
  *
@@ -31,23 +32,6 @@ public class Controller implements IViewEventListener {
     public void Run() {
 
         calculadora = CalculadoraFactory.crearCalculadora("simple");
-        /* float elemento1 = (float) Math.random() * 10;
-        float elemento2 = (float) Math.random() * 10;
-        calculadora.BinaryOperation(elemento1, "+", elemento2);
-        System.out.println("a= " + elemento1);
-        System.out.println("b= " + elemento2);
-        System.out.println("el resultado de la suma es " + calculadora.getResult());
-
-        calculadora.BinaryOperation(elemento1, "-", elemento2);
-        System.out.println("el resultado de la resta es " + calculadora.getResult());
-
-        calculadora.BinaryOperation(elemento1, "*", elemento2);
-
-        System.out.println("el resultado de la multiplicacion es " + calculadora.getResult());
-
-        calculadora.BinaryOperation(elemento1, "/", 0);
-        System.out.println("el resultado de la division es " + calculadora.getResult());
-         */
     }
 
     @Override
@@ -58,7 +42,7 @@ public class Controller implements IViewEventListener {
         String tecla = ae.getActionCommand();
 
         //verifica si esta la regular exprecion, en este caso si hay digitos
-        if (tecla.matches("\\d")) {
+        if ((tecla.matches("\\d")) || (tecla.equalsIgnoreCase("."))) {
             String elemento = main_view.getjTextField1().getText();
             if (elemento.length() < 12) {
                 elemento = elemento + tecla;
@@ -72,13 +56,17 @@ public class Controller implements IViewEventListener {
                 calculadora.setA(0);
                 calculadora.setB(0);
                 calculadora.setOp("");
-                calculadora.getResultString().equals("");
+                calculadora.BinaryOperation(0,"x", 0);
             }
+
             if (tecla.equals("CE")) {
                 String elemento = main_view.getjTextField1().getText();
                 int longitud = elemento.length();
-                elemento = elemento.substring(0, longitud - 1);
 
+                int limiteLong = Math.max(0, longitud - 1);
+                elemento = elemento.substring(0, limiteLong);
+
+               
                 if (!elemento.equals("")) {
                     calculadora.setA((float) Double.parseDouble(elemento));
                     //acá obtengo el operador que esta en uso y lo guardo en una variable 
@@ -95,7 +83,6 @@ public class Controller implements IViewEventListener {
             }
             if (tecla.equals("+")) {
 
-                if (calculadora.getOp().equals("")) {
                     calculadora.setOp("+");
                     if (calculadora.getA() == 0) {
                         String elemento = main_view.getjTextField1().getText();
@@ -104,9 +91,7 @@ public class Controller implements IViewEventListener {
                     } else {
                         calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
                     }
-                } else {
-                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
+               
 
                 main_view.getjTextField1().setText("");
 
@@ -114,7 +99,6 @@ public class Controller implements IViewEventListener {
 
             if (tecla.equals("-")) {
 
-                if (calculadora.getOp().equals("")) {
                     calculadora.setOp("-");
                     if (calculadora.getA() == 0) {
                         String elemento = main_view.getjTextField1().getText();
@@ -123,18 +107,15 @@ public class Controller implements IViewEventListener {
                     } else {
                         calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
                     }
-                } else {
-                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
+                
 
                 main_view.getjTextField1().setText("");
 
             }
 
-            if (tecla.equals("X")) {
+            if (tecla.equals("x")) {
 
-                if (calculadora.getOp().equals("")) {
-                    calculadora.setOp("X");
+                    calculadora.setOp("x");
                     if (calculadora.getA() == 0) {
                         String elemento = main_view.getjTextField1().getText();
 
@@ -142,9 +123,7 @@ public class Controller implements IViewEventListener {
                     } else {
                         calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
                     }
-                } else {
-                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
+                
 
                 main_view.getjTextField1().setText("");
 
@@ -152,7 +131,6 @@ public class Controller implements IViewEventListener {
 
             if (tecla.equals("/")) {
 
-                if (calculadora.getOp().equals("")) {
                     calculadora.setOp("/");
                     if (calculadora.getA() == 0) {
                         String elemento = main_view.getjTextField1().getText();
@@ -161,9 +139,7 @@ public class Controller implements IViewEventListener {
                     } else {
                         calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
                     }
-                } else {
-                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
+            
 
                 main_view.getjTextField1().setText("");
 
@@ -175,6 +151,9 @@ public class Controller implements IViewEventListener {
 
                 calculadora.BinaryOperation(calculadora.getA(), calculadora.getOp(), calculadora.getB());
                 main_view.getjTextField1().setText(calculadora.getResultString());
+                
+                calculadora.setOp("=");
+            
             }
         }
     }

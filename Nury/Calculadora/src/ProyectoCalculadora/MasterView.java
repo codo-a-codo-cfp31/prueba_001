@@ -68,7 +68,7 @@ public class MasterView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
-        setForeground(java.awt.Color.gray);
+        setForeground(java.awt.Color.black);
 
         jButton1.setBackground(new java.awt.Color(204, 0, 0));
         jButton1.setText("C");
@@ -108,7 +108,7 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(153, 153, 153));
+        jButton3.setBackground(new java.awt.Color(102, 204, 0));
         jButton3.setText("-");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +172,7 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(153, 153, 153));
+        jButton13.setBackground(new java.awt.Color(102, 204, 0));
         jButton13.setText("/");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -187,15 +187,14 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jButton15.setBackground(new java.awt.Color(0, 153, 204));
-        jButton15.setText(",");
+        jButton15.setText(".");
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 convertbutton(evt);
             }
         });
 
-        jButton16.setBackground(new java.awt.Color(153, 153, 153));
+        jButton16.setBackground(new java.awt.Color(102, 204, 0));
         jButton16.setText("+");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -203,15 +202,15 @@ public class MasterView extends javax.swing.JFrame {
             }
         });
 
-        jButton17.setBackground(new java.awt.Color(153, 153, 153));
-        jButton17.setText("X");
+        jButton17.setBackground(new java.awt.Color(102, 204, 0));
+        jButton17.setText("x");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 convertbutton(evt);
             }
         });
 
-        jButton18.setBackground(new java.awt.Color(153, 153, 153));
+        jButton18.setBackground(new java.awt.Color(0, 153, 204));
         jButton18.setText("=");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
