@@ -11,7 +11,7 @@ import java.awt.Event;
 import java.awt.event.ActionEvent;
 /**
  *
- * @author CFP31-15
+ * @author @AnalistaSistok #SEducA #CFP31
  */
 public class Controller implements IViewEventListener {
 
@@ -42,7 +42,7 @@ public class Controller implements IViewEventListener {
         //3- Operacion multiplicacion
         elemento1 = (float) Math.random() * 10;
         elemento2 = (float) Math.random() * 10;
-        calculadora.binaryOperation(elemento1, "*", elemento2);
+        calculadora.binaryOperation(elemento1, "X", elemento2);
         System.out.println("El resultado (X) para los elementos es: " + calculadora.getResult());
 
         //2- Operacion division
@@ -98,8 +98,11 @@ public class Controller implements IViewEventListener {
                 main_view.getjTextField1().setText("");
             } else if (tecla.equals(".")) {
                 if (longitud <= 10) {
-                    numero = numero + tecla;
+                    if(numero.indexOf(".")==-1){
+                     numero = numero + tecla;
+                    }
                 }
+                
                 main_view.getjTextField1().setText(numero);
             } else if (tecla.equals("=")) {
                 Double valorNumerico = Double.parseDouble(numero);
