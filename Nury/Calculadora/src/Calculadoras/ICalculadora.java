@@ -15,6 +15,7 @@ public interface ICalculadora {
     
     
     public void BinaryOperation(float elemento1,String Operador, float elemento2);
+    public void UnaryOperation(float elemento1,String Operador);
     public String getResultString();
     public float getA();
     public void setA(float a);
