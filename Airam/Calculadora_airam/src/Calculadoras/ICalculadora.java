@@ -7,6 +7,9 @@ package Calculadoras;
 
 //import java.util.List;
 
+import java.util.List;
+
+
 /**
  *
  * @author CFP31-10
@@ -22,6 +25,8 @@ public interface ICalculadora {
     public void setB(float b);
     public String getOp();
     public void setOp(String op);
+    
+  
 
    // public List<String>getUnitList();
 

@@ -6,6 +6,7 @@
 package Calculadoras;
 
 import java.util.*;
+import java.util.ArrayList;
 
 /**
  *
@@ -80,6 +81,8 @@ public class CalculadoraSimple implements ICalculadora {
 
     @Override
     public void UnaryOperation(float elemento1, String operador) {
-    }
+            }
+
+    
 
 }
