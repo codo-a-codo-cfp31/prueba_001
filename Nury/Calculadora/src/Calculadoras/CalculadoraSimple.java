@@ -79,4 +79,9 @@ public class CalculadoraSimple implements ICalculadora {
         return resultString;
     }
 
+    @Override
+    public void UnaryOperation(float elemento1, String Operador) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
