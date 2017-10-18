@@ -10,12 +10,14 @@ import java.awt.Event;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
  *
  * @author CFP31-15
  */
-public class MasterView extends javax.swing.JFrame {
+public class MasterView extends javax.swing.JFrame implements KeyListener {
 
     private List<IViewEventListener> list_listeners;
 
@@ -25,6 +27,7 @@ public class MasterView extends javax.swing.JFrame {
     public MasterView() {
         initComponents();
         list_listeners = new ArrayList<>();
+        jTextField1.addKeyListener(this);
     }
 
     public void AddViewEvenListener(IViewEventListener listener) {
@@ -98,6 +101,11 @@ public class MasterView extends javax.swing.JFrame {
                 ConvertComboBox(evt);
             }
             public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt) {
+            }
+        });
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
             }
         });
 
@@ -349,12 +357,33 @@ public class MasterView extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ConvertComboBox
 
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
     public JTextField getjTextField1() {
         return jTextField1;
     }
 
     public JComboBox<String> getjComboBox3() {
         return jComboBox3;
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+    }
+
+//Este método se ejecuta cada vez que presionas una tecla.
+    public void keyReleased(KeyEvent e) {
+        for (IViewEventListener listener : list_listeners) {
+            Event event = new Event(e, 0, e);
+            listener.Listen(event);
+        }
+    }
+
+//Este método se ejecuta cada vez que sueltas una tecla.
+    @Override
+    public void keyTyped(KeyEvent e) {
     }
 
 
