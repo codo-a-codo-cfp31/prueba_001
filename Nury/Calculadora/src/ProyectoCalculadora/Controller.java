@@ -9,6 +9,8 @@ import Calculadoras.CalculadoraFactory;
 import Calculadoras.ICalculadora;
 import java.awt.Event;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.math.*;
 
 /**
@@ -22,58 +24,94 @@ public class Controller implements IViewEventListener {
 
     public Controller() {
         main_view = new MasterView();
-        // main_view.setVisible(true);
+        main_view.setVisible(true);
 
         main_view.AddViewEvenListener(this);
+        
+        ConversorListModel model1 = new ConversorListModel(CalculadoraFactory.getListaCalculadoras());
+         main_view.getjComboBox3().setModel(model1);
 
     }
 
     public void Run() {
+        if (main_view.getjComboBox3().getModel().getSelectedItem().equals("Simple")){
+                    calculadora = CalculadoraFactory.crearCalculadora("Simple");
+                    main_view.getjPanel2().setVisible(false);
+        }
+         if (main_view.getjComboBox3().getModel().getSelectedItem().equals("Cientifica")){
+                    calculadora = CalculadoraFactory.crearCalculadora("Cientifica");
+                    
+                    main_view.getjPanel2().setVisible(true);
+         }
 
-        calculadora = CalculadoraFactory.crearCalculadora("Cientifica");
-
-        calculadora.UnaryOperation(10, "tan");
-        System.out.println("Tan "+calculadora.getResultString());
+        /*calculadora.UnaryOperation(10, "tan");
+        System.out.println("Tan " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "cos");
-        System.out.println("Cos "+calculadora.getResultString());
+        System.out.println("Cos " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "sin");
-        System.out.println("Sin "+calculadora.getResultString());
+        System.out.println("Sin " + calculadora.getResultString());
 
-        calculadora.UnaryOperation(10,"log");
-        System.out.println("Log "+calculadora.getResultString());
+        calculadora.UnaryOperation(10, "log");
+        System.out.println("Log " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "Mod");
-        System.out.println("Mod "+calculadora.getResultString());
+        System.out.println("Mod " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "√");
-        System.out.println("√ "+calculadora.getResultString());
+        System.out.println("√ " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "10˟");
-        System.out.println("10˟ "+calculadora.getResultString());
+        System.out.println("10˟ " + calculadora.getResultString());
 
         calculadora.UnaryOperation(10, "X²");
-        System.out.println("X²"+calculadora.getResultString());
+        System.out.println("X²" + calculadora.getResultString());
+         */
     }
 
     @Override
     public void Listen(Event event) {
-        ActionEvent ae = (ActionEvent) event.target;
-        System.out.println("Tecla " + ae.getActionCommand());
+        //diferencio los eventos que me llegan que sean del teclado o de la vista
+        String EventType = event.target.getClass().getCanonicalName();
+        String tecla = "";
+        if (EventType.equalsIgnoreCase("java.awt.event.ActionEvent")) {
+            ActionEvent ae = (ActionEvent) event.target;
+            tecla = ae.getActionCommand();
+        
 
-        String tecla = ae.getActionCommand();
+        } else if (EventType.equalsIgnoreCase("java.awt.event.KeyEvent")) {
+            KeyEvent ke = (KeyEvent) event.target;
+            tecla = "" + ke.getKeyChar();
+        } else {
+
+        }
 
         //verifica si esta la regular exprecion, en este caso si hay digitos
-        if ((tecla.matches("\\d")) || (tecla.equalsIgnoreCase("."))) {
+        if (tecla.matches("\\d")) {
+            if (calculadora.getOp().equalsIgnoreCase("=")) {
+                main_view.getjTextField1().setText("");
+                String elemento = main_view.getjTextField1().getText();
+                calculadora.BinaryOperation(0, "x", 0);
+            }
             String elemento = main_view.getjTextField1().getText();
             if (elemento.length() < 12) {
                 elemento = elemento + tecla;
             }
-
-            main_view.getjTextField1().setText(elemento);
             //System.out.println("es numero");
+            main_view.getjTextField1().setText(elemento);
+
         } else {
+
+            if (tecla.equalsIgnoreCase(".")) {
+                String elemento = main_view.getjTextField1().getText();
+                if (!elemento.contains(".")) {
+                    elemento = elemento + tecla;
+                }
+
+                main_view.getjTextField1().setText(elemento);
+            }
+
             if (tecla.equals("C")) {
                 main_view.getjTextField1().setText("");
                 calculadora.setA(0);
