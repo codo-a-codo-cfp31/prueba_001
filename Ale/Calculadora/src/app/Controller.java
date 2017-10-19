@@ -53,9 +53,15 @@ public class Controller implements IViewEventListener {
         
         //Verifica si el string es un numero
         if(tecla.matches("\\d") ) {
+            
+            String valorAString = main_view.getjTextField1().getText();
+            Double valorA = Double.parseDouble(valorAString);
 
             System.out.println("Es numero");
         } else {
+            
+           
+            
         }
     }
 

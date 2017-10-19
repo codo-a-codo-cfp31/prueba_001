@@ -67,6 +67,16 @@ public class Controller implements IViewEventListener {
     public void listen(Event event) {
         ActionEvent ae = (ActionEvent)event.target;
         System.out.println("Tecla " + ae.getActionCommand());
+        
+          String tecla = ae.getActionCommand();
+        
+        //Verifica si el string es un numero
+        if(tecla.matches("\\d") ) {
+            
+
+            System.out.println("Es numero");
+        } else {
+        }
     }
 
 }
