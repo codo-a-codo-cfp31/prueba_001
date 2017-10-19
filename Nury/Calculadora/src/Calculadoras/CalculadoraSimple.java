@@ -17,13 +17,44 @@ public class CalculadoraSimple implements ICalculadora {
     protected float b;
     protected String op;
     protected float result;
-
+    
     public CalculadoraSimple() {
         a = 0.0f;
         b = 0.0f;
         op = "";
         result = 0.0f;
     }
+
+    @Override
+    public float getA() {
+        return a;
+    }
+
+    @Override
+    public void setA(float a) {
+        this.a = a;
+    }
+
+    @Override
+    public float getB() {
+        return b;
+    }
+
+    @Override
+    public void setB(float b) {
+        this.b = b;
+    }
+
+    @Override
+    public String getOp() {
+        return op;
+    }
+
+    @Override
+    public void setOp(String op) { 
+        this.op = op;
+    }
+
 
     @Override
     public void BinaryOperation(float elemento1, String operador, float elemento2) {
@@ -35,7 +66,7 @@ public class CalculadoraSimple implements ICalculadora {
             result = a + b;
         } else if (op.equalsIgnoreCase("-")) {
             result = a - b;
-        } else if (op.equalsIgnoreCase("*")) {
+        } else if (op.equalsIgnoreCase("x")) {
             result = a * b;
         } else if (op.equalsIgnoreCase("/")) {
             result = a / b;
@@ -43,8 +74,14 @@ public class CalculadoraSimple implements ICalculadora {
     }
 
     @Override
-    public float getResult() {
-        return result;
+    public String getResultString() {
+        String resultString= Double.toString(result);
+        return resultString;
+    }
+
+    @Override
+    public void UnaryOperation(float elemento1, String Operador) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

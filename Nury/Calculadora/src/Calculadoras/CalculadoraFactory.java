@@ -18,8 +18,11 @@ public class CalculadoraFactory {
         
         ICalculadora calculadora = null;
         
-        if (tipo.equalsIgnoreCase("simple")){
+        if (tipo.equalsIgnoreCase("Simple")){
             calculadora = (ICalculadora) new CalculadoraSimple();
+        }
+        if(tipo.equalsIgnoreCase("Cientifica")){
+            calculadora = (ICalculadora) new CalculadoraCientifica();
         }
         return calculadora;   
     }
@@ -27,7 +30,8 @@ public class CalculadoraFactory {
     public static List<String> getListaCalculadoras(){
         List<String> ListCalculadora= new ArrayList();
         
-        ListCalculadora.add("simple");
+        ListCalculadora.add("Simple");
+        ListCalculadora.add("Cientifica");
   
 
     
