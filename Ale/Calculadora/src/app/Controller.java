@@ -61,6 +61,12 @@ public class Controller implements IViewEventListener {
         String numero = main_view.getjTextField1().getText();
         Integer longitud = numero.length();
         //Verifica si el string es un numero
+<<<<<<< HEAD
+        if(tecla.matches("\\d") ) {
+            
+            String valorAString = main_view.getjTextField1().getText();
+            Double valorA = Double.parseDouble(valorAString);
+=======
         if (tecla.matches("\\d")) {
             if (longitud <= 10) {
                 numero = numero + tecla;
@@ -78,11 +84,18 @@ public class Controller implements IViewEventListener {
                 Double valorNumerico = Double.parseDouble(numero);
             }
         }
+>>>>>>> 63237fe1ea58e4faa63731088d75ef3764d29176
 
         if (longitud > 10) {
             main_view.getjLabel1().setText("Numero maximo alcanzado: " + longitud);
         } else {
+<<<<<<< HEAD
+            
+           
+            
+=======
             main_view.getjLabel1().setText("");
+>>>>>>> 63237fe1ea58e4faa63731088d75ef3764d29176
         }
     }
 

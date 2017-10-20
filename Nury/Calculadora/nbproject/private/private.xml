@@ -9,8 +9,17 @@
             <file>file:/C:/Users/CFP31-15/Documents/prueba_001/Ale/Conversor/src/conversor/Controller.java</file>
         </group>
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/CFP31-10/Documents/prueba_001/Nury/Calculadora/src/ProyectoCalculadora/MasterView.java</file>
             <file>file:/C:/Users/CFP31-10/Documents/prueba_001/Nury/Calculadora/src/ProyectoCalculadora/Controller.java</file>
+=======
+<<<<<<< HEAD
+            <file>file:/C:/Users/Luis%20Vera/Documents/prueba_001/Nury/Calculadora/src/ProyectoCalculadora/Controller.java</file>
+=======
+            <file>file:/C:/Users/CFP31-10/Documents/prueba_001/Nury/Calculadora/src/ProyectoCalculadora/Controller.java</file>
+            <file>file:/C:/Users/CFP31-10/Documents/prueba_001/Nury/Calculadora/src/Calculadoras/CalculadoraCientifica.java</file>
+>>>>>>> 63237fe1ea58e4faa63731088d75ef3764d29176
+>>>>>>> d55a273213cdd8459bddcbddf809b73713e47769
         </group>
     </open-files>
 </project-private>
