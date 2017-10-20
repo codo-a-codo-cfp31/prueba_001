@@ -11,7 +11,6 @@ package Calculadoras;
  */
 public class CalculadoraCientifica extends CalculadoraSimple {
     
-    protected float result;
     protected String resultString;
     
     CalculadoraCientifica(){
@@ -60,12 +59,5 @@ public class CalculadoraCientifica extends CalculadoraSimple {
             Double valor = Math.pow(elemento1, 2);
              result = valor.floatValue();
         }
-    }
-
-    @Override
-    public String getResultString() {
-        resultString = Double.toString(result);
-        return resultString;
-    }
-       
+    }       
 }

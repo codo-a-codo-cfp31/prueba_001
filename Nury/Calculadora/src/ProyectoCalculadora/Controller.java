@@ -25,49 +25,16 @@ public class Controller implements IViewEventListener {
     public Controller() {
         main_view = new MasterView();
         main_view.setVisible(true);
-
+        main_view.getjPanel2().setVisible(false);
         main_view.AddViewEvenListener(this);
-        
+
         ConversorListModel model1 = new ConversorListModel(CalculadoraFactory.getListaCalculadoras());
-         main_view.getjComboBox3().setModel(model1);
+        main_view.getjComboBox3().setModel(model1);
 
     }
 
     public void Run() {
-        if (main_view.getjComboBox3().getModel().getSelectedItem().equals("Simple")){
-                    calculadora = CalculadoraFactory.crearCalculadora("Simple");
-                    main_view.getjPanel2().setVisible(false);
-        }
-         if (main_view.getjComboBox3().getModel().getSelectedItem().equals("Cientifica")){
-                    calculadora = CalculadoraFactory.crearCalculadora("Cientifica");
-                    
-                    main_view.getjPanel2().setVisible(true);
-         }
-
-        /*calculadora.UnaryOperation(10, "tan");
-        System.out.println("Tan " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "cos");
-        System.out.println("Cos " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "sin");
-        System.out.println("Sin " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "log");
-        System.out.println("Log " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "Mod");
-        System.out.println("Mod " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "√");
-        System.out.println("√ " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "10˟");
-        System.out.println("10˟ " + calculadora.getResultString());
-
-        calculadora.UnaryOperation(10, "X²");
-        System.out.println("X²" + calculadora.getResultString());
-         */
+        
     }
 
     @Override
@@ -78,12 +45,21 @@ public class Controller implements IViewEventListener {
         if (EventType.equalsIgnoreCase("java.awt.event.ActionEvent")) {
             ActionEvent ae = (ActionEvent) event.target;
             tecla = ae.getActionCommand();
-        
 
         } else if (EventType.equalsIgnoreCase("java.awt.event.KeyEvent")) {
             KeyEvent ke = (KeyEvent) event.target;
             tecla = "" + ke.getKeyChar();
         } else {
+            String tipo = (String) main_view.getjComboBox3().getModel().getSelectedItem();
+
+            if (tipo.equalsIgnoreCase("Simple")) {
+                calculadora = CalculadoraFactory.crearCalculadora("Simple");
+                main_view.getjPanel2().setVisible(false);
+            }
+            if (tipo.equals("Cientifica")) {
+                calculadora = CalculadoraFactory.crearCalculadora("Cientifica");
+                main_view.getjPanel2().setVisible(true);
+            }
 
         }
 
@@ -201,12 +177,137 @@ public class Controller implements IViewEventListener {
 
             }
 
+            if (tecla.equals("tan")) {
+
+                calculadora.setOp("tan");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("cos")) {
+
+                calculadora.setOp("cos");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("sin")) {
+
+                calculadora.setOp("sin");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("mod")) {
+
+                calculadora.setOp("mod");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("log")) {
+
+                calculadora.setOp("log");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("√")) {
+
+                calculadora.setOp("√");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            
+            if (tecla.equals("10˟")) {
+
+                calculadora.setOp("10˟");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
+            if (tecla.equals("X²")) {
+
+                calculadora.setOp("X²");
+                if (calculadora.getA() == 0) {
+                    String elemento = main_view.getjTextField1().getText();
+
+                    calculadora.setA((float) Double.parseDouble(elemento));
+                } else {
+                    calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+                }
+
+                main_view.getjTextField1().setText("");
+
+            }
             if (tecla.equals("=")) {
+                
+                if (calculadora.getOp().equalsIgnoreCase("+") || calculadora.getOp().equalsIgnoreCase("-") || calculadora.getOp().equalsIgnoreCase("x") || calculadora.getOp().equalsIgnoreCase("/")){
                 String elemento = main_view.getjTextField1().getText();
                 calculadora.setB((float) Double.parseDouble(elemento));
 
                 calculadora.BinaryOperation(calculadora.getA(), calculadora.getOp(), calculadora.getB());
                 main_view.getjTextField1().setText(calculadora.getResultString());
+                
+                }else{
+                    calculadora.UnaryOperation(calculadora.getA(), calculadora.getOp());
+                    main_view.getjTextField1().setText(calculadora.getResultString());
+                }
 
                 calculadora.setOp("=");
 
