@@ -21,7 +21,7 @@ public class Juego implements IKeyGameListener {
 
     public Juego() {
         LaPalabra = new Palabra();
-        Vidas=3;
+        Vidas=6;
 
     }
 
@@ -42,10 +42,13 @@ public class Juego implements IKeyGameListener {
             LaPalabra.Ingresar(dato);
             LaPalabra.compararPalabraOculta();
             System.out.println(LaPalabra.PalabraOculta);
+        }else{
+           
         }
-        if (!LaPalabra.PalabraOculta.contains(dato)) {
-            --Vidas;//=Vidas-1;
+       if (!LaPalabra.PalabraOculta.contains(dato)) {
+           --Vidas;//=Vidas-1;
         }
+
     }
   
     public boolean TerminoElJuego(){
@@ -63,4 +66,15 @@ public class Juego implements IKeyGameListener {
         }
         return lala;
     }
+    
+    public boolean Gano(){
+        if (!LaPalabra.PalabraOculta.contains("-")){
+            return true;
+        }else{
+        return false;
+  
+    }
+    }
+   
+
 }

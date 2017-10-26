@@ -30,11 +30,14 @@ public class Controller implements IViewEventListener {
 
         ConversorListModel model1 = new ConversorListModel(CalculadoraFactory.getListaCalculadoras());
         main_view.getjComboBox3().setModel(model1);
+        
+        calculadora = CalculadoraFactory.crearCalculadora("Simple");
+        main_view.getjPanel2().setVisible(false);
 
     }
 
     public void Run() {
-        
+
     }
 
     @Override
@@ -50,6 +53,7 @@ public class Controller implements IViewEventListener {
             KeyEvent ke = (KeyEvent) event.target;
             tecla = "" + ke.getKeyChar();
         } else {
+
             String tipo = (String) main_view.getjComboBox3().getModel().getSelectedItem();
 
             if (tipo.equalsIgnoreCase("Simple")) {
@@ -67,16 +71,20 @@ public class Controller implements IViewEventListener {
         if (tecla.matches("\\d")) {
             if (calculadora.getOp().equalsIgnoreCase("=")) {
                 main_view.getjTextField1().setText("");
+                main_view.getjTextField2().setText("");
                 String elemento = main_view.getjTextField1().getText();
                 calculadora.BinaryOperation(0, "x", 0);
-            }
-            String elemento = main_view.getjTextField1().getText();
-            if (elemento.length() < 12) {
-                elemento = elemento + tecla;
-            }
-            //System.out.println("es numero");
-            main_view.getjTextField1().setText(elemento);
+            } else {
 
+                String elemento = main_view.getjTextField1().getText();
+                if (elemento.length() < 12) {
+                    elemento = elemento + tecla;
+                }
+                main_view.getjTextField1().setText(elemento);
+
+            }
+
+            //System.out.println("es numero");
         } else {
 
             if (tecla.equalsIgnoreCase(".")) {
@@ -90,6 +98,7 @@ public class Controller implements IViewEventListener {
 
             if (tecla.equals("C")) {
                 main_view.getjTextField1().setText("");
+                main_view.getjTextField2().setText("");
                 calculadora.setA(0);
                 calculadora.setB(0);
                 calculadora.setOp("");
@@ -124,9 +133,14 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
+
+                String Operacion = calculadora.getA() + calculadora.getOp();
+                main_view.getjTextField2().setText(Operacion);
 
                 main_view.getjTextField1().setText("");
 
@@ -139,9 +153,14 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
+
+                String Operacion = calculadora.getA() + calculadora.getOp();
+                main_view.getjTextField2().setText(Operacion);
 
                 main_view.getjTextField1().setText("");
 
@@ -154,9 +173,14 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
+
+                String Operacion = calculadora.getA() + calculadora.getOp();
+                main_view.getjTextField2().setText(Operacion);
 
                 main_view.getjTextField1().setText("");
 
@@ -169,10 +193,14 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
 
+                String Operacion = calculadora.getA() + calculadora.getOp();
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
 
             }
@@ -184,14 +212,16 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
 
+                }
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
 
             }
-            
             if (tecla.equals("cos")) {
 
                 calculadora.setOp("cos");
@@ -199,14 +229,17 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
 
+                }
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
 
             }
-            
+
             if (tecla.equals("sin")) {
 
                 calculadora.setOp("sin");
@@ -214,14 +247,17 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
 
+                }
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
 
             }
-            
+
             if (tecla.equals("mod")) {
 
                 calculadora.setOp("mod");
@@ -229,14 +265,17 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
-                }
 
+                }
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
 
             }
-            
+
             if (tecla.equals("log")) {
 
                 calculadora.setOp("log");
@@ -244,14 +283,16 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
-
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
-
             }
-            
+
             if (tecla.equals("√")) {
 
                 calculadora.setOp("√");
@@ -259,14 +300,16 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
-
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
-
             }
-            
+
             if (tecla.equals("10˟")) {
 
                 calculadora.setOp("10˟");
@@ -274,12 +317,14 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
-
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
-
             }
             if (tecla.equals("X²")) {
 
@@ -288,23 +333,28 @@ public class Controller implements IViewEventListener {
                     String elemento = main_view.getjTextField1().getText();
 
                     calculadora.setA((float) Double.parseDouble(elemento));
+
                 } else {
                     calculadora.setA((float) Double.parseDouble(calculadora.getResultString()));
+
                 }
-
+                String Operacion = calculadora.getOp() + "(" + calculadora.getA() + ")";
+                main_view.getjTextField2().setText(Operacion);
                 main_view.getjTextField1().setText("");
-
             }
             if (tecla.equals("=")) {
-                
-                if (calculadora.getOp().equalsIgnoreCase("+") || calculadora.getOp().equalsIgnoreCase("-") || calculadora.getOp().equalsIgnoreCase("x") || calculadora.getOp().equalsIgnoreCase("/")){
-                String elemento = main_view.getjTextField1().getText();
-                calculadora.setB((float) Double.parseDouble(elemento));
 
-                calculadora.BinaryOperation(calculadora.getA(), calculadora.getOp(), calculadora.getB());
-                main_view.getjTextField1().setText(calculadora.getResultString());
-                
-                }else{
+                if (calculadora.getOp().equalsIgnoreCase("+") || calculadora.getOp().equalsIgnoreCase("-") || calculadora.getOp().equalsIgnoreCase("x") || calculadora.getOp().equalsIgnoreCase("/")) {
+                    String elemento = main_view.getjTextField1().getText();
+                    calculadora.setB((float) Double.parseDouble(elemento));
+
+                    String Operacion = calculadora.getA() + calculadora.getOp() + calculadora.getB() + "=";
+                    main_view.getjTextField2().setText(Operacion);
+
+                    calculadora.BinaryOperation(calculadora.getA(), calculadora.getOp(), calculadora.getB());
+                    main_view.getjTextField1().setText(calculadora.getResultString());
+
+                } else {
                     calculadora.UnaryOperation(calculadora.getA(), calculadora.getOp());
                     main_view.getjTextField1().setText(calculadora.getResultString());
                 }

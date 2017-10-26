@@ -28,7 +28,10 @@ public class Palabra {
         ListaDePalabras = new ArrayList<>();
         ListaDePalabras.add("PALA");
         ListaDePalabras.add("OTORRINOLARINGOLOGO");
-        ListaDePalabras.add("VENEZUELA");
+        ListaDePalabras.add("DIAPASON");
+        ListaDePalabras.add("EXCEPCION");
+        ListaDePalabras.add("NOBLEZA");
+        ListaDePalabras.add("REDES");
         ListaDePalabras.add("SUPERVISORA");
         ListaDePalabras.add("ESPERMOGRAMA");
         ListaDePalabras.add("CORCHETE");

@@ -90,6 +90,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton25 = new javax.swing.JButton();
         jButton26 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -119,7 +120,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         setFont(new java.awt.Font("Arial Narrow", 0, 10)); // NOI18N
         setForeground(java.awt.Color.black);
 
-        jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setBackground(new java.awt.Color(241, 217, 7));
         jButton1.setText("C");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -162,7 +163,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(102, 204, 0));
+        jButton3.setBackground(new java.awt.Color(0, 204, 204));
         jButton3.setText("-");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -226,7 +227,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(102, 204, 0));
+        jButton13.setBackground(new java.awt.Color(0, 204, 204));
         jButton13.setText("/");
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -248,7 +249,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton16.setBackground(new java.awt.Color(102, 204, 0));
+        jButton16.setBackground(new java.awt.Color(0, 204, 204));
         jButton16.setText("+");
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -256,7 +257,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton17.setBackground(new java.awt.Color(102, 204, 0));
+        jButton17.setBackground(new java.awt.Color(0, 204, 204));
         jButton17.setText("x");
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -264,7 +265,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton18.setBackground(new java.awt.Color(0, 153, 204));
+        jButton18.setBackground(new java.awt.Color(0, 204, 204));
         jButton18.setText("=");
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -272,7 +273,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(255, 51, 51));
+        jButton6.setBackground(new java.awt.Color(241, 217, 7));
         jButton6.setText("CE");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -292,7 +293,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton20.setText("sin");
         jButton20.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -300,7 +301,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton21.setText("log");
         jButton21.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton21convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -308,7 +309,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton22.setText("√");
         jButton22.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton22convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -316,7 +317,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton23.setText("mod");
         jButton23.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton23convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -324,7 +325,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton24.setText("cos");
         jButton24.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton24convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -332,7 +333,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton25.setText("10˟");
         jButton25.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton25convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -340,7 +341,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         jButton26.setText("X²");
         jButton26.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton26convertbutton(evt);
+                convertbutton(evt);
             }
         });
 
@@ -391,7 +392,11 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ProyectoCalculadora/13.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel1.setIconTextGap(1);
+        jLabel1.setPreferredSize(new java.awt.Dimension(964, 543));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -400,16 +405,6 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(34, 34, 34)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jTextField1)
-                            .addComponent(jComboBox3, 0, 184, Short.MAX_VALUE))
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
@@ -451,24 +446,36 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox3, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(34, 34, 34)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jTextField2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(6, 6, 6)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(10, 10, 10)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton10)
                             .addComponent(jButton11)
@@ -497,7 +504,8 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
                             .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jButton6)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(21, 21, 21))
         );
@@ -530,36 +538,16 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
-    private void jButton26convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton26convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton26convertbutton
-
-    private void jButton25convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton25convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton25convertbutton
-
-    private void jButton24convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton24convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton24convertbutton
-
-    private void jButton23convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton23convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton23convertbutton
-
-    private void jButton22convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton22convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton22convertbutton
-
-    private void jButton21convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton21convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton21convertbutton
-
-    private void jButton20convertbutton(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20convertbutton
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20convertbutton
-
     public JTextField getjTextField1() {
         return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public void setjTextField2(JTextField jTextField2) {
+        this.jTextField2 = jTextField2;
     }
 
     public JComboBox<String> getjComboBox3() {
@@ -601,6 +589,7 @@ public class MasterView extends javax.swing.JFrame implements KeyListener {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 
     @Override

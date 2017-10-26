@@ -30,17 +30,8 @@ public class Keyboard extends JInternalFrame implements ActionListener{
     private JPanel[] panel;
     private JButton[][] button;
     private static final String[][] key = {
-        {"Esc", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9",
-            "F10", "F11", "F12", "PrtSc", "Insert", "Delete", "Home",
-            "End", "PgUp", "PgDn"}, {"3\n2", "&", "é", "\"", "'", "(",
-            "§", "è", "!", "ç", "à", ")", "-", "BkSpc", "NumLock", "/",
-            "*", "-"}, {"Tab", "A", "Z", "E", "R", "T", "Y", "U", "I",
-            "O", "P", "^", "$", "Enter", "7", "8", "9", "+"}, {"ShiftLock",
-            "Q", "S", "D", "F", "G", "H", "J", "K", "L", "M", "ù", "µ",
-            "4", "5", "6"}, {"Shift", "<", "W", "X", "C", "V", "B",
-            "N", ",", ";", ":", "=", "Shift", "Up", "1", "2", "3", "Enter"},
-        {"Ctrl", "Fn", "Win", "Alt", "Space", "AltGr", "Reiniciar",
-            "Ctrl", "Left", "Down", "Right", "0", "."}};
+        {"Q", "W", "E", "R", "T", "Y", "U", "I","O", "P",}, {"A", "S", "D", "F", "G", "H", "J", "K", "L", "Ñ",}, {"Z", "X", "C", "V", "B","N","M"},
+        {}};
 
     public Keyboard() {
         initComponents();

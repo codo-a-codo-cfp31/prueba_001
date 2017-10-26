@@ -30,7 +30,6 @@ public class CalculadoraFactory {
     public static List<String> getListaCalculadoras(){
         List<String> ListCalculadora= new ArrayList();
         
-        ListCalculadora.add("Seleccione una calculadora");
         ListCalculadora.add("Simple");
         ListCalculadora.add("Cientifica");
   
