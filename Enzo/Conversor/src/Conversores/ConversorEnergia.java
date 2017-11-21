@@ -28,7 +28,7 @@ public class ConversorEnergia implements IConversor {
     
      @Override
     public float getMedida(String toUnit){
-        float energyResult=0;
+        float energyResult=energy;
         if (unit.equalsIgnoreCase("J")) {
             if (toUnit.equalsIgnoreCase("kWh")) {
                 energyResult=energy*0.0000002778f;

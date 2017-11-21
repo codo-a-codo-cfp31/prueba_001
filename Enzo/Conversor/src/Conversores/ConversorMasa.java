@@ -60,7 +60,7 @@ public class ConversorMasa implements IConversor {
                 //de C a C no hago Nada de Nada
             }
         } else {
-            if (toUnit.equalsIgnoreCase("kg")) {
+            if (toUnit.equalsIgnoreCase("lb")) {
                 resultMass=mass*2.205f;
             } else {
                 //de K a K No hago nada de nada
