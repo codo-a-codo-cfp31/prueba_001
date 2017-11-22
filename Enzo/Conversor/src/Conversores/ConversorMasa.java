@@ -40,12 +40,6 @@ public class ConversorMasa implements IConversor {
             } else {
                 //de C a C no hago Nada de Nada
             }
-        } else {
-            if (toUnit.equalsIgnoreCase("kg")) {
-                resultMass=mass/2.205f;
-            } else {
-                //de K a K No hago nada de nada
-            }
         }
         
         if (unit.equalsIgnoreCase("lb")) {
@@ -55,15 +49,9 @@ public class ConversorMasa implements IConversor {
                 //de C a C no hago Nada de Nada
             }
              if (toUnit.equalsIgnoreCase("g")) {
-                resultMass=mass*1000f/2.21f;
+                resultMass=mass*(1000f/2.21f);
             } else {
                 //de C a C no hago Nada de Nada
-            }
-        } else {
-            if (toUnit.equalsIgnoreCase("lb")) {
-                resultMass=mass*2.205f;
-            } else {
-                //de K a K No hago nada de nada
             }
         }
         
@@ -74,15 +62,9 @@ public class ConversorMasa implements IConversor {
                 //de C a C no hago Nada de Nada
             }
              if (toUnit.equalsIgnoreCase("lb")) {
-               resultMass=mass/1000f/2.21f;
+               resultMass=mass/(1000f/2.21f);
             } else {
                 //de C a C no hago Nada de Nada
-            }
-        } else {
-            if (toUnit.equalsIgnoreCase("g")) {
-               resultMass=mass*1000f;
-            } else {
-                //de K a K No hago nada de nada
             }
         }
        return resultMass;

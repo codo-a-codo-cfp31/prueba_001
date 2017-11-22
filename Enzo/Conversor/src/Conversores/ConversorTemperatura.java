@@ -40,12 +40,6 @@ public class ConversorTemperatura implements IConversor{
             } else {
                 //de C a C no hago Nada de Nada
             }
-        } else {
-            if (toUnit.equalsIgnoreCase("C")) {
-                temperatureResult=temperature-273.15f;
-            } else {
-                //de K a K No hago nada de nada
-            }
         }
         
         if (unit.equalsIgnoreCase("K")) {
@@ -59,12 +53,6 @@ public class ConversorTemperatura implements IConversor{
             } else {
                 //de C a C no hago Nada de Nada
             }
-        } else {
-            if (toUnit.equalsIgnoreCase("K")) {
-                temperatureResult=temperature+273.15f;
-            } else {
-                //de K a K No hago nada de nada
-            }
         }
         
         if (unit.equalsIgnoreCase("F")) {
@@ -74,15 +62,9 @@ public class ConversorTemperatura implements IConversor{
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("K")) {
-                temperatureResult=(temperature-459.67f)*5/9;
+                temperatureResult=(temperature-32f)*5/9+273f;
             } else {
                 //de C a C no hago Nada de Nada
-            }
-        } else {
-            if (toUnit.equalsIgnoreCase("F")) {
-                temperatureResult=(temperature+32f)/5/9;
-            } else {
-                //de K a K No hago nada de nada
             }
         }
         return temperatureResult;

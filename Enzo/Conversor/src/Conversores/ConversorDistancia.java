@@ -33,17 +33,17 @@ public class ConversorDistancia implements IConversor {
         float distanceResult = distance;
         if (unit.equalsIgnoreCase("mi")) {
             if (toUnit.equalsIgnoreCase("km")) {
-                distanceResult = distance * (1609344f / 1000000f);
+                distanceResult=distance*(1609344f / 1000000f);
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("m")) {
-                distanceResult = distance * 1609.344f;
+                distanceResult=distance*1609.344f;
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("cm")) {
-                distanceResult = distance * 1609.344f * 100f;
+                distanceResult=distance*1609.344f * 100f;
             } else {
                 //de C a C no hago Nada de Nada
             }
@@ -51,17 +51,17 @@ public class ConversorDistancia implements IConversor {
 
         if (unit.equalsIgnoreCase("km")) {
             if (toUnit.equalsIgnoreCase("mi")) {
-                distanceResult = distance * (1000 / 1609.344f);
+                distanceResult=distance*(1000/1609.344f);
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("m")) {
-                distanceResult = distance * 1000f;
+                distanceResult=distance*1000f;
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("cm")) {
-                distanceResult = distance * 100000f;
+                distanceResult=distance*100000f;
             } else {
                 //de C a C no hago Nada de Nada
             }
@@ -69,17 +69,17 @@ public class ConversorDistancia implements IConversor {
 
         if (unit.equalsIgnoreCase("m")) {
             if (toUnit.equalsIgnoreCase("mi")) {
-                distanceResult = distance * (1 / 1609.344f);
+                distanceResult=distance*(1/1609.344f);
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("km")) {
-                distanceResult = distance / 1000f;
+                distanceResult=distance/1000f;
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("cm")) {
-                distanceResult = distance * 100f;
+                distanceResult=distance*100f;
             } else {
                 //de C a C no hago Nada de Nada
             }
@@ -87,17 +87,17 @@ public class ConversorDistancia implements IConversor {
 
         if (unit.equalsIgnoreCase("cm")) {
             if (toUnit.equalsIgnoreCase("mi")) {
-                distanceResult = distance * 1 / (1609.344f * 100f);
+                distanceResult=distance*1/(1609.344f * 100f);
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("km")) {
-                distanceResult = distance / 100000f;
+                distanceResult= distance/100000f;
             } else {
                 //de C a C no hago Nada de Nada
             }
             if (toUnit.equalsIgnoreCase("m")) {
-                distanceResult = distance / 100f;
+                distanceResult=distance/100f;
             } else {
                 //de C a C no hago Nada de Nada
             }
